@@ -1,7 +1,8 @@
 {
- "version": "0.5.0",
+ "version": "0.5.1",
  "url": "https://github.com/Duplexsteel/KryptoKompis/releases/latest",
- "notes": "Kryptokompis 0.5.0 - første offentlige beta: portefølje, kryptoskatt, Windows og Android",
- "windows": "https://github.com/Duplexsteel/KryptoKompis/releases/download/v0.5.0/Kryptokompis-Setup-0.5.0.exe",
- "android": "https://github.com/Duplexsteel/KryptoKompis/releases/download/v0.5.0/Kryptokompis-0.5.0.apk"
+ "notes": "Kryptokompis 0.5.1: abonnement og lisens p\u00e5 e-post med en gang, Oppdater n\u00e5 med ett klikk, sikrere import",
+ "windows": "https://github.com/Duplexsteel/KryptoKompis/releases/download/v0.5.1/Kryptokompis-Setup-0.5.1.exe",
+ "windows_sha256": "1904cdee4869dc93d3374172bbac17b14ab1079866cf33190d131bf24cd358c8",
+ "android": "https://github.com/Duplexsteel/KryptoKompis/releases/download/v0.5.1/Kryptokompis-0.5.1.apk"
 }

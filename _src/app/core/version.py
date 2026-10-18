@@ -1,6 +1,6 @@
 """Version identifiers stamped on reports and test runs."""
 
-APP_VERSION = "0.5.0"
+APP_VERSION = "0.5.1"
 # Bump when a TAX RULE changes (not for UI/import fixes): a report or test run
 # can then say exactly which interpretation of the rules produced it.
 RULESET_VERSION = "NO-krypto-2026.1"
