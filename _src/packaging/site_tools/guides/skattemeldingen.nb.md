@@ -33,7 +33,7 @@ En overføring mellom dine egne kontoer og lommebøker er ikke et salg. Men et g
 ## Inntekt og kostnader
 Staking, belønninger og mining er inntekt med markedsverdien den dagen du fikk dem. Har du kostnader knyttet til inntekten, for eksempel strøm til mining, kan de normalt trekkes fra.
 
-Forvaltningskostnader gir bare fradrag for den delen som gjelder kryptoen. En PC eller et internettabonnement som også brukes privat, gir normalt bare forholdsmessig fradrag. I Kryptokompis legger du inn hvor stor del som er til krypto.
+Forvaltningskostnader gir bare fradrag for det som faktisk gjelder kryptoen: programvare og kursdata (for eksempel TradingView), verktøy for å regne ut skatten og regnskapsfører. Utstyr og abonnementer du hovedsakelig bruker privat, som PC, bredbånd og mobil, gir normalt ikke fradrag for en privatperson. Det gjelder bare hvis kryptohandelen drives som næring (ENK eller AS). I Kryptokompis legger du inn hele kostnaden og hvor stor del som er til krypto.
 
 ## Kontanter på børsene
 Dollar og kroner som står på en børs ved årsskiftet, er ikke en virtuell eiendel, men de er formue - normalt et krav mot børsen. Hvor beløpet skal føres, avhenger av saldoen, valutaen og hvor børsen holder til. Kryptokompis viser saldoen for seg, så du har tallet når du skal føre det.
