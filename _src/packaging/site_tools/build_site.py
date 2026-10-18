@@ -3,6 +3,7 @@ from one template, plus the shared head/nav/footer that the Info pages (build_in
 
 Run:  python packaging/site_tools/build_site.py <site dir>
 Facts on the page must match the app (prices in app/core/version.py, exchanges in accounts.py)."""
+import json
 import sys
 from pathlib import Path
 
@@ -317,7 +318,7 @@ T = {
  price_list=["Hele programmet: alle børser, kontroller, PDF og CSV", "Oppdateringer og nye børser inkludert",
              "Ingen abonnement", "Én lisens gjelder både PC og mobil", "Direkte kontakt med utvikleren på Discord"],
  buy="Kjøp betalisens - 99 kr",
- pay_note="Betaling med kort via Stripe. Lisensnøkkelen sendes til e-posten din innen 24 timer.",
+ pay_note="Betaling med kort via Stripe. Lisensnøkkelen kommer på e-post med en gang. Du legger den inn én gang - abonnement fornyes av seg selv i appen.",
  later_h="Etter betaen", later=[("49 kr", "per måned"), ("399 kr", "per år"), ("999 kr", "livstid")],
  # trust
  trust_h="Dataene dine",
@@ -418,7 +419,7 @@ T = {
  price_list=["The whole program: all exchanges, checks, PDF and CSV", "Updates and new exchanges included",
              "No subscription", "One licence covers both PC and phone", "Direct contact with the developer on Discord"],
  buy="Buy the beta licence - 99 NOK",
- pay_note="Card payment via Stripe. Your licence key is emailed to you within 24 hours.",
+ pay_note="Card payment via Stripe. Your licence key is emailed to you straight away. You enter it once - subscriptions renew by themselves in the app.",
  later_h="After the beta", later=[("49 NOK", "per month"), ("399 NOK", "per year"), ("999 NOK", "lifetime")],
  trust_h="Your data",
  trust=[("Stays on your device", "No account and no cloud. Transactions, reports and settings are stored with you."),
@@ -478,10 +479,11 @@ def head(t, title, desc, path=None):
 # page per topic. PAGES maps a topic to its file per language; the old one-page anchors
 # (index.html#skatt etc.) are forwarded by OLD_ANCHORS so links already shared keep working.
 PORTAL = "https://billing.stripe.com/p/login/4gM28r4nj6pf3oG257eUU00"     # Stripe customer portal: cancel / change card
+LICENCE_API = "https://kryptokompis-licence.kryptokompis.workers.dev"     # licence-service/: /resend for a lost key
 PLAN_LINKS = {"month": "https://buy.stripe.com/28EeVd1b700RcZg113eUU01?prefilled_promo_code=START99",
               "year": "https://buy.stripe.com/cNi9ATg61bJzaR8dNPeUU02",
               "life": "https://buy.stripe.com/bJe5kD5rnaFv0cueRTeUU03"}
-PLANS_LIVE = False      # True when licences for these plans are delivered automatically (licence service)
+PLANS_LIVE = True       # licences are delivered and renewed by the licence service (licence-service/)
 
 PAGES = {
     "nb": dict(portfolio="portefolje.html", tax="skatt.html", imports="borser.html", insights="innsikt.html",
@@ -526,6 +528,9 @@ X = {
         deduct='Kostnader du har for å forvalte kryptoen din, som et verktøy for oversikt og skatt, kan normalt føres som <b>forvaltningskostnader</b> i skattemeldingen. Fradraget er verdt 22 % av beløpet (18,5 % i Nord-Troms og Finnmark). 399 kr i året kan altså gi omtrent 88 kr lavere skatt. Ta vare på kvitteringen. Dette er ikke skatterådgivning - sjekk hva som gjelder for deg hos <a href="https://www.skatteetaten.no/person/skatt/hjelp-til-riktig-skatt/aksjer-og-verdipapirer/om/virtuelle-eiendeler/">Skatteetaten</a>.',
         portal_h="Abonnement", portal_p="Du administrerer abonnementet selv hos Stripe: si opp, bytt kort eller last ned kvitteringer. Skriv inn e-posten du betalte med, så får du en kode.",
         portal_btn="Administrer eller si opp abonnement",
+        lost_h="Mistet lisensnøkkelen?", lost_p="Skriv e-posten du betalte med, så sender vi nøklene dine på nytt.",
+        lost_btn="Send nøkkelen på nytt", lost_ok="Hvis vi finner et kjøp på denne adressen, kommer e-posten om et minutt. Sjekk også søppelpost.",
+        lost_err="Noe gikk galt. Prøv igjen litt senere, eller spør på Discord.",
         latest_h="Siste guider og nytt", latest_all="Alle guider",
         final_h="Prøv Kryptokompis gratis", final_p="Last ned, koble til børsene og se porteføljen din på få minutter.",
         kicker="Funksjoner",
@@ -561,6 +566,9 @@ X = {
         deduct='Costs of managing your crypto, such as a tool for overview and tax, can normally be claimed as <b>management costs (forvaltningskostnader)</b> in the Norwegian tax return. The deduction is worth 22 % of the amount (18.5 % in Nord-Troms and Finnmark), so 399 NOK a year can mean about 88 NOK less tax. Keep the receipt. This is not tax advice - check what applies to you with <a href="https://www.skatteetaten.no/en/person/taxes/get-the-taxes-right/shares-and-securities/about-shares-and-securities/virtual-currency/">Skatteetaten</a>.',
         portal_h="Subscription", portal_p="You manage your subscription yourself at Stripe: cancel, change card or download receipts. Enter the email you paid with and you get a code.",
         portal_btn="Manage or cancel subscription",
+        lost_h="Lost your licence key?", lost_p="Enter the email you paid with and we send your keys again.",
+        lost_btn="Send the key again", lost_ok="If we find a purchase for this address, the email arrives within a minute. Check your spam folder too.",
+        lost_err="Something went wrong. Try again a bit later, or ask on Discord.",
         latest_h="Latest guides and news", latest_all="All guides",
         final_h="Try Kryptokompis for free", final_p="Download, connect your exchanges and see your portfolio in minutes.",
         kicker="Features",
@@ -649,6 +657,8 @@ CSS += """
 .tier p{color:#B9CCC3;font-size:15px;flex:1}.tier .btn{margin-top:6px;width:100%}
 .tier .btn.off{background:transparent;border-color:#4A6A61;color:#B9CCC3;pointer-events:none}
 .tip{margin-top:28px;padding:20px 22px;border-radius:var(--r);background:rgba(154,216,189,.1);border:1px solid #2F4D45}
+.lost{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.lost input{flex:1 1 220px;min-height:40px;border-radius:999px;border:1px solid #4A6A61;
+ background:rgba(255,255,255,.06);color:#fff;padding:0 16px;font:inherit;font-size:15px}.lost-msg{margin-top:10px;color:var(--mint2)!important}
 .tip h3{font-size:17px;margin-bottom:6px}.tip p{color:#CFE0D8;font-size:15.5px}
 .latest{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .latest a{display:block;padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--sheet);color:var(--ink);text-decoration:none}
@@ -763,6 +773,13 @@ def sec_start(t, head=True):
  <p class="note">{t['pay_note']}</p>
  <div class="tip"><h3>{x['deduct_h']}</h3><p>{x['deduct']}</p></div>
  <div class="tip"><h3>{x['portal_h']}</h3><p>{x['portal_p']}</p><div class="cta" style="margin-top:14px"><a class="btn s" href="{PORTAL}" target="_blank" rel="noopener">{x['portal_btn']}</a></div></div>
+ <div class="tip" id="lost"><h3>{x['lost_h']}</h3><p>{x['lost_p']}</p>
+  <form class="lost" onsubmit="return lostKey(this)"><input type="email" name="email" required autocomplete="email" placeholder="navn@epost.no" aria-label="E-post">
+  <button class="btn s" type="submit">{x['lost_btn']}</button></form><p class="lost-msg" role="status" aria-live="polite"></p></div>
+<script>function lostKey(f){{var m=f.parentNode.querySelector('.lost-msg');f.querySelector('button').disabled=true;
+fetch('{LICENCE_API}/resend',{{method:'POST',headers:{{'content-type':'application/json'}},body:JSON.stringify({{email:f.email.value}})}})
+.then(function(r){{m.textContent=r.ok?{json.dumps(x['lost_ok'])}:{json.dumps(x['lost_err'])}}})
+.catch(function(){{m.textContent={json.dumps(x['lost_err'])}}}).finally(function(){{f.querySelector('button').disabled=false}});return false}}</script>
 </div></section>"""
 
 
