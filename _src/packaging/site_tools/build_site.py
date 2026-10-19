@@ -819,7 +819,8 @@ def page(t):
 <div class="w hero">
  <div><h1>{t['h1']}</h1><p class="lead">{t['lead']}</p>
   <div class="cta"><a class="btn" href="{url(t, 'pricing')}#{t['ids'][4]}">{t['cta']}</a><a class="btn g" href="{t['report_pdf']}">{t['cta2']}</a></div>
-  <p class="note">{t['hero_note']}</p></div>
+  <p class="note">{t['hero_note']}</p>
+  <div class="fox-intro" style="display:flex;align-items:center;gap:13px;margin-top:18px;max-width:360px"><img src="assets/fox-mascot.svg" alt="" loading="lazy" width="96" height="88" style="width:96px;height:auto;max-width:26%;flex-shrink:0"><span style="font-size:14px;color:var(--ink2)">{'Hei! Jeg er fjellreven til Kryptokompis.' if t['lang']=='nb' else 'Meet the Kryptokompis arctic fox.'}</span></div></div>
  <figure class="sheet" style="margin:0"><h3>{t['hero_pf_title']}</h3>
   <div class="ptotal">{t['pf_total_v']}</div><div class="pchange up">{t['pf_change']}</div>
   <ul class="coins">{coins}</ul>
