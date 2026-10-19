@@ -256,6 +256,23 @@ T = {
  hero_demo_note="Illustrasjon med oppdiktede tall.", hero_exports="PDF og CSV",
  hero_history_desc="Eksempel på porteføljeverdi i norske kroner fra mai til oktober. Verdien svinger fra 35 000 kr ved starten til 99 298 kr ved slutten. Innskudd og uttak kan påvirke verdien; kurven viser ikke avkastning.",
  hero_months=("Mai", "Jun", "Jul", "Aug", "Sep", "Okt"),
+ story_lines=("Oversikt i hverdagen.", "Rapporter når du trenger dem."),
+ story_intro="Følg porteføljen, hold deg oppdatert og samle grunnlaget til skattemeldingen.",
+ story_daily="01 / GJENNOM ÅRET", story_daily_h="Se hva du eier. Forstå historikken.",
+ story_report="02 / NÅR DU TRENGER DET", story_report_h="Fra oversikt til rapport.",
+ story_example="Forenklet eksempel", story_transactions="Transaksjonshistorikk",
+ story_transaction_note="Kjøp, salg og belønninger", story_columns=("Dato", "Hendelse", "Eiendel", "Verdi (NOK)"),
+ story_rows=(("19.01.2025", "Kjøp", "ETH", "67 200 kr", "buy"),
+             ("06.02.2025", "Kjøp", "XRP", "8 663 kr", "buy"),
+             ("14.03.2025", "Belønning", "ETH", "139 kr", "reward"),
+             ("19.04.2025", "Salg", "BTC", "19 950 kr", "sell")),
+ story_caption="Forenklet visning med oppdiktede transaksjoner.", story_portfolio="Se mer om porteføljen",
+ story_report_title="Årsoversikt", story_report_example="Eksempelrapport · 2025",
+ story_report_items=(("Gevinst", "7 527 kr"), ("Tap", "6 616 kr"), ("Inntekt", "428 kr"), ("Formue", "99 298 kr")),
+ story_report_link="Se eksempelrapport", story_report_formats="PDF og CSV til dokumentasjonen din",
+ story_news_kicker="NYTT OG NYTTIG", story_news_h="Kryptonytt og guider",
+ story_news_intro="Følg markedet og finn forklaringer underveis.", story_news_link="Utforsk kryptonytt", story_guides_link="Finn en guide",
+ story_local="Lokalt på Windows og Android.", story_privacy="Les om personvern",
  sheet_title="Fra transaksjoner ...",
  rows=[("19.01.2025", "Kjøp 2 ETH", "67 200 kr"), ("06.02.2025", "Kjøp 1 500 XRP", "8 663 kr"),
        ("14.03.2025", "Staking-belønning ETH", "139 kr"), ("19.04.2025", "Salg 0,02 BTC", "19 950 kr"),
@@ -371,6 +388,23 @@ T = {
  hero_demo_note="Illustration with made-up figures.", hero_exports="PDF and CSV",
  hero_history_desc="Example portfolio value in Norwegian kroner from May to October. The value fluctuates from NOK 35,000 at the start to NOK 99,298 at the end. Deposits and withdrawals can affect value; this is not an investment-return chart.",
  hero_months=("May", "Jun", "Jul", "Aug", "Sep", "Oct"),
+ story_lines=("Clarity every day.", "Reports when you need them."),
+ story_intro="Follow your portfolio, stay informed and bring together the figures for your tax return.",
+ story_daily="01 / THROUGHOUT THE YEAR", story_daily_h="See what you own. Understand its history.",
+ story_report="02 / WHEN YOU NEED IT", story_report_h="From overview to report.",
+ story_example="Simplified example", story_transactions="Transaction history",
+ story_transaction_note="Buys, sells and rewards", story_columns=("Date", "Event", "Asset", "Value (NOK)"),
+ story_rows=(("19 Jan 2025", "Buy", "ETH", "67,200", "buy"),
+             ("6 Feb 2025", "Buy", "XRP", "8,663", "buy"),
+             ("14 Mar 2025", "Reward", "ETH", "139", "reward"),
+             ("19 Apr 2025", "Sell", "BTC", "19,950", "sell")),
+ story_caption="Simplified view with made-up transactions.", story_portfolio="Explore the portfolio",
+ story_report_title="Annual overview", story_report_example="Example report · 2025",
+ story_report_items=(("Gains", "NOK 7,527"), ("Losses", "NOK 6,616"), ("Income", "NOK 428"), ("Wealth", "NOK 99,298")),
+ story_report_link="View example report", story_report_formats="PDF and CSV for your records",
+ story_news_kicker="NEWS AND KNOW-HOW", story_news_h="Crypto news and guides",
+ story_news_intro="Follow the market and find explanations along the way.", story_news_link="Explore crypto news", story_guides_link="Find a guide",
+ story_local="Local on Windows and Android.", story_privacy="Read about privacy",
  sheet_title="From transactions ...",
  rows=[("19 Jan 2025", "Buy 2 ETH", "NOK 67,200"), ("6 Feb 2025", "Buy 1,500 XRP", "NOK 8,663"),
        ("14 Mar 2025", "Staking reward ETH", "NOK 139"), ("19 Apr 2025", "Sell 0.02 BTC", "NOK 19,950"),
@@ -974,24 +1008,125 @@ def homepage_hero(t):
 </div></div>'''
 
 
+CSS += """
+/* Approved overview spread: one product story, not a repeated feature-card grid. */
+.overview-story{position:relative;isolation:isolate;overflow:hidden;padding:86px 0 70px;background:#fff}
+.overview-story:before{content:"";position:absolute;z-index:-1;inset:170px -14% 100px;
+ background:linear-gradient(120deg,#F5FAFF,#E8F4FF 65%,#F8FCFF);border-radius:50%;transform:rotate(-9deg)}
+.story-shell{max-width:1440px;margin:0 auto;padding:0 40px}
+.story-heading{display:grid;grid-template-columns:2.35fr 1fr;gap:48px;align-items:center;margin-bottom:48px}
+.story-heading h2{font-size:clamp(32px,3.55vw,51px);line-height:1.12;letter-spacing:-.04em}
+.story-heading h2 span{display:block}.story-heading h2 .accent{color:#1260E8}
+.story-heading>p{font-size:17px;line-height:1.65;color:#425675}
+.story-spread{display:grid;grid-template-columns:minmax(0,2.55fr) minmax(260px,1fr);gap:42px;align-items:start}
+.story-chapter{padding-left:17px;border-left:4px solid #1260E8;min-height:61px;margin-bottom:25px}
+.story-kicker{font-size:11px;font-weight:700;letter-spacing:.08em;color:#0B4DC2;margin-bottom:8px}
+.story-chapter h3{font-size:clamp(19px,1.75vw,25px);letter-spacing:-.035em;line-height:1.2}
+.story-window{margin:0;min-width:0;overflow:hidden;border:1px solid #DFEAF6;border-radius:14px;background:#fff;box-shadow:0 18px 50px #214B7D0D}
+.story-window-top{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#10254A;color:#fff;padding:16px 22px}
+.story-app-name{display:flex;align-items:center;gap:8px;font-size:21px;font-weight:700;letter-spacing:-.025em}
+.story-app-name .mark{width:25px;height:25px;color:#B8D9FF}
+.story-example{font-size:10px;white-space:nowrap;border:1px solid #597091;border-radius:5px;padding:3px 7px;color:#E6F2FF}
+.story-window-body{padding:25px 24px 8px}.story-window-body h4{font-size:23px;line-height:1.3;letter-spacing:-.03em;margin:0 0 6px;color:#10254A}
+.story-window-body>p{font-size:13px;color:#536989;margin-bottom:22px}
+.story-table{width:100%;border-collapse:collapse;table-layout:fixed;color:#10254A}
+.story-table col:nth-child(1){width:25%}.story-table col:nth-child(2){width:25%}
+.story-table col:nth-child(3){width:18%}.story-table col:nth-child(4){width:32%}
+.story-table th{font-size:12px;text-align:left;font-weight:600;color:#536989;background:#F3F7FD;padding:11px 12px}
+.story-table td{font-size:14px;padding:18px 12px;border-bottom:1px solid #E8EFF8;vertical-align:middle}
+.story-table th:last-child,.story-table td:last-child{text-align:right}
+.story-table td:first-child{font-size:12px;color:#536989;white-space:nowrap}.story-table td:last-child{white-space:nowrap}
+.story-event{display:flex;align-items:center;gap:9px}
+.story-event i{font-size:15px;font-style:normal;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;flex:none;
+ background:#E6F2FF;color:#0B4DC2}.story-event.reward i{background:#F2EDFF;color:#7352AA}
+.story-asset{font-size:12px;font-weight:700;letter-spacing:.02em}
+.story-window figcaption{font-family:inherit;font-size:11px;color:#536989;padding:16px 24px 21px}
+.story-portfolio-link{font-size:14px;display:inline-block;margin-top:18px;text-decoration:none;font-weight:600}
+.story-report{min-width:0}.story-report-stack{position:relative;margin:0 8px 24px 0;isolation:isolate}
+.story-report-stack:before{content:"";position:absolute;inset:16px -9px -9px 11px;background:#EDF4FD;transform:rotate(5deg);z-index:-1;
+ border:1px solid #E1EBF7;box-shadow:0 14px 32px #173E7410}
+.story-paper{background:#fff;border:1px solid #E6EEF7;box-shadow:0 12px 30px #173E7410;transform:rotate(3deg);padding:27px 25px 23px;color:#10254A;min-height:414px}
+.story-paper .report-brand{font-size:13px;font-weight:800;letter-spacing:-.025em;margin-bottom:22px}
+.story-paper h4{font-size:28px;line-height:1.15;letter-spacing:-.035em;margin:0 0 7px}
+.story-paper .report-year{font-size:11px;color:#536989;padding-bottom:18px;border-bottom:2px solid #E6F2FF}
+.story-paper dl{margin:5px 0 0}.story-paper dl>div{padding:13px 0;border-bottom:1px solid #E6EEF7}
+.story-paper dt{font-size:12px;font-weight:600}.story-paper dd{font-size:17px;font-weight:700;margin:3px 0 0;color:#0B4DC2}
+.story-paper .report-formats{font-size:10px;color:#536989;margin-top:17px;line-height:1.5}
+.story-report-link{font-size:14px;font-weight:600;display:inline-block;margin:8px 0 0 8px}
+.story-news{display:flex;align-items:end;justify-content:space-between;gap:30px;border-top:1px solid #B8D9FF;margin-top:50px;padding-top:25px}
+.story-news h3{font-size:27px;letter-spacing:-.03em;margin:0 0 5px}.story-news p{font-size:15px;color:#425675}
+.story-news .story-kicker{font-size:11px;color:#0B4DC2;margin-bottom:7px}
+.story-news-links{display:flex;gap:22px;flex-wrap:wrap;margin-top:13px}.story-news-links a{font-size:14px;font-weight:600;text-decoration:none}
+.story-local{text-align:right;flex:none}.story-local p{font-size:12px}.story-local a{font-size:12px}
+@media(max-width:1100px){
+ .story-shell{padding-inline:28px}.story-heading{gap:30px;grid-template-columns:2fr 1fr}.story-heading h2{font-size:39px}
+ .story-spread{gap:28px;grid-template-columns:minmax(0,2fr) minmax(245px,1fr)}
+ .story-window-body{padding:22px 16px 5px}.story-table td,.story-table th{padding-inline:6px}.story-paper{padding:24px 20px}
+}
+@media(max-width:800px){
+ .overview-story{padding:58px 0}.story-heading{grid-template-columns:1fr;gap:18px;margin-bottom:35px}
+ .story-heading h2{font-size:clamp(32px,5vw,41px)}.story-heading>p{max-width:34em;font-size:16px}
+ .story-spread{grid-template-columns:1fr;gap:38px}.story-report{max-width:430px;width:100%;margin:0 auto}
+ .story-chapter{min-height:0}.story-chapter h3{font-size:23px}.story-news{margin-top:42px}
+}
+@media(max-width:480px){
+ .story-shell{padding-inline:20px}.overview-story{padding:44px 0 40px}.story-heading h2{font-size:32px}
+ .story-chapter{padding-left:12px;margin-bottom:20px}.story-chapter h3{font-size:21px}
+ .story-window-top{padding:13px 12px;gap:6px}.story-app-name{font-size:15px;gap:5px}.story-app-name .mark{width:19px;height:19px}
+ .story-example{font-size:8px;padding:3px 5px}.story-window-body{padding:18px 12px 0}.story-window-body h4{font-size:21px}
+ .story-window-body>p{font-size:11px;margin-bottom:17px}.story-table th{font-size:9px;padding:9px 3px}
+ .story-table td{font-size:11px;padding:15px 3px}.story-table td:first-child{font-size:9px}
+ .story-event{gap:5px}.story-event i{display:none}.story-asset{font-size:10px}.story-window figcaption{font-size:10px;padding:14px 15px 18px}
+ .story-paper{min-height:0}.story-news{display:block}.story-news h3{font-size:25px}.story-local{text-align:left;margin-top:25px}
+ .story-news-links{gap:18px}.story-news p{font-size:14px}
+}
+"""
+
+
+def homepage_overview(t):
+    """A simplified, labelled view of existing transaction/report functionality."""
+    headings = "".join(f'<span class="accent">{line}</span>' if i else f'<span>{line}</span>'
+                       for i, line in enumerate(t["story_lines"]))
+    columns = "".join(f'<th scope="col">{label}</th>' for label in t["story_columns"])
+    symbols = {"buy": "+", "reward": "◇", "sell": "−"}
+    rows = "".join(f'<tr><td>{date}</td><td><span class="story-event {kind}"><i aria-hidden="true">{symbols[kind]}</i>{event}</span></td>'
+                   f'<td><span class="story-asset">{asset}</span></td><td>{value}</td></tr>'
+                   for date, event, asset, value, kind in t["story_rows"])
+    report = "".join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label, value in t["story_report_items"])
+    return f'''<section class="overview-story" aria-labelledby="overview-title"><div class="story-shell">
+ <div class="story-heading"><h2 id="overview-title">{headings}</h2><p>{t['story_intro']}</p></div>
+ <div class="story-spread">
+  <div class="story-daily"><div class="story-chapter"><p class="story-kicker">{t['story_daily']}</p><h3>{t['story_daily_h']}</h3></div>
+   <figure class="story-window" aria-labelledby="story-transactions-title story-transactions-caption">
+    <div class="story-window-top"><span class="story-app-name">{MARK}Kryptokompis</span><span class="story-example">{t['story_example']}</span></div>
+    <div class="story-window-body"><h4 id="story-transactions-title">{t['story_transactions']}</h4><p>{t['story_transaction_note']}</p>
+     <table class="story-table"><colgroup><col><col><col><col></colgroup><thead><tr>{columns}</tr></thead><tbody>{rows}</tbody></table>
+    </div><figcaption id="story-transactions-caption">{t['story_caption']}</figcaption>
+   </figure><a class="story-portfolio-link" href="{url(t, 'portfolio')}">{t['story_portfolio']} →</a>
+  </div>
+  <div class="story-report"><div class="story-chapter"><p class="story-kicker">{t['story_report']}</p><h3>{t['story_report_h']}</h3></div>
+   <figure class="story-report-stack" aria-labelledby="story-report-title story-report-caption"><div class="story-paper">
+    <p class="report-brand">Kryptokompis</p><h4 id="story-report-title">{t['story_report_title']}</h4>
+    <p class="report-year" id="story-report-caption">{t['story_report_example']}</p><dl>{report}</dl><p class="report-formats">{t['story_report_formats']}</p>
+   </div></figure><a class="story-report-link" href="{t['report_pdf']}">{t['story_report_link']} →</a>
+  </div>
+ </div>
+ <div class="story-news"><div><p class="story-kicker">{t['story_news_kicker']}</p><h3>{t['story_news_h']}</h3><p>{t['story_news_intro']}</p>
+  <div class="story-news-links"><a href="{url(t, 'news')}">{t['story_news_link']} →</a><a href="{url(t, 'guides')}">{t['story_guides_link']} →</a></div></div>
+  <div class="story-local"><p>{t['story_local']}</p><a href="{url(t, 'insights')}#{t['ids'][5]}">{t['story_privacy']} →</a></div>
+ </div>
+</div></section>'''
+
+
 def page(t):
-    """The front page: hero, what the app does (each card links to its page), exchanges, prices, latest posts."""
+    """The front page: hero, product overview, prices and latest posts."""
     x = X[t["lang"]]
-    feats = "".join(
-        f'<a href="{url(t, k)}"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true">{ICON[ic]}</svg></span>'
-        f'<h3>{h}{f"<span class=tag>{tag}</span>" if tag else ""}</h3><p>{p}</p><span class="go2">{x["more"]}</span></a>'
-        for ic, h, p, k, tag in x["feats"])
-    chips = "".join(f"<span>{c}</span>" for c in x["ex_chips"])
     redirect = ("<script>(function(){var m=" + __import__("json").dumps(OLD_ANCHORS[t["lang"]]) +
                 ";var h=location.hash.slice(1);if(m[h])location.replace(m[h]);})();</script>")
     return (head(t, t["title"], t["desc"], body_class="home-blue") + redirect + nav(t) + f"""<main>
 {homepage_hero(t)}
 
-<section class="band"><div class="w">
- <div class="head"><h2>{x['feat_h']}</h2><p class="sub">{x['feat_sub']}</p></div>
- <div class="feat">{feats}</div>
- <div class="chips"><b>{x['ex_h']}</b>{chips}</div>
-</div></section>
+{homepage_overview(t)}
 
 <section class="dark"><div class="w">
  <div class="headrow"><div><h2>{x['tiers_h']}</h2><p class="sub">{x['tiers_sub']}</p></div><a href="{url(t, 'pricing')}">{x['all_prices']} →</a></div>

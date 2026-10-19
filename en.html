@@ -348,6 +348,78 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--ink2);fo
  .hero-shell{padding-inline:16px}.hero-copy h1{font-size:33px}.home-blue header .btn.s{display:none}
  .demo-distribution{gap:14px}.demo-donut{width:108px}.hero-portfolio{padding:16px}
 }
+
+/* Approved overview spread: one product story, not a repeated feature-card grid. */
+.overview-story{position:relative;isolation:isolate;overflow:hidden;padding:86px 0 70px;background:#fff}
+.overview-story:before{content:"";position:absolute;z-index:-1;inset:170px -14% 100px;
+ background:linear-gradient(120deg,#F5FAFF,#E8F4FF 65%,#F8FCFF);border-radius:50%;transform:rotate(-9deg)}
+.story-shell{max-width:1440px;margin:0 auto;padding:0 40px}
+.story-heading{display:grid;grid-template-columns:2.35fr 1fr;gap:48px;align-items:center;margin-bottom:48px}
+.story-heading h2{font-size:clamp(32px,3.55vw,51px);line-height:1.12;letter-spacing:-.04em}
+.story-heading h2 span{display:block}.story-heading h2 .accent{color:#1260E8}
+.story-heading>p{font-size:17px;line-height:1.65;color:#425675}
+.story-spread{display:grid;grid-template-columns:minmax(0,2.55fr) minmax(260px,1fr);gap:42px;align-items:start}
+.story-chapter{padding-left:17px;border-left:4px solid #1260E8;min-height:61px;margin-bottom:25px}
+.story-kicker{font-size:11px;font-weight:700;letter-spacing:.08em;color:#0B4DC2;margin-bottom:8px}
+.story-chapter h3{font-size:clamp(19px,1.75vw,25px);letter-spacing:-.035em;line-height:1.2}
+.story-window{margin:0;min-width:0;overflow:hidden;border:1px solid #DFEAF6;border-radius:14px;background:#fff;box-shadow:0 18px 50px #214B7D0D}
+.story-window-top{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#10254A;color:#fff;padding:16px 22px}
+.story-app-name{display:flex;align-items:center;gap:8px;font-size:21px;font-weight:700;letter-spacing:-.025em}
+.story-app-name .mark{width:25px;height:25px;color:#B8D9FF}
+.story-example{font-size:10px;white-space:nowrap;border:1px solid #597091;border-radius:5px;padding:3px 7px;color:#E6F2FF}
+.story-window-body{padding:25px 24px 8px}.story-window-body h4{font-size:23px;line-height:1.3;letter-spacing:-.03em;margin:0 0 6px;color:#10254A}
+.story-window-body>p{font-size:13px;color:#536989;margin-bottom:22px}
+.story-table{width:100%;border-collapse:collapse;table-layout:fixed;color:#10254A}
+.story-table col:nth-child(1){width:25%}.story-table col:nth-child(2){width:25%}
+.story-table col:nth-child(3){width:18%}.story-table col:nth-child(4){width:32%}
+.story-table th{font-size:12px;text-align:left;font-weight:600;color:#536989;background:#F3F7FD;padding:11px 12px}
+.story-table td{font-size:14px;padding:18px 12px;border-bottom:1px solid #E8EFF8;vertical-align:middle}
+.story-table th:last-child,.story-table td:last-child{text-align:right}
+.story-table td:first-child{font-size:12px;color:#536989;white-space:nowrap}.story-table td:last-child{white-space:nowrap}
+.story-event{display:flex;align-items:center;gap:9px}
+.story-event i{font-size:15px;font-style:normal;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;flex:none;
+ background:#E6F2FF;color:#0B4DC2}.story-event.reward i{background:#F2EDFF;color:#7352AA}
+.story-asset{font-size:12px;font-weight:700;letter-spacing:.02em}
+.story-window figcaption{font-family:inherit;font-size:11px;color:#536989;padding:16px 24px 21px}
+.story-portfolio-link{font-size:14px;display:inline-block;margin-top:18px;text-decoration:none;font-weight:600}
+.story-report{min-width:0}.story-report-stack{position:relative;margin:0 8px 24px 0;isolation:isolate}
+.story-report-stack:before{content:"";position:absolute;inset:16px -9px -9px 11px;background:#EDF4FD;transform:rotate(5deg);z-index:-1;
+ border:1px solid #E1EBF7;box-shadow:0 14px 32px #173E7410}
+.story-paper{background:#fff;border:1px solid #E6EEF7;box-shadow:0 12px 30px #173E7410;transform:rotate(3deg);padding:27px 25px 23px;color:#10254A;min-height:414px}
+.story-paper .report-brand{font-size:13px;font-weight:800;letter-spacing:-.025em;margin-bottom:22px}
+.story-paper h4{font-size:28px;line-height:1.15;letter-spacing:-.035em;margin:0 0 7px}
+.story-paper .report-year{font-size:11px;color:#536989;padding-bottom:18px;border-bottom:2px solid #E6F2FF}
+.story-paper dl{margin:5px 0 0}.story-paper dl>div{padding:13px 0;border-bottom:1px solid #E6EEF7}
+.story-paper dt{font-size:12px;font-weight:600}.story-paper dd{font-size:17px;font-weight:700;margin:3px 0 0;color:#0B4DC2}
+.story-paper .report-formats{font-size:10px;color:#536989;margin-top:17px;line-height:1.5}
+.story-report-link{font-size:14px;font-weight:600;display:inline-block;margin:8px 0 0 8px}
+.story-news{display:flex;align-items:end;justify-content:space-between;gap:30px;border-top:1px solid #B8D9FF;margin-top:50px;padding-top:25px}
+.story-news h3{font-size:27px;letter-spacing:-.03em;margin:0 0 5px}.story-news p{font-size:15px;color:#425675}
+.story-news .story-kicker{font-size:11px;color:#0B4DC2;margin-bottom:7px}
+.story-news-links{display:flex;gap:22px;flex-wrap:wrap;margin-top:13px}.story-news-links a{font-size:14px;font-weight:600;text-decoration:none}
+.story-local{text-align:right;flex:none}.story-local p{font-size:12px}.story-local a{font-size:12px}
+@media(max-width:1100px){
+ .story-shell{padding-inline:28px}.story-heading{gap:30px;grid-template-columns:2fr 1fr}.story-heading h2{font-size:39px}
+ .story-spread{gap:28px;grid-template-columns:minmax(0,2fr) minmax(245px,1fr)}
+ .story-window-body{padding:22px 16px 5px}.story-table td,.story-table th{padding-inline:6px}.story-paper{padding:24px 20px}
+}
+@media(max-width:800px){
+ .overview-story{padding:58px 0}.story-heading{grid-template-columns:1fr;gap:18px;margin-bottom:35px}
+ .story-heading h2{font-size:clamp(32px,5vw,41px)}.story-heading>p{max-width:34em;font-size:16px}
+ .story-spread{grid-template-columns:1fr;gap:38px}.story-report{max-width:430px;width:100%;margin:0 auto}
+ .story-chapter{min-height:0}.story-chapter h3{font-size:23px}.story-news{margin-top:42px}
+}
+@media(max-width:480px){
+ .story-shell{padding-inline:20px}.overview-story{padding:44px 0 40px}.story-heading h2{font-size:32px}
+ .story-chapter{padding-left:12px;margin-bottom:20px}.story-chapter h3{font-size:21px}
+ .story-window-top{padding:13px 12px;gap:6px}.story-app-name{font-size:15px;gap:5px}.story-app-name .mark{width:19px;height:19px}
+ .story-example{font-size:8px;padding:3px 5px}.story-window-body{padding:18px 12px 0}.story-window-body h4{font-size:21px}
+ .story-window-body>p{font-size:11px;margin-bottom:17px}.story-table th{font-size:9px;padding:9px 3px}
+ .story-table td{font-size:11px;padding:15px 3px}.story-table td:first-child{font-size:9px}
+ .story-event{gap:5px}.story-event i{display:none}.story-asset{font-size:10px}.story-window figcaption{font-size:10px;padding:14px 15px 18px}
+ .story-paper{min-height:0}.story-news{display:block}.story-news h3{font-size:25px}.story-local{text-align:left;margin-top:25px}
+ .story-news-links{gap:18px}.story-news p{font-size:14px}
+}
 </style>
 <script data-goatcounter="https://duplexsteel.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body class="home-blue">
 <script>(function(){var m={"portfolio": "portfolio.html", "tax": "tax.html", "imports": "exchanges.html", "insights": "insights.html", "get-started": "pricing.html#get-started", "data": "insights.html#data", "faq": "faq.html"};var h=location.hash.slice(1);if(m[h])location.replace(m[h]);})();</script><header><div class="w"><nav aria-label="Main">
@@ -383,10 +455,28 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--ink2);fo
  </div>
 </div></div>
 
-<section class="band"><div class="w">
- <div class="head"><h2>Everything in one place</h2><p class="sub">Kryptokompis does two jobs: keeps track of your crypto every day, and works out the tax when the tax return comes.</p></div>
- <div class="feat"><a href="portfolio.html"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg></span><h3>Portfolio<span class=tag>Free</span></h3><p>All your coins from every exchange added up, valued in NOK with the 24-hour change. Updates by itself.</p><span class="go2">Read more</span></a><a href="tax.html"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></span><h3>Crypto tax</h3><p>Gains, losses, income and wealth under Norwegian rules, ready for the Virtuelle eiendeler card. With PDF and CSV as documentation.</p><span class="go2">Read more</span></a><a href="exchanges.html"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3v5M15 3v5M7 8h10v3a5 5 0 0 1-10 0zM12 16v5"/></svg></span><h3>Exchanges and imports</h3><p>Kraken, Binance, Coinbase and KuCoin with a read-only API key. Firi, Revolut X and the rest with a file.</p><span class="go2">Read more</span></a><a href="insights.html"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><h3>Checks</h3><p>Holdings are reconciled with the exchanges, and you are told about gaps instead of the app guessing.</p><span class="go2">Read more</span></a><a href="insights.html#data"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><h3>Your data stays with you</h3><p>No account and no cloud. Everything is stored on your PC or phone, and the keys can never trade or withdraw.</p><span class="go2">Read more</span></a><a href="pricing.html#get-started"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="14" height="10" rx="1.5"/><path d="M6 18h6"/><rect x="17" y="8" width="5" height="12" rx="1.2"/></svg></span><h3>PC and phone</h3><p>Windows 10 and 11, and Android. One licence covers both, and new versions install with one click.</p><span class="go2">Read more</span></a></div>
- <div class="chips"><b>Works with</b><span>Kraken</span><span>Binance</span><span>Coinbase</span><span>KuCoin</span><span>Firi</span><span>Revolut X</span><span>Everything else via template</span></div>
+<section class="overview-story" aria-labelledby="overview-title"><div class="story-shell">
+ <div class="story-heading"><h2 id="overview-title"><span>Clarity every day.</span><span class="accent">Reports when you need them.</span></h2><p>Follow your portfolio, stay informed and bring together the figures for your tax return.</p></div>
+ <div class="story-spread">
+  <div class="story-daily"><div class="story-chapter"><p class="story-kicker">01 / THROUGHOUT THE YEAR</p><h3>See what you own. Understand its history.</h3></div>
+   <figure class="story-window" aria-labelledby="story-transactions-title story-transactions-caption">
+    <div class="story-window-top"><span class="story-app-name"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><g fill="currentColor"><rect x="5" y="5" width="5" height="22" rx="1.4"/><rect x="20" y="5" width="8" height="3.6" rx="1.4"/><rect x="16" y="9.6" width="8" height="3.6" rx="1.4"/><rect x="12" y="14.2" width="8" height="3.6" rx="1.4"/><rect x="16" y="18.8" width="8" height="3.6" rx="1.4"/><rect x="20" y="23.4" width="8" height="3.6" rx="1.4"/></g></svg>Kryptokompis</span><span class="story-example">Simplified example</span></div>
+    <div class="story-window-body"><h4 id="story-transactions-title">Transaction history</h4><p>Buys, sells and rewards</p>
+     <table class="story-table"><colgroup><col><col><col><col></colgroup><thead><tr><th scope="col">Date</th><th scope="col">Event</th><th scope="col">Asset</th><th scope="col">Value (NOK)</th></tr></thead><tbody><tr><td>19 Jan 2025</td><td><span class="story-event buy"><i aria-hidden="true">+</i>Buy</span></td><td><span class="story-asset">ETH</span></td><td>67,200</td></tr><tr><td>6 Feb 2025</td><td><span class="story-event buy"><i aria-hidden="true">+</i>Buy</span></td><td><span class="story-asset">XRP</span></td><td>8,663</td></tr><tr><td>14 Mar 2025</td><td><span class="story-event reward"><i aria-hidden="true">◇</i>Reward</span></td><td><span class="story-asset">ETH</span></td><td>139</td></tr><tr><td>19 Apr 2025</td><td><span class="story-event sell"><i aria-hidden="true">−</i>Sell</span></td><td><span class="story-asset">BTC</span></td><td>19,950</td></tr></tbody></table>
+    </div><figcaption id="story-transactions-caption">Simplified view with made-up transactions.</figcaption>
+   </figure><a class="story-portfolio-link" href="portfolio.html">Explore the portfolio →</a>
+  </div>
+  <div class="story-report"><div class="story-chapter"><p class="story-kicker">02 / WHEN YOU NEED IT</p><h3>From overview to report.</h3></div>
+   <figure class="story-report-stack" aria-labelledby="story-report-title story-report-caption"><div class="story-paper">
+    <p class="report-brand">Kryptokompis</p><h4 id="story-report-title">Annual overview</h4>
+    <p class="report-year" id="story-report-caption">Example report · 2025</p><dl><div><dt>Gains</dt><dd>NOK 7,527</dd></div><div><dt>Losses</dt><dd>NOK 6,616</dd></div><div><dt>Income</dt><dd>NOK 428</dd></div><div><dt>Wealth</dt><dd>NOK 99,298</dd></div></dl><p class="report-formats">PDF and CSV for your records</p>
+   </div></figure><a class="story-report-link" href="eksempel/Kryptokompis-example-report-2025.pdf">View example report →</a>
+  </div>
+ </div>
+ <div class="story-news"><div><p class="story-kicker">NEWS AND KNOW-HOW</p><h3>Crypto news and guides</h3><p>Follow the market and find explanations along the way.</p>
+  <div class="story-news-links"><a href="crypto-news.html">Explore crypto news →</a><a href="guides.html">Find a guide →</a></div></div>
+  <div class="story-local"><p>Local on Windows and Android.</p><a href="insights.html#data">Read about privacy →</a></div>
+ </div>
 </div></section>
 
 <section class="dark"><div class="w">
