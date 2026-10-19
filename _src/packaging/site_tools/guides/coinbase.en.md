@@ -1,5 +1,6 @@
 ---
 title: Coinbase: API key or statement file
+draft: yes
 date: 2026-10-16
 summary: Connect Coinbase with a View-only key (ECDSA), or import the transaction history as CSV.
 order: 4

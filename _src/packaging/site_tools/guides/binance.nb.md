@@ -1,5 +1,6 @@
 ---
 title: Binance: koble til med API-nøkkel
+draft: yes
 date: 2026-10-16
 summary: Lag en Binance-nøkkel med bare lesetilgang og lim den inn i Kryptokompis.
 order: 3

@@ -1,5 +1,6 @@
 ---
 title: Binance: connect with an API key
+draft: yes
 date: 2026-10-16
 summary: Create a read-only Binance key and paste it into Kryptokompis.
 order: 3

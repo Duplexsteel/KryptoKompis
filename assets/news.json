@@ -1,6 +1,84 @@
 [
 {
-"title": "Wall Street freaked out Friday. VIX and bitcoin say the fear may fade Monday.",
+"title": "Bitcoin, Ether ETFs shed $549M as October ETH outflows near $1B",
+"link": "https://cointelegraph.com/markets/bitcoin-ether-etfs-549-million-weekly-outflows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-19T07:54:13+00:00"
+},
+{
+"title": "Bitcoin whale moves $34 million in BTC it got in 2013 when coins traded at $131",
+"link": "https://www.coindesk.com/markets/2026/10/19/bitcoin-whale-moves-usd34-million-in-btc-it-got-in-2013-when-coins-traded-at-usd131",
+"source": "CoinDesk",
+"at": "2026-10-19T06:23:16+00:00"
+},
+{
+"title": "Zoom adds ‘proof of human’ badges to show you’re not a deepfake",
+"link": "https://cointelegraph.com/news/zoom-proof-of-human-badges-world-id-ai-deepfakes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-19T05:55:44+00:00"
+},
+{
+"title": "Here’s what happened in crypto today",
+"link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-19T05:48:07+00:00"
+},
+{
+"title": "Zcash developers plan a fix to keep ZEC swaps private from future quantum computers",
+"link": "https://www.coindesk.com/tech/2026/10/19/zcash-developers-plan-a-fix-to-keep-zec-swaps-private-from-future-quantum-computers",
+"source": "CoinDesk",
+"at": "2026-10-19T05:23:02+00:00"
+},
+{
+"title": "South Korea to meet crypto exchanges amid calls for tax delay",
+"link": "https://cointelegraph.com/news/south-korea-to-meet-crypto-exchanges-amid-calls-for-tax-delay?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-19T05:14:06+00:00"
+},
+{
+"title": "XRP Ledger is set to fix its lending code before anyone can use it",
+"link": "https://www.coindesk.com/tech/2026/10/19/xrp-ledger-is-set-to-fix-its-lending-code-before-anyone-can-use-it",
+"source": "CoinDesk",
+"at": "2026-10-19T04:54:31+00:00"
+},
+{
+"title": "Bitcoin, Korea’s Kospi and Nasdaq futures rally as China GDP beats estimates",
+"link": "https://www.coindesk.com/markets/2026/10/19/bitcoin-korea-s-kospi-and-nasdaq-futures-rally-as-china-gdp-beats-estimates",
+"source": "CoinDesk",
+"at": "2026-10-19T03:36:58+00:00"
+},
+{
+"title": "Deutsche Bank targets Asia crypto custody expansion in 2027 as German launch nears",
+"link": "https://www.coindesk.com/business/2026/10/18/deutsche-bank-targets-asia-crypto-custody-expansion-in-2027-as-german-launch-nears",
+"source": "CoinDesk",
+"at": "2026-10-19T02:00:00+00:00"
+},
+{
+"title": "Qubic freezes chain after attacker drains 1.4K wallets with weak seeds",
+"link": "https://cointelegraph.com/news/qubic-freezes-chain-after-attacker-drains-14k-wallets-with-weak-seeds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-19T01:03:27+00:00"
+},
+{
+"title": "SEC tokenized stock framework faces issuer pushback as Broadcom, Verizon object to OKX-ICE listing",
+"link": "https://www.coindesk.com/business/2026/10/18/sec-tokenized-stock-framework-faces-issuer-pushback-as-broadcom-verizon-object-to-okx-ice-listing",
+"source": "CoinDesk",
+"at": "2026-10-18T23:28:06+00:00"
+},
+{
+"title": "Richard Heart caught ‘off-guard,’ QDay gets even closer: Hodler’s Digest",
+"link": "https://cointelegraph.com/magazine/richard-heart-caught-with-pants-down-qday-gets-even-closer-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-18T22:58:17+00:00"
+},
+{
+"title": "The White House's crypto chief departs: State of Crypto",
+"link": "https://www.coindesk.com/policy/2026/10/18/the-white-house-s-crypto-chief-departs-state-of-crypto",
+"source": "CoinDesk",
+"at": "2026-10-18T18:30:00+00:00"
+},
+{
+"title": "Wall Street freaked out Friday, but VIX and bitcoin trades say the fear may fade Monday.",
 "link": "https://www.coindesk.com/markets/2026/10/18/wall-street-freaked-out-friday-vix-and-bitcoin-say-it-may-not-last",
 "source": "CoinDesk",
 "at": "2026-10-18T16:33:00+00:00"
@@ -28,12 +106,6 @@
 "link": "https://www.coindesk.com/business/2026/10/18/stablecoin-supply-stalls-but-payments-jump-45-as-visa-mastercard-and-stripe-connect-crypto-to-cash",
 "source": "CoinDesk",
 "at": "2026-10-18T14:00:00+00:00"
-},
-{
-"title": "Here’s what happened in crypto today",
-"link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-18T13:54:00+00:00"
 },
 {
 "title": "Most Americans polled oppose betting on elections: Reuters",
@@ -286,77 +358,5 @@
 "link": "https://decrypt.co/381148/three-canadian-armed-forces-members-charged-in-kidnapping-of-crypto-exchange-owner",
 "source": "Decrypt",
 "at": "2026-10-16T15:43:58+00:00"
-},
-{
-"title": "Big Tech's AI auditors will only see what they're shown",
-"link": "https://www.coindesk.com/opinion/2026/10/16/big-tech-s-ai-auditors-will-only-see-what-they-re-shown",
-"source": "CoinDesk",
-"at": "2026-10-16T14:58:22+00:00"
-},
-{
-"title": "Strategy conditionally declares daily dividends as STRC hovers below $100",
-"link": "https://cointelegraph.com/news/strategy-daily-dividends-strc-hovers-below-100?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-16T14:11:03+00:00"
-},
-{
-"title": "Ledger’s early implant warnings deserved more action, Karpelès says",
-"link": "https://cointelegraph.com/news/ledger-early-implant-warnings-mark-karpeles?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-16T13:51:35+00:00"
-},
-{
-"title": "Crypto Analyst Lark Davis: The Bitcoin Bull Run has Begun",
-"link": "https://bitcoinmagazine.com/videos/crypto-analyst-lark-davis-the-bitcoin-bull-run-has-begun",
-"source": "Bitcoin Magazine",
-"at": "2026-10-16T13:48:18+00:00"
-},
-{
-"title": "Deutsche Bank prepares German crypto custody launch, eyes Asia: Report",
-"link": "https://cointelegraph.com/news/deutsche-bank-crypto-custody-expansion-asia-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-16T13:33:40+00:00"
-},
-{
-"title": "Math Professor Warns of Threat to Bitcoin from AI Pivot",
-"link": "https://bitcoinmagazine.com/videos/math-professor-warns-of-threat-to-bitcoin-from-ai-pivot",
-"source": "Bitcoin Magazine",
-"at": "2026-10-16T13:25:44+00:00"
-},
-{
-"title": "Morgan Stanley’s Amy Oldenburg: The Digital Gold Investment Case for Bitcoin",
-"link": "https://bitcoinmagazine.com/videos/morgan-stanleys-amy-oldenburg-the-digital-gold-investment-case-for-bitcoin",
-"source": "Bitcoin Magazine",
-"at": "2026-10-16T13:20:36+00:00"
-},
-{
-"title": "Sazmining Brings Proto’s Immersion Hashboards to Individual Owners, With 0% Financing From $1,397 Down",
-"link": "https://bitcoinmagazine.com/press-releases/sazmining-brings-protos-immersion-hashboards-to-individual-owners-with-0-financing-from-1397-down",
-"source": "Bitcoin Magazine",
-"at": "2026-10-16T12:42:22+00:00"
-},
-{
-"title": "Scammer Lost $4.8M in Bitcoin to Tampered Ledger Wallets: Chainalysis",
-"link": "https://decrypt.co/381141/scammer-lost-4-8m-in-bitcoin-to-tampered-ledger-wallets-chainalysis",
-"source": "Decrypt",
-"at": "2026-10-16T12:22:18+00:00"
-},
-{
-"title": "Morning Minute: Google Clears a Major Quantum Hurdle, Bitcoin Still Safe",
-"link": "https://decrypt.co/381138/morning-minute-google-clears-a-major-quantum-hurdle-bitcoin-still-safe",
-"source": "Decrypt",
-"at": "2026-10-16T11:46:54+00:00"
-},
-{
-"title": "Solana’s Liu says Shanghai event postponed over registration surge",
-"link": "https://cointelegraph.com/news/solana-shanghai-postponed-exceeding-event-cap?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-16T11:22:47+00:00"
-},
-{
-"title": "Traders will soon be able to bet on whether Coinbase, Robinhood and Marathon will hit their targets",
-"link": "https://www.coindesk.com/daybook-us/2026/10/16/traders-will-soon-be-able-to-bet-on-whether-coinbase-robinhood-and-marathon-will-hit-their-targets",
-"source": "CoinDesk",
-"at": "2026-10-16T11:15:00+00:00"
 }
 ]

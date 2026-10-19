@@ -1,5 +1,6 @@
 ---
 title: Firi: import your transactions
+draft: yes
 date: 2026-10-16
 summary: Download the transactions file from Firi and import it. Trades, staking and fees are included.
 order: 6

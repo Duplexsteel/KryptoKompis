@@ -1,5 +1,6 @@
 ---
 title: Andre børser og lommebøker: importmalen
+draft: yes
 date: 2026-10-16
 summary: Nordnet, NBX, maskinvarelommebøker og alt annet uten egen import - fyll inn malen og importer den.
 order: 8

@@ -3,7 +3,7 @@
 Content lives as Markdown next to this script - edit there, never in site/:
   guides/<slug>.nb.md and guides/<slug>.en.md   one guide or news post per language
   pages/om.nb.md, pages/about.en.md             the About page
-Front matter (between --- lines): title, date (YYYY-MM-DD), summary, kind (guide | news | blog - news/blog go on the blog page),
+Front matter (between --- lines): title, date (YYYY-MM-DD), summary, draft (yes = hidden), kind (guide | news | blog - news/blog go on the blog page),
 optional order (reading order of guides on the list page), optional video (a YouTube id, embedded privacy-friendly via youtube-nocookie.com).
 
 New post every other week: add the two .md files, run this script, push the site.
@@ -126,6 +126,9 @@ def build() -> list:
         for f in sorted((HERE / "guides").glob(f"*.{lang}.md")):
             slug = f.name[: -len(f".{lang}.md")]
             m = read(f)
+            if str(m.get("draft", "")).lower() in ("yes", "true", "1"):   # draft: not on the site until verified
+                print(f"draft: {f.name}")
+                continue
             if m["date"] > today():                  # scheduled: goes live on its date (daily site build)
                 print(f"scheduled {m['date']}: {f.name}")
                 continue

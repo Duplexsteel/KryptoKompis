@@ -1,5 +1,6 @@
 ---
 title: Coinbase: API-nøkkel eller eksportfil
+draft: yes
 date: 2026-10-16
 summary: Koble til Coinbase med en View only-nøkkel (ECDSA), eller importer transaksjonshistorikken som CSV.
 order: 4

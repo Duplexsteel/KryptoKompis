@@ -1,5 +1,6 @@
 ---
 title: Other exchanges and wallets: the import template
+draft: yes
 date: 2026-10-16
 summary: Nordnet, NBX, hardware wallets and anything else without its own import - fill in the template and import it.
 order: 8

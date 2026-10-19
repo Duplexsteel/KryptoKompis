@@ -1,5 +1,6 @@
 ---
 title: Revolut X: import the account statement
+draft: yes
 date: 2026-10-16
 summary: The Revolut X API does not show transfers or fees, so the account statement is the source. How to get it.
 order: 7

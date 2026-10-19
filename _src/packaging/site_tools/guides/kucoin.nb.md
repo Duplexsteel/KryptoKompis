@@ -1,5 +1,6 @@
 ---
 title: KuCoin: API-nøkkel og eldre historikk
+draft: yes
 date: 2026-10-16
 summary: KuCoins API gir bare de siste 12 månedene. Slik kobler du til, og slik får du med eldre år.
 order: 5

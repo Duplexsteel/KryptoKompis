@@ -1,5 +1,6 @@
 ---
 title: Firi: importer transaksjonene
+draft: yes
 date: 2026-10-16
 summary: Last ned transaksjonsfilen fra Firi og importer den. Handler, staking og gebyrer kommer med.
 order: 6

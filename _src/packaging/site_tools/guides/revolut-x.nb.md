@@ -1,5 +1,6 @@
 ---
 title: Revolut X: importer kontoutskriften
+draft: yes
 date: 2026-10-16
 summary: Revolut X sitt API viser ikke overføringer og gebyrer, så kontoutskriften er kilden. Slik henter du den.
 order: 7

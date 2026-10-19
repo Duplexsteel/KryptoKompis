@@ -1,5 +1,6 @@
 ---
 title: KuCoin: API key and older history
+draft: yes
 date: 2026-10-16
 summary: KuCoin's API only reaches the last 12 months. How to connect, and how to add older years.
 order: 5
