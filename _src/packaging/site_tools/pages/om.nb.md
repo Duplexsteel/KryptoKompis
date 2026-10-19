@@ -53,3 +53,4 @@ photo_alt: Christian Thesen
 <p>Har du spørsmål, tilbakemeldinger eller forslag til forbedringer?</p>
 <p>Du kan kontakte meg på <a href="mailto:kryptokompis@outlook.com">kryptokompis@outlook.com</a>, via <a href="https://discord.gg/hnAGgsAQ5V">Discord</a> eller på <a href="https://www.linkedin.com/in/christian-thesen">LinkedIn</a>.</p>
 </div>
+

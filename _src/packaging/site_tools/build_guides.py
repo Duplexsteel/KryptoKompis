@@ -90,7 +90,7 @@ def nice_date(d: str, t: dict) -> str:
 def page(lang: str, file: str, other: str, title: str, desc: str, main: str) -> str:
     p = dict(B.T[lang], file=file, other=other)
     return (B.head(p, title, desc).replace("</head>", CSS + "</head>", 1) + B.nav(p, home_page=False)
-            + f"<main>{main}</main>" + B.footer(p))
+            + f'<main id="main">{main}</main>' + B.footer(p))
 
 
 def video(vid: str, t: dict) -> str:
@@ -126,7 +126,7 @@ def build() -> list:
         for f in sorted((HERE / "guides").glob(f"*.{lang}.md")):
             slug = f.name[: -len(f".{lang}.md")]
             m = read(f)
-            if str(m.get("draft", "")).lower() in ("yes", "true", "1"):   # draft: not on the site until verified
+            if str(m.get("draft", "")).lower() in ("yes", "true", "1"):
                 print(f"draft: {f.name}")
                 continue
             if m["date"] > today():                  # scheduled: goes live on its date (daily site build)
@@ -141,12 +141,16 @@ def build() -> list:
 
     for lang, t in L.items():
         for m in posts[lang]:
+            other_lang = 'en' if lang == 'nb' else 'nb'
+            if m['other'] not in {post['file'] for post in posts[other_lang]}:
+                m['other'] = t['other_list']
             back = (t["blog"], t["blog_h1"]) if m.get("kind", "guide") != "guide" else (t["list"], t["back"])
             main = (f'<article class="w art"><p class="meta"><a href="{back[0]}">{back[1]}</a> · {t["updated"]} {nice_date(m["date"], t)}</p>'
                     f'<h1>{escape(m["title"])}</h1><p class="lead">{escape(m["summary"])}</p>'
                     + (video(m["video"], t) if m.get("video") else "") + m["html"]
                     + f'<p class="end"><a class="btn" href="{t["cta_href"]}">{t["cta"]}</a>'
                       f'<a class="btn g" href="{B.DISCORD}" target="_blank" rel="noopener">Discord</a></p></article>')
+            main = B.DESIGN.reading(B.T[lang], main.replace('class="w art"', 'class="article-content"'))
             (SITE / m["file"]).write_text(page(lang, m["file"], m["other"], f'{m["title"]} - Kryptokompis', m["summary"], main), encoding="utf-8")
             urls.append((m["file"], m["date"]))
 
@@ -165,17 +169,24 @@ def build() -> list:
         intro = next((m for m in posts[lang] if m["slug"] == "hva-er-api"), None)      # the explainer video, first
         start = (f'<p><a class="btn s" href="{intro["file"]}">{t["api_intro"]}</a></p>' if intro else "")
         keys = f'<div class="gsec"><h2>{t["keys_h"]}</h2><p>{t["keys_p"]}</p>{start}<ul class="glist">{rows}</ul></div>' if rows else ""
-        main = (f'<div class="w art" style="max-width:900px"><h1>{t["h1"]}</h1><p class="lead">{t["lead"]}</p>'
-                f'<p class="rss"><a href="{t["rss"]}">{t["rss_label"]}</a></p>'
-                + keys + f'<div class="gsec"><h2>{t["guides"]}</h2><ul class="glist">{items("guide")}</ul></div></div>')
+        main = (f'<section class="space"><div class="wrap guide-index">'
+                + B.DESIGN.title(B.T[lang], 'guides', 'guide_page_h')
+                + f'<p class="intro">{t["lead"]}</p><div class="topic-list">'
+                + f'<a href="#guide-list">{t["guides"]}</a><a href="{t["blog"]}">{t["blog_h1"]}</a>'
+                + f'<a href="{t["rss"]}">{t["rss_label"]}</a></div><div class="editorial">'
+                + f'<div class="feature-article"><p class="eyebrow">{t["guides"]}</p>'
+                + f'<h2>{B.DESIGN.text(B.T[lang], "guide_h")}</h2><p>{B.DESIGN.text(B.T[lang], "guide_p")}</p>{start}{keys}</div>'
+                + f'<div class="article-list" id="guide-list"><ul class="glist">{items("guide")}</ul></div></div></div></section>')
         (SITE / t["list"]).write_text(page(lang, t["list"], t["other_list"], f'{t["h1"]} - Kryptokompis', t["lead"], main), encoding="utf-8")
         urls.append((t["list"], posts[lang][0]["date"] if posts[lang] else None))
 
         # Blog: news and blog posts (kind news | blog), newest first
         blog = "".join(f'<li><a href="{m["file"]}"><b>{escape(m["title"])}</b><span>{escape(m["summary"])}</span>'
                        f'<small>{nice_date(m["date"], t)}</small></a></li>' for m in posts[lang] if m.get("kind", "guide") != "guide")
-        main = (f'<div class="w art" style="max-width:900px"><h1>{t["blog_h1"]}</h1><p class="lead">{t["blog_lead"]}</p>'
-                f'<p class="rss"><a href="{t["rss"]}">{t["rss_label"]}</a></p><ul class="glist">{blog}</ul></div>')
+        main = (f'<section class="space white"><div class="wrap guide-index">'
+                + B.DESIGN.title(B.T[lang], 'guides', 'blog_h')
+                + f'<p class="intro">{t["blog_lead"]}</p><div class="topic-list">'
+                + f'<a href="{t["list"]}">{t["guides"]}</a><a href="{t["rss"]}">{t["rss_label"]}</a></div><ul class="glist">{blog}</ul></div></section>')
         (SITE / t["blog"]).write_text(page(lang, t["blog"], t["other_blog"], f'{t["blog_h1"]} - Kryptokompis', t["blog_lead"], main), encoding="utf-8")
         urls.append((t["blog"], None))
 
@@ -183,10 +194,8 @@ def build() -> list:
         home = SITE / B.T[lang]["file"]
         if home.exists():
             x = B.X[lang]
-            cards = "".join(f'<a href="{m["file"]}"><small>{nice_date(m["date"], t)}</small><b>{escape(m["title"])}</b>'
-                            f'<span>{escape(m["summary"])}</span></a>' for m in posts[lang][:3])
-            block = (f'<section><div class="w"><div class="headrow"><h2>{x["latest_h"]}</h2>'
-                     f'<a href="{t["list"]}">{x["latest_all"]} →</a></div><div class="latest">{cards}</div></div></section>')
+            cards = "".join(f'<a class="article-row" href="{m["file"]}"><span class="tiny">{nice_date(m["date"], t)}</span><h3>{escape(m["title"])}</h3><p>{escape(m["summary"])}</p></a>' for m in posts[lang][:3])
+            block = B.DESIGN.latest(B, B.T[lang], cards)
             html = home.read_text(encoding="utf-8")
             if "<!--LATEST-->" in html:
                 home.write_text(html.replace("<!--LATEST-->", block), encoding="utf-8")
@@ -194,8 +203,7 @@ def build() -> list:
         a = read(HERE / "pages" / t["about_src"])
         photo = (f'<img class="who" src="{escape(a["photo"])}" alt="{escape(a.get("photo_alt", ""))}" width="120" height="120">'
                  if a.get("photo") else "")
-        main = (f'<article class="w art"><div class="whohead">{photo}<div><h1>{escape(a["title"])}</h1>'
-                f'<p class="lead">{escape(a["summary"])}</p></div></div>{a["html"]}</article>')
+        main = B.DESIGN.about(B, B.T[lang], a["html"], photo)
         (SITE / t["about"]).write_text(page(lang, t["about"], t["other_about"], f'{a["title"]} - Kryptokompis', a["summary"], main), encoding="utf-8")
         urls.append((t["about"], None))
 

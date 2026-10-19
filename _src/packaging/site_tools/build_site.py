@@ -6,6 +6,7 @@ Facts on the page must match the app (prices in app/core/version.py, exchanges i
 import json
 import shutil
 import sys
+import site_design as DESIGN
 from pathlib import Path
 
 SITE = Path(sys.argv[1] if len(sys.argv) > 1 else "site")
@@ -504,13 +505,14 @@ for _t in T.values():
 
 
 def head(t, title, desc, path=None, body_class=""):
+    body_class = "home-blue site-design"
     url = f"{SITE_URL}/{path or t['file']}"
     return f"""<!doctype html>
 <html lang="{t['lang']}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<meta name="theme-color" content="{'#F5FAFF' if body_class == 'home-blue' else '#F4F7F5'}">
+<meta name="theme-color" content="{'#F5FAFF'}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Kryptokompis">
 <meta property="og:title" content="{t.get('og_title', title)}"><meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url}"><meta property="og:locale" content="{t['locale']}">
@@ -522,7 +524,7 @@ def head(t, title, desc, path=None, body_class=""):
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{FONTS}" rel="stylesheet">
-<style>{CSS}</style>
+<link rel="stylesheet" href="assets/site.css">
 <script data-goatcounter="https://duplexsteel.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body{f' class="{body_class}"' if body_class else ''}>
 """
 
@@ -647,31 +649,8 @@ def url(t, key):
     return (f + (f"#{frag}" if frag else "")) if f else key
 
 
-def nav(t, home_page=True):           # home_page kept for the callers in build_info / build_guides
-    x = X[t["lang"]]
-    home = "index.html" if t["lang"] == "nb" else "en.html"
-    info = [(i if i.endswith(".html") else t["info"] + "#" + i, lab) for i, lab in t["info_items"] if not i.startswith("guide")]
-    info += [(url(t, k), lab) for k, lab in x["info_extra"]]
-    groups = [(x["nav_feat"], [(url(t, k), x["pages"][k][0].split(",")[0]) for k in ("portfolio", "tax", "imports", "insights")], "feat-m"),
-              (x["nav_read"], [(url(t, k), lab) for k, lab in x["read_items"]], "read-m"),
-              (x["nav_info"], info, "info-m")]
-    short = {"portfolio": x["feats"][0][1], "tax": x["feats"][1][1], "imports": x["feats"][2][1], "insights": x["pages"]["insights"][0]}
-    groups[0] = (x["nav_feat"], [(url(t, k), short[k]) for k in ("portfolio", "tax", "imports", "insights")], "feat-m")
-    dd = lambda g: (f'<div class="dd"><button type="button" aria-expanded="false" aria-controls="{g[2]}">{g[0]}</button>'
-                    f'<div class="m" id="{g[2]}">' + "".join(f'<a href="{h}">{lab}</a>' for h, lab in g[1]) + "</div></div>")
-    desk = dd(groups[0]) + f'<a class="l" href="{url(t, "pricing")}">{x["nav_price"]}</a>' + dd(groups[1]) + dd(groups[2])
-    mob = "".join(f'<div class="grp">{g[0]}</div><div class="in">' + "".join(f'<a href="{h}">{lab}</a>' for h, lab in g[1]) + "</div>"
-                  for g in groups[:1]) + f'<a href="{url(t, "pricing")}">{x["nav_price"]}</a>' + "".join(
-                  f'<div class="grp">{g[0]}</div><div class="in">' + "".join(f'<a href="{h}">{lab}</a>' for h, lab in g[1]) + "</div>" for g in groups[1:])
-    start = url(t, "pricing") + "#" + t["ids"][4]
-    return f"""<header><div class="w"><nav aria-label="{'Hovedmeny' if t['lang']=='nb' else 'Main'}">
-<a class="brand" href="{home}">{MARK}Kryptokompis</a>
-{desk}
-<span class="sp"></span><a class="lang" href="{t['other']}" lang="{'en' if t['lang']=='nb' else 'nb'}">{'EN' if t['lang']=='nb' else 'NO'}</a>
-<a class="btn s" href="{start}">{t['cta']}</a>
-<button type="button" class="menu-btn" aria-expanded="false" aria-controls="mob">{t['menu']}</button></nav>
-<div class="mobile" id="mob">{mob}<a href="{t['other']}">{t['other_label']}</a></div></div></header>
-"""
+def nav(t, home_page=True):
+    return DESIGN.nav(sys.modules[__name__], t)
 
 
 SCRIPT = """<script>
@@ -728,15 +707,7 @@ CSS += """
 
 
 def footer(t):
-    x = X[t["lang"]]
-    links = [(url(t, h), lab) for h, lab in x["foot_extra"]] + list(t["foot_links"])
-    links = "".join(f'<li><a href="{h}">{lab}</a></li>' for h, lab in links)
-    home = "index.html" if t["lang"] == "nb" else "en.html"
-    return f"""<footer><div class="w foot"><div><a class="brand" href="{home}">{MARK}Kryptokompis</a><p><span class="made">{FLAG.format(label=t['flag_label'])}{t['foot_p']}</span></p></div>
-<ul>{links}</ul></div></footer>
-{SCRIPT}
-</body></html>
-"""
+    return DESIGN.footer(sys.modules[__name__], t)
 
 
 # --- sections (each used on its own page; head=False when the page header already says it) ---
@@ -1123,18 +1094,12 @@ def page(t):
     x = X[t["lang"]]
     redirect = ("<script>(function(){var m=" + __import__("json").dumps(OLD_ANCHORS[t["lang"]]) +
                 ";var h=location.hash.slice(1);if(m[h])location.replace(m[h]);})();</script>")
-    return (head(t, t["title"], t["desc"], body_class="home-blue") + redirect + nav(t) + f"""<main>
+    return (head(t, t["title"], t["desc"], body_class="home-blue") + redirect + nav(t) + f"""<main id="main">
 {homepage_hero(t)}
 
 {homepage_overview(t)}
 
-<section class="dark"><div class="w">
- <div class="headrow"><div><h2>{x['tiers_h']}</h2><p class="sub">{x['tiers_sub']}</p></div><a href="{url(t, 'pricing')}">{x['all_prices']} →</a></div>
- {tiers(t)}
- <p class="note">{t['pay_note']}</p>
-</div></section>
-
-<!--LATEST-->
+{DESIGN.home_end(sys.modules[__name__], t)}
 </main>
 """ + footer(t))
 
@@ -1143,28 +1108,22 @@ def subpage(t, key, body):
     x = X[t["lang"]]
     h1, lead = x["pages"][key]
     p = dict(t, file=PAGES[t["lang"]][key], other=PAGES["en" if t["lang"] == "nb" else "nb"][key])
-    kick = f'<p class="kick">{x["kicker"]}</p>' if key in ("portfolio", "tax", "imports", "insights") else ""
-    return (head(p, f"{h1} - Kryptokompis", lead, p["file"]) + nav(p) + f"""<main>
-<div class="w phead">{kick}<h1>{h1}</h1><p class="lead">{lead}</p></div>
-{body}
-{final_cta(t) if key != "pricing" else ""}
-</main>
-""" + footer(p))
+    return (head(p, f"{h1} - Kryptokompis", lead, p["file"]) + nav(p)
+            + f'<main id="main">{body}</main>' + footer(p))
 
 
 def subpages(t):
-    return {
-        "portfolio": subpage(t, "portfolio", sec_portfolio(t, head=False)),
-        "tax": subpage(t, "tax", sec_tax(t, head=False)),
-        "imports": subpage(t, "imports", sec_imports(t, head=False)),
-        "insights": subpage(t, "insights", sec_insights(t, head=False) + sec_trust(t)),
-        "pricing": subpage(t, "pricing", sec_start(t, head=False)),
-        "faq": subpage(t, "faq", sec_faq(t)),
-    }
+    builders = dict(portfolio=DESIGN.portfolio, tax=DESIGN.tax, imports=DESIGN.exchanges,
+                    insights=DESIGN.controls, pricing=DESIGN.pricing, faq=DESIGN.faq)
+    return {key: subpage(t, key, render(sys.modules[__name__], t)) for key, render in builders.items()}
+
+
+CSS += DESIGN.CSS
 
 
 if __name__ == "__main__":
     (SITE / "assets").mkdir(parents=True, exist_ok=True)
+    (SITE / "assets/site.css").write_text(CSS, encoding="utf-8")
     for asset in ("hero-fox.webp", "hero-mountains.webp"):
         shutil.copy2(ASSETS / asset, SITE / "assets" / asset)
     for t in T.values():

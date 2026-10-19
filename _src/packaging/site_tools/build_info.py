@@ -155,7 +155,7 @@ for L, t in T.items():
                    enumerate(("guides", "examples", "links", "about", "contact")))
     html = (B.head(page, t["title"], t["lead"]).replace("</head>", EXTRA + "</head>", 1)
             + B.nav(page, home_page=False)
-            + f'<main><div class="w ihero"><h1>{t["h1"]}</h1><p class="lead">{t["lead"]}</p></div>{body}</main>'
+            + f'<main id="main" class="info-sections"><div class="w ihero"><h1>{t["h1"]}</h1><p class="lead">{t["lead"]}</p></div>{body}</main>'
             + B.footer(page))
     (SITE / t["file"]).write_text(html, encoding="utf-8")
     print("wrote", t["file"])
@@ -171,6 +171,6 @@ for L, f, srcname, other in (("nb", "vilkar.html", "legal_nb.html", "terms.html"
     title = src.split("title: ", 1)[1].split(" -->", 1)[0]
     page = dict(B.T[L], file=f, other=other)
     html = (B.head(page, title, title).replace("</head>", LEGAL + "</head>", 1) + B.nav(page, home_page=False)
-            + f'<main class="w legal">{src.split("-->", 1)[1]}</main>' + B.footer(page))
+            + '<main id="main">' + B.DESIGN.reading(page, src.split("-->", 1)[1]) + '</main>' + B.footer(page))
     (SITE / f).write_text(html, encoding="utf-8")
     print("wrote", f)

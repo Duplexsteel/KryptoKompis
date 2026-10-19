@@ -103,11 +103,21 @@ def render(items: list) -> None:
             groups[-1][1].append(f'<li><time>{at:%H:%M}</time><div><a href="{escape(i["link"])}" target="_blank" rel="noopener nofollow">'
                                  f'{escape(i["title"])}</a><small>{escape(i["source"])}</small></div></li>')
         body = "".join(f'<h2>{d}</h2><ul class="nl">{"".join(rows)}</ul>' for d, rows in groups) or f"<p>{t['empty']}</p>"
-        main = (f'<div class="w news"><h1>{t["h1"]}</h1><p class="lead">{t["lead"]}</p>{body}'
-                f'<p class="note" style="margin-top:28px">{t["note"]}</p></div>')
+        # Keep the feed, original links and dates; only the presentation changes.
+        sources = sorted({item['source'] for item in items})
+        filters = ''.join(f'<button type="button" data-source-filter="{escape(source, quote=True)}" aria-pressed="false">{escape(source)}</button>' for source in sources)
+        filters = f'<button type="button" data-source-filter="ALL" aria-pressed="true">{B.DESIGN.text(B.T[lang], "all_sources")}</button>' + filters
+        rows = []
+        for item in items:
+            at = datetime.fromisoformat(item['at']).astimezone(oslo)
+            source, link, headline = [escape(item[k], quote=True) for k in ('source', 'link', 'title')]
+            rows.append(f'<a class="news-row" data-news-source="{source}" href="{link}" target="_blank" rel="noopener nofollow"><span class="source-name"><time datetime="{at.isoformat()}">{at:%d.%m %H:%M}</time><br>{source}</span><div><h3>{headline}</h3><p>{B.DESIGN.text(B.T[lang], "open_original")} {source}</p></div><span class="blue" aria-hidden="true">↗</span></a>')
+        listing = ''.join(rows) or f'<p>{t["empty"]}</p>'
+        main = (f'<section class="space"><div class="wrap">' + B.DESIGN.title(B.T[lang], 'news', 'news_h', 'news_p')
+                + f'<div class="news-layout"><aside class="news-sources">{filters}</aside><div class="news-list">{listing}<p class="news-note">{t["note"]}</p></div></div></div></section>')
         p = dict(B.T[lang], file=t["file"], other=t["other"])
         html = (B.head(p, f'{t["h1"]} - Kryptokompis', t["lead"]).replace("</head>", CSS + "</head>", 1)
-                + B.nav(p) + f"<main>{main}</main>" + B.footer(p))
+                + B.nav(p) + f'<main id="main">{main}</main>' + B.footer(p))
         (SITE / t["file"]).write_text(html, encoding="utf-8")
 
 
