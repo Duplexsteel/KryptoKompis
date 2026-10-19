@@ -4,6 +4,7 @@ from one template, plus the shared head/nav/footer that the Info pages (build_in
 Run:  python packaging/site_tools/build_site.py <site dir>
 Facts on the page must match the app (prices in app/core/version.py, exchanges in accounts.py)."""
 import json
+import shutil
 import sys
 from pathlib import Path
 
@@ -246,6 +247,15 @@ T = {
  lead="Se alle myntene dine fra alle børsene på ett sted, med verdien i kroner oppdatert av seg selv. Og når skattemeldingen kommer, er tallene allerede regnet ut etter norske regler.",
  cta2="Se en eksempelrapport", report_pdf="eksempel/Kryptokompis-eksempelrapport-2025.pdf",
  hero_note="Gratis å prøve. For Windows og Android.",
+ hero_kicker="DIN KRYPTOKOMPIS",
+ hero_lines=("Kryptoen din.", "Samlet oversikt.", "Enklere skatt."),
+ hero_intro="Følg porteføljen gjennom året, og få oversikt når du trenger tallene til skattemeldingen.",
+ hero_import="Koble til støttede kryptobørser via API, eller last opp CSV-filer med transaksjonene dine.",
+ hero_try="Prøv Kryptokompis", hero_find="Finn børsen din",
+ hero_demo="Eksempeldata", hero_allocation="Fordeling", hero_history="Verdi over tid",
+ hero_demo_note="Illustrasjon med oppdiktede tall.", hero_exports="PDF og CSV",
+ hero_history_desc="Eksempel på porteføljeverdi i norske kroner fra mai til oktober. Verdien svinger fra 35 000 kr ved starten til 99 298 kr ved slutten. Innskudd og uttak kan påvirke verdien; kurven viser ikke avkastning.",
+ hero_months=("Mai", "Jun", "Jul", "Aug", "Sep", "Okt"),
  sheet_title="Fra transaksjoner ...",
  rows=[("19.01.2025", "Kjøp 2 ETH", "67 200 kr"), ("06.02.2025", "Kjøp 1 500 XRP", "8 663 kr"),
        ("14.03.2025", "Staking-belønning ETH", "139 kr"), ("19.04.2025", "Salg 0,02 BTC", "19 950 kr"),
@@ -352,6 +362,15 @@ T = {
  lead="See all your coins from every exchange in one place, valued in NOK and updated by themselves. And when the tax return comes, the figures are already worked out under Norwegian rules.",
  cta2="See an example report", report_pdf="eksempel/Kryptokompis-example-report-2025.pdf",
  hero_note="Free to try. For Windows and Android.",
+ hero_kicker="YOUR CRYPTO COMPANION",
+ hero_lines=("Your crypto.", "One clear overview.", "Simpler tax."),
+ hero_intro="Follow your portfolio throughout the year, and get an overview when you need the figures for your tax return.",
+ hero_import="Connect supported crypto exchanges via API, or upload CSV files with your transactions.",
+ hero_try="Try Kryptokompis", hero_find="Find your exchange",
+ hero_demo="Example data", hero_allocation="Allocation", hero_history="Value over time",
+ hero_demo_note="Illustration with made-up figures.", hero_exports="PDF and CSV",
+ hero_history_desc="Example portfolio value in Norwegian kroner from May to October. The value fluctuates from NOK 35,000 at the start to NOK 99,298 at the end. Deposits and withdrawals can affect value; this is not an investment-return chart.",
+ hero_months=("May", "Jun", "Jul", "Aug", "Sep", "Oct"),
  sheet_title="From transactions ...",
  rows=[("19 Jan 2025", "Buy 2 ETH", "NOK 67,200"), ("6 Feb 2025", "Buy 1,500 XRP", "NOK 8,663"),
        ("14 Mar 2025", "Staking reward ETH", "NOK 139"), ("19 Apr 2025", "Sell 0.02 BTC", "NOK 19,950"),
@@ -450,14 +469,14 @@ for _t in T.values():
                       if isinstance(i, tuple) else i for i in _v]
 
 
-def head(t, title, desc, path=None):
+def head(t, title, desc, path=None, body_class=""):
     url = f"{SITE_URL}/{path or t['file']}"
     return f"""<!doctype html>
 <html lang="{t['lang']}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<meta name="theme-color" content="#F4F7F5">
+<meta name="theme-color" content="{'#F5FAFF' if body_class == 'home-blue' else '#F4F7F5'}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Kryptokompis">
 <meta property="og:title" content="{t.get('og_title', title)}"><meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url}"><meta property="og:locale" content="{t['locale']}">
@@ -470,7 +489,7 @@ def head(t, title, desc, path=None):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{FONTS}" rel="stylesheet">
 <style>{CSS}</style>
-<script data-goatcounter="https://duplexsteel.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body>
+<script data-goatcounter="https://duplexsteel.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body{f' class="{body_class}"' if body_class else ''}>
 """
 
 
@@ -801,13 +820,163 @@ def final_cta(t):
 </div></section>"""
 
 
+HOME_HERO_CSS = """
+/* Approved homepage hero. Keep this scoped so topic pages retain their layout. */
+.home-blue{--paper:#F5FAFF;--ink:#10254A;--ink2:#425675;--line:#D7E4F4;
+ --spruce:#1260E8;--spruce-d:#0B4DC2;--mint:#E6F2FF;--mint2:#B8D9FF;--dark:#10254A}
+.home-blue header{background:rgba(255,255,255,.96);border-bottom-color:#E4EDFA}
+.home-blue header .w{max-width:1440px;padding-inline:32px}
+.home-blue .brand .mark{color:#1260E8}
+.home-blue .tier{border-color:#365078}.home-blue .tier.on{background:rgba(184,217,255,.07)}
+.home-blue .tier p,.home-blue .tier .p small{color:#CBD9EF}
+.brand-hero{position:relative;isolation:isolate;background:#F0F7FF;overflow:hidden}
+.brand-hero:before{content:"";position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(90deg,rgba(248,252,255,.98) 0%,rgba(248,252,255,.88) 35%,rgba(240,247,255,.1) 75%),
+ url('assets/hero-mountains.webp') right bottom/cover no-repeat}
+.brand-hero:after{content:"";position:absolute;inset:auto 0 0;height:64px;z-index:-1;
+ background:linear-gradient(transparent,var(--paper))}
+.hero-shell{max-width:1440px;margin:0 auto;padding:64px 32px 78px;display:grid;
+ grid-template-columns:1.04fr 1fr;gap:30px;align-items:center}
+.hero-copy{position:relative;z-index:2;min-width:0}
+.hero-kicker{font-size:14px;font-weight:700;letter-spacing:.055em;color:#0B4DC2;margin-bottom:18px}
+.hero-copy h1{font-size:clamp(40px,5.1vw,72px);line-height:1.07;letter-spacing:-.045em;margin-bottom:25px}
+.hero-copy h1 span{display:block}.hero-copy h1 .accent{color:#1260E8}
+.hero-copy .hero-intro,.hero-copy .hero-import{font-size:clamp(17px,1.4vw,20px);line-height:1.55;max-width:31em}
+.hero-copy .hero-import{margin-top:16px;color:var(--ink2)}
+.hero-copy .cta{gap:12px;margin-top:28px}.hero-copy .btn{min-height:54px;padding:0 22px}
+.hero-copy .hero-secondary{background:#fff;border-color:#fff;color:#0B4DC2;box-shadow:0 5px 20px #163C6D08}
+.hero-copy .hero-secondary:hover{background:#E6F2FF;border-color:#D7E4F4;color:#10254A}
+.hero-copy .btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hero-copy .note{font-size:14px;margin-top:20px}
+.hero-scene{position:relative;min-width:0;min-height:590px;display:flex;align-items:flex-start;padding-top:12px}
+.hero-portfolio{width:73%;max-width:400px;position:relative;z-index:1;margin:0;padding:24px;
+ background:rgba(255,255,255,.97);border:1px solid #E2ECF8;border-radius:22px;box-shadow:0 18px 55px #17457C13}
+.demo-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.demo-heading h2{font-size:17px;line-height:1.3;letter-spacing:-.02em}
+.demo-badge{font-size:11px;color:#425675;background:#EDF4FF;border-radius:999px;padding:5px 9px;white-space:nowrap}
+.demo-total{font-size:39px;line-height:1.2;font-weight:800;letter-spacing:-.045em;margin:10px 0 18px}
+.demo-distribution{border-top:1px solid #E4ECF8;border-bottom:1px solid #E4ECF8;padding:19px 0;
+ display:flex;align-items:center;gap:20px}
+.demo-donut{width:132px;aspect-ratio:1;flex:none;border-radius:50%;display:grid;place-items:center;
+ background:conic-gradient(#1260E8 0% 45%,#21A9B0 45% 78%,#A989EF 78% 100%)}
+.demo-donut span{display:grid;place-items:center;width:68%;height:68%;background:#fff;border-radius:50%;
+ font-size:12px;font-weight:700;color:#10254A}
+.demo-legend{list-style:none;margin:0;padding:0;flex:1;font-size:13px}
+.demo-legend li{display:flex;align-items:center;gap:8px;padding:7px 0}
+.demo-legend .dot{width:10px;height:10px;border-radius:50%;background:var(--coin);flex:none}
+.demo-legend b{font-weight:700}.demo-legend .share{margin-left:auto;color:#425675;white-space:nowrap}
+.demo-history{margin:18px 0 0}.demo-history h3{font-size:15px;margin-bottom:12px}
+.demo-chart{width:100%;height:auto;overflow:visible;font-family:inherit}
+.demo-chart text{fill:#536989;font-size:10px}.demo-chart .grid{stroke:#E1EAF7;stroke-dasharray:3 4;stroke-width:1}
+.demo-chart .value-line{stroke:#1260E8;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.demo-chart .endpoint{fill:#fff;stroke:#1260E8;stroke-width:2.7}
+.demo-chart .end-label{fill:#10254A;font-size:10px;font-weight:600}
+.demo-export{display:flex;gap:10px;align-items:center;margin-top:16px;padding-top:16px;border-top:1px solid #E4ECF8;
+ font-size:14px;color:#10254A;text-decoration:none}
+.demo-export svg{width:19px;height:19px;fill:none;stroke:#1260E8;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.demo-export .export-arrow{margin-left:auto}.demo-export:hover{color:#0B4DC2}
+.hero-portfolio figcaption{font-size:10.5px;color:#536989;margin-top:11px}
+.hero-fox{position:absolute;z-index:2;right:-45px;bottom:0;width:50%;height:auto;pointer-events:none;
+ filter:drop-shadow(0 14px 14px #163B7010)}
+@media(min-width:1500px){.hero-copy h1{font-size:76px}}
+@media(max-width:1100px) and (min-width:901px){
+ .hero-shell{gap:24px;padding:52px 28px 70px;grid-template-columns:1fr 1fr}
+ .hero-copy h1{font-size:52px}.hero-copy .cta{flex-direction:column;align-items:flex-start}
+ .hero-scene{min-height:570px;padding-bottom:92px}.hero-portfolio{width:82%;padding:20px}.demo-distribution{gap:12px}
+ .demo-donut{width:112px}.demo-legend{font-size:12px}.hero-fox{width:190px;right:-14px;bottom:-58px}
+}
+@media(max-width:900px){
+ .hero-shell{grid-template-columns:1fr;gap:30px;padding:44px 28px 56px;max-width:760px}
+ .hero-copy h1{font-size:clamp(40px,7.6vw,65px)}.hero-copy .hero-intro,.hero-copy .hero-import{max-width:34em}
+ .hero-scene{min-height:560px;width:100%;max-width:660px;margin:0 auto;padding-top:0}
+ .hero-portfolio{width:70%;max-width:440px}.hero-fox{right:-10px;bottom:-4px;width:38%;max-width:260px}
+ .brand-hero:before{background-position:center bottom;background-size:auto 100%}
+ .home-blue header .w{padding-inline:24px}
+}
+@media(max-width:600px){
+ .home-blue header .w{padding-inline:16px}.home-blue nav{gap:10px}.home-blue header .brand{font-size:17px;gap:6px}
+ .home-blue header .brand .mark{width:24px;height:24px}.home-blue header .btn.s{font-size:13px;min-height:36px;padding:0 10px}
+ .hero-shell{padding:35px 20px 40px;gap:30px}.hero-kicker{font-size:12px;margin-bottom:14px}
+ .hero-copy h1{font-size:clamp(35px,9.25vw,53px);letter-spacing:-.045em;margin-bottom:20px}
+ .hero-copy .hero-intro,.hero-copy .hero-import{font-size:17px;line-height:1.55}
+ .hero-copy .cta{gap:10px;margin-top:23px}.hero-copy .btn{min-height:50px;font-size:15px}
+ .hero-copy .note{font-size:12px;margin-top:15px}
+ .hero-scene{min-height:0;display:block;padding-bottom:104px}
+ .hero-portfolio{width:100%;max-width:none;padding:20px;border-radius:18px}
+ .demo-heading h2{font-size:16px}.demo-total{font-size:36px}.demo-distribution{gap:24px}
+ .demo-donut{width:122px}.demo-legend{font-size:13px}.demo-badge{font-size:10px}
+ .hero-fox{width:145px;right:-13px;bottom:-3px;max-width:none}
+ .hero-portfolio figcaption{max-width:175px}.demo-export{padding-right:75px}
+}
+@media(max-width:359px){
+ .hero-shell{padding-inline:16px}.hero-copy h1{font-size:33px}.home-blue header .btn.s{display:none}
+ .demo-distribution{gap:14px}.demo-donut{width:108px}.hero-portfolio{padding:16px}
+}
+"""
+CSS += HOME_HERO_CSS
+
+
+# Fictional marketing data: NOK values, not investment returns or live quotes.
+HERO_VALUES = (35000, 40500, 38000, 47000, 52000, 59000, 56000, 46000, 42000,
+               49000, 53500, 60000, 65000, 61000, 74500, 79000, 85000, 92000,
+               81000, 76000, 69000, 73500, 78000, 86000, 82000, 91000, 95000, 99298)
+HERO_ALLOCATION = (("BTC", 45, "#1260E8"), ("ETH", 33, "#21A9B0"), ("XRP", 22, "#A989EF"))
+
+
+def hero_history(t):
+    """An accessible, static example chart; axes and endpoint use the same NOK data."""
+    left, right, top, bottom, maximum = 42, 346, 16, 132, 120000
+    points = [(left + i * (right - left) / (len(HERO_VALUES) - 1),
+               bottom - v * (bottom - top) / maximum) for i, v in enumerate(HERO_VALUES)]
+    line = "M" + " L".join(f"{x:.2f},{y:.2f}" for x, y in points)
+    area = line + f" L{right},{bottom} L{left},{bottom} Z"
+    grid = "".join(
+        f'<line class="grid" x1="{left}" x2="{right}" y1="{bottom - value * (bottom - top) / maximum:.2f}" y2="{bottom - value * (bottom - top) / maximum:.2f}"/>'
+        f'<text x="34" y="{bottom - value * (bottom - top) / maximum + 3:.2f}" text-anchor="end">{value // 1000}k</text>'
+        for value in (0, 40000, 80000, 120000))
+    months = "".join(f'<text x="{left + i * (right - left) / 5:.2f}" y="153" text-anchor="middle">{month}</text>'
+                     for i, month in enumerate(t["hero_months"]))
+    x, y = points[-1]
+    return f'''<svg class="demo-chart" viewBox="0 0 364 162" role="img" aria-labelledby="history-title history-desc">
+<title id="history-title">{t['hero_history']}</title><desc id="history-desc">{t['hero_history_desc']}</desc>
+<defs><linearGradient id="history-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1260E8" stop-opacity=".17"/><stop offset="100%" stop-color="#1260E8" stop-opacity=".02"/></linearGradient></defs>
+{grid}<path d="{area}" fill="url(#history-fill)"/><path class="value-line" d="{line}"/>
+<circle class="endpoint" cx="{x:.2f}" cy="{y:.2f}" r="4"/>
+<text class="end-label" x="{x}" y="{y - 12:.2f}" text-anchor="end">{t['pf_total_v']}</text>{months}</svg>'''
+
+
+def homepage_hero(t):
+    headline = "".join(f'<span class="accent">{line}</span>' if i == 1 else f'<span>{line}</span>'
+                       for i, line in enumerate(t["hero_lines"]))
+    legend = "".join(f'<li><span class="dot" style="--coin:{color}" aria-hidden="true"></span><b>{asset}</b><span class="share">{share} %</span></li>'
+                     for asset, share, color in HERO_ALLOCATION)
+    arrow = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>'
+    search = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4.5 4.5"/></svg>'
+    document = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>'
+    return f'''<div class="brand-hero"><div class="hero-shell">
+ <div class="hero-copy"><p class="hero-kicker">{t['hero_kicker']}</p>
+  <h1>{headline}</h1><p class="hero-intro">{t['hero_intro']}</p><p class="hero-import">{t['hero_import']}</p>
+  <div class="cta"><a class="btn" href="{url(t, 'pricing')}#{t['ids'][4]}">{t['hero_try']}{arrow}</a>
+   <a class="btn hero-secondary" href="{url(t, 'imports')}">{search}{t['hero_find']}</a></div>
+  <p class="note">{t['hero_note']}</p></div>
+ <div class="hero-scene">
+  <figure class="hero-portfolio" aria-labelledby="demo-title demo-caption">
+   <div class="demo-heading"><h2 id="demo-title">{t['hero_pf_title']}</h2><span class="demo-badge">{t['hero_demo']}</span></div>
+   <p class="demo-total">{t['pf_total_v']}</p>
+   <div class="demo-distribution" role="group" aria-label="{t['hero_allocation']}">
+    <div class="demo-donut" aria-hidden="true"><span>{t['hero_allocation']}</span></div><ul class="demo-legend">{legend}</ul></div>
+   <div class="demo-history"><h3>{t['hero_history']}</h3>{hero_history(t)}</div>
+   <a class="demo-export" href="{url(t, 'tax')}">{document}<span>{t['hero_exports']}</span><span class="export-arrow">→</span></a>
+   <figcaption id="demo-caption">{t['hero_demo_note']}</figcaption>
+  </figure>
+  <img class="hero-fox" src="assets/hero-fox.webp" alt="" width="800" height="800" fetchpriority="high" decoding="async">
+ </div>
+</div></div>'''
+
+
 def page(t):
     """The front page: hero, what the app does (each card links to its page), exchanges, prices, latest posts."""
     x = X[t["lang"]]
-    coins = "".join(f'<li><span class="cn"><b>{a}</b><small>{q}</small></span><span class="cb"><i style="width:{w}%"></i></span>'
-                    f'<span class="cv"><b>{v}</b><small class="{"up" if ch.startswith("+") else "down"}">{ch}</small></span></li>'
-                    for a, q, v, ch, sh, w in t["pf_rows"])
-    htax = "".join(f'<div><small>{a}</small><b class="{c}">{v}</b></div>' for a, v, c in t["hero_tax"])
     feats = "".join(
         f'<a href="{url(t, k)}"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true">{ICON[ic]}</svg></span>'
         f'<h3>{h}{f"<span class=tag>{tag}</span>" if tag else ""}</h3><p>{p}</p><span class="go2">{x["more"]}</span></a>'
@@ -815,19 +984,8 @@ def page(t):
     chips = "".join(f"<span>{c}</span>" for c in x["ex_chips"])
     redirect = ("<script>(function(){var m=" + __import__("json").dumps(OLD_ANCHORS[t["lang"]]) +
                 ";var h=location.hash.slice(1);if(m[h])location.replace(m[h]);})();</script>")
-    return (head(t, t["title"], t["desc"]) + redirect + nav(t) + f"""<main>
-<div class="w hero">
- <div><h1>{t['h1']}</h1><p class="lead">{t['lead']}</p>
-  <div class="cta"><a class="btn" href="{url(t, 'pricing')}#{t['ids'][4]}">{t['cta']}</a><a class="btn g" href="{t['report_pdf']}">{t['cta2']}</a></div>
-  <p class="note">{t['hero_note']}</p>
-  <div class="fox-intro" style="display:flex;align-items:center;gap:13px;margin-top:18px;max-width:360px"><img src="assets/fox-mascot.svg" alt="" loading="lazy" width="96" height="88" style="width:96px;height:auto;max-width:26%;flex-shrink:0"><span style="font-size:14px;color:var(--ink2)">{'Hei! Jeg er fjellreven til Kryptokompis.' if t['lang']=='nb' else 'Meet the Kryptokompis arctic fox.'}</span></div></div>
- <figure class="sheet" style="margin:0"><h3>{t['hero_pf_title']}</h3>
-  <div class="ptotal">{t['pf_total_v']}</div><div class="pchange up">{t['pf_change']}</div>
-  <ul class="coins">{coins}</ul>
-  <div class="into">{t['hero_tax_title']}<span class="rules-tag">{FLAG.format(label=t['flag_label'])}{t['flag_tag']}</span></div>
-  <div class="htax">{htax}</div>
-  <figcaption class="cap">{t['hero_cap']}</figcaption></figure>
-</div>
+    return (head(t, t["title"], t["desc"], body_class="home-blue") + redirect + nav(t) + f"""<main>
+{homepage_hero(t)}
 
 <section class="band"><div class="w">
  <div class="head"><h2>{x['feat_h']}</h2><p class="sub">{x['feat_sub']}</p></div>
@@ -871,6 +1029,9 @@ def subpages(t):
 
 
 if __name__ == "__main__":
+    (SITE / "assets").mkdir(parents=True, exist_ok=True)
+    for asset in ("hero-fox.webp", "hero-mountains.webp"):
+        shutil.copy2(ASSETS / asset, SITE / "assets" / asset)
     for t in T.values():
         (SITE / t["file"]).write_text(page(t), encoding="utf-8")
         print("wrote", t["file"])

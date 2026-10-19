@@ -3,7 +3,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kryptokompis - crypto portfolio and Norwegian crypto tax</title>
 <meta name="description" content="Kryptokompis brings your crypto portfolio from every exchange together, valued in NOK with the 24-hour change - automatically. Plus your Norwegian crypto tax report: cost basis, gains, losses and wealth. Free to try.">
-<meta name="theme-color" content="#F4F7F5">
+<meta name="theme-color" content="#F5FAFF">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Kryptokompis">
 <meta property="og:title" content="Kryptokompis - your crypto companion for overview and tax"><meta property="og:description" content="Kryptokompis brings your crypto portfolio from every exchange together, valued in NOK with the 24-hour change - automatically. Plus your Norwegian crypto tax report: cost basis, gains, losses and wealth. Free to try.">
 <meta property="og:url" content="https://kryptokompis.no/en.html"><meta property="og:locale" content="en_US">
@@ -256,8 +256,100 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--ink2);fo
 .final .dl{margin:0 6px}
 @media (max-width:900px){.feat,.latest{grid-template-columns:1fr 1fr}.tiers{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.feat,.latest,.tiers{grid-template-columns:1fr}.phead{padding-top:40px}}
+
+/* Approved homepage hero. Keep this scoped so topic pages retain their layout. */
+.home-blue{--paper:#F5FAFF;--ink:#10254A;--ink2:#425675;--line:#D7E4F4;
+ --spruce:#1260E8;--spruce-d:#0B4DC2;--mint:#E6F2FF;--mint2:#B8D9FF;--dark:#10254A}
+.home-blue header{background:rgba(255,255,255,.96);border-bottom-color:#E4EDFA}
+.home-blue header .w{max-width:1440px;padding-inline:32px}
+.home-blue .brand .mark{color:#1260E8}
+.home-blue .tier{border-color:#365078}.home-blue .tier.on{background:rgba(184,217,255,.07)}
+.home-blue .tier p,.home-blue .tier .p small{color:#CBD9EF}
+.brand-hero{position:relative;isolation:isolate;background:#F0F7FF;overflow:hidden}
+.brand-hero:before{content:"";position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(90deg,rgba(248,252,255,.98) 0%,rgba(248,252,255,.88) 35%,rgba(240,247,255,.1) 75%),
+ url('assets/hero-mountains.webp') right bottom/cover no-repeat}
+.brand-hero:after{content:"";position:absolute;inset:auto 0 0;height:64px;z-index:-1;
+ background:linear-gradient(transparent,var(--paper))}
+.hero-shell{max-width:1440px;margin:0 auto;padding:64px 32px 78px;display:grid;
+ grid-template-columns:1.04fr 1fr;gap:30px;align-items:center}
+.hero-copy{position:relative;z-index:2;min-width:0}
+.hero-kicker{font-size:14px;font-weight:700;letter-spacing:.055em;color:#0B4DC2;margin-bottom:18px}
+.hero-copy h1{font-size:clamp(40px,5.1vw,72px);line-height:1.07;letter-spacing:-.045em;margin-bottom:25px}
+.hero-copy h1 span{display:block}.hero-copy h1 .accent{color:#1260E8}
+.hero-copy .hero-intro,.hero-copy .hero-import{font-size:clamp(17px,1.4vw,20px);line-height:1.55;max-width:31em}
+.hero-copy .hero-import{margin-top:16px;color:var(--ink2)}
+.hero-copy .cta{gap:12px;margin-top:28px}.hero-copy .btn{min-height:54px;padding:0 22px}
+.hero-copy .hero-secondary{background:#fff;border-color:#fff;color:#0B4DC2;box-shadow:0 5px 20px #163C6D08}
+.hero-copy .hero-secondary:hover{background:#E6F2FF;border-color:#D7E4F4;color:#10254A}
+.hero-copy .btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hero-copy .note{font-size:14px;margin-top:20px}
+.hero-scene{position:relative;min-width:0;min-height:590px;display:flex;align-items:flex-start;padding-top:12px}
+.hero-portfolio{width:73%;max-width:400px;position:relative;z-index:1;margin:0;padding:24px;
+ background:rgba(255,255,255,.97);border:1px solid #E2ECF8;border-radius:22px;box-shadow:0 18px 55px #17457C13}
+.demo-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.demo-heading h2{font-size:17px;line-height:1.3;letter-spacing:-.02em}
+.demo-badge{font-size:11px;color:#425675;background:#EDF4FF;border-radius:999px;padding:5px 9px;white-space:nowrap}
+.demo-total{font-size:39px;line-height:1.2;font-weight:800;letter-spacing:-.045em;margin:10px 0 18px}
+.demo-distribution{border-top:1px solid #E4ECF8;border-bottom:1px solid #E4ECF8;padding:19px 0;
+ display:flex;align-items:center;gap:20px}
+.demo-donut{width:132px;aspect-ratio:1;flex:none;border-radius:50%;display:grid;place-items:center;
+ background:conic-gradient(#1260E8 0% 45%,#21A9B0 45% 78%,#A989EF 78% 100%)}
+.demo-donut span{display:grid;place-items:center;width:68%;height:68%;background:#fff;border-radius:50%;
+ font-size:12px;font-weight:700;color:#10254A}
+.demo-legend{list-style:none;margin:0;padding:0;flex:1;font-size:13px}
+.demo-legend li{display:flex;align-items:center;gap:8px;padding:7px 0}
+.demo-legend .dot{width:10px;height:10px;border-radius:50%;background:var(--coin);flex:none}
+.demo-legend b{font-weight:700}.demo-legend .share{margin-left:auto;color:#425675;white-space:nowrap}
+.demo-history{margin:18px 0 0}.demo-history h3{font-size:15px;margin-bottom:12px}
+.demo-chart{width:100%;height:auto;overflow:visible;font-family:inherit}
+.demo-chart text{fill:#536989;font-size:10px}.demo-chart .grid{stroke:#E1EAF7;stroke-dasharray:3 4;stroke-width:1}
+.demo-chart .value-line{stroke:#1260E8;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.demo-chart .endpoint{fill:#fff;stroke:#1260E8;stroke-width:2.7}
+.demo-chart .end-label{fill:#10254A;font-size:10px;font-weight:600}
+.demo-export{display:flex;gap:10px;align-items:center;margin-top:16px;padding-top:16px;border-top:1px solid #E4ECF8;
+ font-size:14px;color:#10254A;text-decoration:none}
+.demo-export svg{width:19px;height:19px;fill:none;stroke:#1260E8;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.demo-export .export-arrow{margin-left:auto}.demo-export:hover{color:#0B4DC2}
+.hero-portfolio figcaption{font-size:10.5px;color:#536989;margin-top:11px}
+.hero-fox{position:absolute;z-index:2;right:-45px;bottom:0;width:50%;height:auto;pointer-events:none;
+ filter:drop-shadow(0 14px 14px #163B7010)}
+@media(min-width:1500px){.hero-copy h1{font-size:76px}}
+@media(max-width:1100px) and (min-width:901px){
+ .hero-shell{gap:24px;padding:52px 28px 70px;grid-template-columns:1fr 1fr}
+ .hero-copy h1{font-size:52px}.hero-copy .cta{flex-direction:column;align-items:flex-start}
+ .hero-scene{min-height:570px;padding-bottom:92px}.hero-portfolio{width:82%;padding:20px}.demo-distribution{gap:12px}
+ .demo-donut{width:112px}.demo-legend{font-size:12px}.hero-fox{width:190px;right:-14px;bottom:-58px}
+}
+@media(max-width:900px){
+ .hero-shell{grid-template-columns:1fr;gap:30px;padding:44px 28px 56px;max-width:760px}
+ .hero-copy h1{font-size:clamp(40px,7.6vw,65px)}.hero-copy .hero-intro,.hero-copy .hero-import{max-width:34em}
+ .hero-scene{min-height:560px;width:100%;max-width:660px;margin:0 auto;padding-top:0}
+ .hero-portfolio{width:70%;max-width:440px}.hero-fox{right:-10px;bottom:-4px;width:38%;max-width:260px}
+ .brand-hero:before{background-position:center bottom;background-size:auto 100%}
+ .home-blue header .w{padding-inline:24px}
+}
+@media(max-width:600px){
+ .home-blue header .w{padding-inline:16px}.home-blue nav{gap:10px}.home-blue header .brand{font-size:17px;gap:6px}
+ .home-blue header .brand .mark{width:24px;height:24px}.home-blue header .btn.s{font-size:13px;min-height:36px;padding:0 10px}
+ .hero-shell{padding:35px 20px 40px;gap:30px}.hero-kicker{font-size:12px;margin-bottom:14px}
+ .hero-copy h1{font-size:clamp(35px,9.25vw,53px);letter-spacing:-.045em;margin-bottom:20px}
+ .hero-copy .hero-intro,.hero-copy .hero-import{font-size:17px;line-height:1.55}
+ .hero-copy .cta{gap:10px;margin-top:23px}.hero-copy .btn{min-height:50px;font-size:15px}
+ .hero-copy .note{font-size:12px;margin-top:15px}
+ .hero-scene{min-height:0;display:block;padding-bottom:104px}
+ .hero-portfolio{width:100%;max-width:none;padding:20px;border-radius:18px}
+ .demo-heading h2{font-size:16px}.demo-total{font-size:36px}.demo-distribution{gap:24px}
+ .demo-donut{width:122px}.demo-legend{font-size:13px}.demo-badge{font-size:10px}
+ .hero-fox{width:145px;right:-13px;bottom:-3px;max-width:none}
+ .hero-portfolio figcaption{max-width:175px}.demo-export{padding-right:75px}
+}
+@media(max-width:359px){
+ .hero-shell{padding-inline:16px}.hero-copy h1{font-size:33px}.home-blue header .btn.s{display:none}
+ .demo-distribution{gap:14px}.demo-donut{width:108px}.hero-portfolio{padding:16px}
+}
 </style>
-<script data-goatcounter="https://duplexsteel.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body>
+<script data-goatcounter="https://duplexsteel.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body class="home-blue">
 <script>(function(){var m={"portfolio": "portfolio.html", "tax": "tax.html", "imports": "exchanges.html", "insights": "insights.html", "get-started": "pricing.html#get-started", "data": "insights.html#data", "faq": "faq.html"};var h=location.hash.slice(1);if(m[h])location.replace(m[h]);})();</script><header><div class="w"><nav aria-label="Main">
 <a class="brand" href="en.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><g fill="currentColor"><rect x="5" y="5" width="5" height="22" rx="1.4"/><rect x="20" y="5" width="8" height="3.6" rx="1.4"/><rect x="16" y="9.6" width="8" height="3.6" rx="1.4"/><rect x="12" y="14.2" width="8" height="3.6" rx="1.4"/><rect x="16" y="18.8" width="8" height="3.6" rx="1.4"/><rect x="20" y="23.4" width="8" height="3.6" rx="1.4"/></g></svg>Kryptokompis</a>
 <div class="dd"><button type="button" aria-expanded="false" aria-controls="feat-m">Features</button><div class="m" id="feat-m"><a href="portfolio.html">Portfolio</a><a href="tax.html">Crypto tax</a><a href="exchanges.html">Exchanges and imports</a><a href="insights.html">Checks and privacy</a></div></div><a class="l" href="pricing.html">Pricing</a><div class="dd"><button type="button" aria-expanded="false" aria-controls="read-m">Resources</button><div class="m" id="read-m"><a href="guides.html">Guides</a><a href="blog.html">Blog</a><a href="crypto-news.html">Crypto news</a></div></div><div class="dd"><button type="button" aria-expanded="false" aria-controls="info-m">Info</button><div class="m" id="info-m"><a href="info-en.html#examples">Example reports</a><a href="info-en.html#links">Useful links</a><a href="about.html">About Kryptokompis</a><a href="info-en.html#contact">Contact</a><a href="faq.html">Questions and answers</a></div></div>
@@ -266,17 +358,30 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--ink2);fo
 <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mob">Menu</button></nav>
 <div class="mobile" id="mob"><div class="grp">Features</div><div class="in"><a href="portfolio.html">Portfolio</a><a href="tax.html">Crypto tax</a><a href="exchanges.html">Exchanges and imports</a><a href="insights.html">Checks and privacy</a></div><a href="pricing.html">Pricing</a><div class="grp">Resources</div><div class="in"><a href="guides.html">Guides</a><a href="blog.html">Blog</a><a href="crypto-news.html">Crypto news</a></div><div class="grp">Info</div><div class="in"><a href="info-en.html#examples">Example reports</a><a href="info-en.html#links">Useful links</a><a href="about.html">About Kryptokompis</a><a href="info-en.html#contact">Contact</a><a href="faq.html">Questions and answers</a></div><a href="index.html">Norsk</a></div></div></header>
 <main>
-<div class="w hero">
- <div><h1>Your crypto companion for overview and tax.</h1><p class="lead">See all your coins from every exchange in one place, valued in NOK and updated by themselves. And when the tax return comes, the figures are already worked out under Norwegian rules.</p>
-  <div class="cta"><a class="btn" href="pricing.html#get-started">Get started</a><a class="btn g" href="eksempel/Kryptokompis-example-report-2025.pdf">See an example report</a></div>
+<div class="brand-hero"><div class="hero-shell">
+ <div class="hero-copy"><p class="hero-kicker">YOUR CRYPTO COMPANION</p>
+  <h1><span>Your crypto.</span><span class="accent">One clear overview.</span><span>Simpler tax.</span></h1><p class="hero-intro">Follow your portfolio throughout the year, and get an overview when you need the figures for your tax return.</p><p class="hero-import">Connect supported crypto exchanges via API, or upload CSV files with your transactions.</p>
+  <div class="cta"><a class="btn" href="pricing.html#get-started">Try Kryptokompis<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+   <a class="btn hero-secondary" href="exchanges.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4.5 4.5"/></svg>Find your exchange</a></div>
   <p class="note">Free to try. For Windows and Android.</p></div>
- <figure class="sheet" style="margin:0"><h3>Your portfolio</h3>
-  <div class="ptotal">NOK 99,298</div><div class="pchange up">+NOK 827 (+0.8 %) last 24 hours</div>
-  <ul class="coins"><li><span class="cn"><b>BTC</b><small>0.04</small></span><span class="cb"><i style="width:40%"></i></span><span class="cv"><b>NOK 39,480</b><small class="up">+1.2 %</small></span></li><li><span class="cn"><b>ETH</b><small>1.09</small></span><span class="cb"><i style="width:38%"></i></span><span class="cv"><b>NOK 37,769</b><small class="down">−0.8 %</small></span></li><li><span class="cn"><b>XRP</b><small>1,000</small></span><span class="cb"><i style="width:22%"></i></span><span class="cv"><b>NOK 22,050</b><small class="up">+3.1 %</small></span></li></ul>
-  <div class="into">... and the figures for your tax return<span class="rules-tag"><svg class="flag" viewBox="0 0 22 16" role="img" aria-label="Norwegian flag"><rect width="22" height="16" rx="2" fill="#BA0C2F"/><path d="M6 0h4v16H6zM0 6h22v4H0z" fill="#fff"/><path d="M7 0h2v16H7zM0 7h22v2H0z" fill="#00205B"/></svg>Norwegian rules</span></div>
-  <div class="htax"><div><small>Taxable gain</small><b class="gain">NOK 7,527</b></div><div><small>Deductible loss</small><b class="loss">NOK 6,616</b></div><div><small>Wealth</small><b class="">NOK 99,298</b></div></div>
-  <figcaption class="cap">Example with made-up figures, from the <a href="eksempel/Kryptokompis-example-report-2025.pdf">example report</a>.</figcaption></figure>
-</div>
+ <div class="hero-scene">
+  <figure class="hero-portfolio" aria-labelledby="demo-title demo-caption">
+   <div class="demo-heading"><h2 id="demo-title">Your portfolio</h2><span class="demo-badge">Example data</span></div>
+   <p class="demo-total">NOK 99,298</p>
+   <div class="demo-distribution" role="group" aria-label="Allocation">
+    <div class="demo-donut" aria-hidden="true"><span>Allocation</span></div><ul class="demo-legend"><li><span class="dot" style="--coin:#1260E8" aria-hidden="true"></span><b>BTC</b><span class="share">45 %</span></li><li><span class="dot" style="--coin:#21A9B0" aria-hidden="true"></span><b>ETH</b><span class="share">33 %</span></li><li><span class="dot" style="--coin:#A989EF" aria-hidden="true"></span><b>XRP</b><span class="share">22 %</span></li></ul></div>
+   <div class="demo-history"><h3>Value over time</h3><svg class="demo-chart" viewBox="0 0 364 162" role="img" aria-labelledby="history-title history-desc">
+<title id="history-title">Value over time</title><desc id="history-desc">Example portfolio value in Norwegian kroner from May to October. The value fluctuates from NOK 35,000 at the start to NOK 99,298 at the end. Deposits and withdrawals can affect value; this is not an investment-return chart.</desc>
+<defs><linearGradient id="history-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1260E8" stop-opacity=".17"/><stop offset="100%" stop-color="#1260E8" stop-opacity=".02"/></linearGradient></defs>
+<line class="grid" x1="42" x2="346" y1="132.00" y2="132.00"/><text x="34" y="135.00" text-anchor="end">0k</text><line class="grid" x1="42" x2="346" y1="93.33" y2="93.33"/><text x="34" y="96.33" text-anchor="end">40k</text><line class="grid" x1="42" x2="346" y1="54.67" y2="54.67"/><text x="34" y="57.67" text-anchor="end">80k</text><line class="grid" x1="42" x2="346" y1="16.00" y2="16.00"/><text x="34" y="19.00" text-anchor="end">120k</text><path d="M42.00,98.17 L53.26,92.85 L64.52,95.27 L75.78,86.57 L87.04,81.73 L98.30,74.97 L109.56,77.87 L120.81,87.53 L132.07,91.40 L143.33,84.63 L154.59,80.28 L165.85,74.00 L177.11,69.17 L188.37,73.03 L199.63,59.98 L210.89,55.63 L222.15,49.83 L233.41,43.07 L244.67,53.70 L255.93,58.53 L267.19,65.30 L278.44,60.95 L289.70,56.60 L300.96,48.87 L312.22,52.73 L323.48,44.03 L334.74,40.17 L346.00,36.01 L346,132 L42,132 Z" fill="url(#history-fill)"/><path class="value-line" d="M42.00,98.17 L53.26,92.85 L64.52,95.27 L75.78,86.57 L87.04,81.73 L98.30,74.97 L109.56,77.87 L120.81,87.53 L132.07,91.40 L143.33,84.63 L154.59,80.28 L165.85,74.00 L177.11,69.17 L188.37,73.03 L199.63,59.98 L210.89,55.63 L222.15,49.83 L233.41,43.07 L244.67,53.70 L255.93,58.53 L267.19,65.30 L278.44,60.95 L289.70,56.60 L300.96,48.87 L312.22,52.73 L323.48,44.03 L334.74,40.17 L346.00,36.01"/>
+<circle class="endpoint" cx="346.00" cy="36.01" r="4"/>
+<text class="end-label" x="346.0" y="24.01" text-anchor="end">NOK 99,298</text><text x="42.00" y="153" text-anchor="middle">May</text><text x="102.80" y="153" text-anchor="middle">Jun</text><text x="163.60" y="153" text-anchor="middle">Jul</text><text x="224.40" y="153" text-anchor="middle">Aug</text><text x="285.20" y="153" text-anchor="middle">Sep</text><text x="346.00" y="153" text-anchor="middle">Oct</text></svg></div>
+   <a class="demo-export" href="tax.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg><span>PDF and CSV</span><span class="export-arrow">→</span></a>
+   <figcaption id="demo-caption">Illustration with made-up figures.</figcaption>
+  </figure>
+  <img class="hero-fox" src="assets/hero-fox.webp" alt="" width="800" height="800" fetchpriority="high" decoding="async">
+ </div>
+</div></div>
 
 <section class="band"><div class="w">
  <div class="head"><h2>Everything in one place</h2><p class="sub">Kryptokompis does two jobs: keeps track of your crypto every day, and works out the tax when the tax return comes.</p></div>
