@@ -15,8 +15,11 @@ DISCORD = "https://discord.gg/hnAGgsAQ5V"
 RELEASES = "https://github.com/Duplexsteel/KryptoKompis/releases"
 import re as _re
 VERSION = _re.search(r'APP_VERSION = "([^"]+)"', (Path(__file__).resolve().parents[2] / "app" / "core" / "version.py").read_text()).group(1)
-DL_WIN = f"{RELEASES}/download/v{VERSION}/Kryptokompis-Setup-{VERSION}.exe"
-DL_APK = f"{RELEASES}/download/v{VERSION}/Kryptokompis-{VERSION}.apk"
+# "latest/download" follows the newest release whatever its tag is called (0.5.4 was tagged "V.0.5.4").
+DL_WIN = f"{RELEASES}/latest/download/Kryptokompis-Setup-{VERSION}.exe"
+# The Android build needs Christian's signing key, so it can lag behind: newest release that HAS an APK.
+APK_VERSION, APK_TAG = "0.5.2", "v0.5.2"
+DL_APK = f"{RELEASES}/download/{APK_TAG}/Kryptokompis-{APK_VERSION}.apk"
 FONTS = "https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap"
 ASSETS = Path(__file__).with_name("assets")
 
@@ -313,7 +316,7 @@ T = {
         ("Staking og belønninger", "Inntekt til markedsverdi, som også blir kostprisen."),
         ("Gevinst og tap", "Føres hver for seg, aldri trukket fra hverandre."),
         ("Formue", "Markedsverdi 31.12. Kontanter på børser vises for seg.")],
- rules_note="Regelsettet heter NO-krypto-2026.1 og står i hver rapport.",
+ rules_note="Regelsettet heter NO-krypto-2026.2 og står i hver rapport.",
  # imports + cost basis
  imp_h="Transaksjoner og kostpris", imp_sub="Kryptokompis henter historikken din og gir hvert kjøp riktig kostpris i kroner. Det meste av jobben din er å koble til børsene første gang.",
  imp=[("API-nøkkel som bare kan lese", "Børsene synkes automatisk i bakgrunnen. Kryptokompis kan aldri handle eller ta ut penger."),
@@ -356,7 +359,7 @@ T = {
  faq_h="Spørsmål og svar",
  faq=[("Hvordan skattlegges krypto i Norge?", "Gevinst ved salg eller bytte er skattepliktig, og tap gir fradrag, begge med 22 % skatt. Staking og andre belønninger er inntekt. Kryptoen teller også med i formuen, med verdien per 31.12. Kryptokompis regner ut alt dette i kroner - sjekk alltid tallene før du leverer."),
       ("Er dette skatterådgivning?", "Nei. Kryptokompis er et beregningsverktøy som bruker de norske reglene slik det tolker dem, og oppgir hvilket regelsett som er brukt i hver rapport. Du er selv ansvarlig for skattemeldingen - spør Skatteetaten eller en regnskapsfører hvis du er usikker."),
-      ("Hva med tidligere år?", "Du velger hvor full FIFO-beregning starter. År som allerede er levert på annen måte, forblir lukket. For mynter der du har hele historikken, kan de reelle gamle kjøpsprisene brukes - så et reelt tap kan føres opp når du selger."),
+      ("Hva med tidligere år?", "År som allerede er levert på annen måte, forblir lukket og beregnes ikke på nytt. Alle kjøp du importerer brukes likevel til kostprisen når du selger senere - også gamle kjøp. Mangler kjøpet, viser rapporten salget som uavklart til du legger inn faktisk kostpris."),
       ("Hva med kontanter på børsene?", "Dollar og kroner som ligger på en børs, er formue - normalt et krav mot børsen - men ikke en virtuell eiendel. Kryptokompis viser saldoen ved årsskiftet for seg. Hvor den skal føres, avhenger av saldoen, valutaen og hvor børsen holder til."),
       ("Hvilke enheter?", "Windows-PC og Android-mobil. Én lisens gjelder begge. iPhone kan komme senere."),
       ("Windows sier «Windows beskyttet PC-en». Er det trygt?", "Meldingen kommer fordi Kryptokompis er nytt og ennå ikke har bygget opp et rykte hos Microsoft, ikke fordi noe er galt. Trykk <b>Mer info</b> og så <b>Kjør likevel</b>. Installasjonen trenger ikke administrator, og alt havner i din egen brukermappe. Filens SHA-256-sjekksum står ved hver versjon på nedlastingssiden."),
@@ -443,7 +446,7 @@ T = {
         ("Staking and rewards", "Income at market value, which also becomes the cost."),
         ("Gains and losses", "Reported separately, never netted."),
         ("Wealth", "Market value at 31.12. Cash on exchanges is shown separately.")],
- rules_note="The ruleset is called NO-krypto-2026.1 and is stated in every report.",
+ rules_note="The ruleset is called NO-krypto-2026.2 and is stated in every report.",
  imp_h="Transactions and cost basis", imp_sub="Kryptokompis collects your history and gives every purchase the right cost in NOK. Most of your work is connecting the exchanges the first time.",
  imp=[("Read-only API keys", "Exchanges sync automatically in the background. Kryptokompis can never trade or withdraw."),
       ("Or the exchange's own export file", "Upload the file and Kryptokompis recognises the exchange. Importing the same period again is safe - nothing is counted twice."),
@@ -482,7 +485,7 @@ T = {
  faq_h="Questions and answers",
  faq=[("How is crypto taxed in Norway?", "Gains on a sale or swap are taxable and losses are deductible, both at 22 %. Staking and other rewards are income. Your crypto also counts towards wealth, at its value on 31.12. Kryptokompis works all of this out in NOK - always check the figures before you file."),
       ("Is this tax advice?", "No. Kryptokompis is a calculation tool that applies the Norwegian rules as it interprets them, and states the ruleset used in every report. You are responsible for your tax return - ask Skatteetaten or an accountant if unsure."),
-      ("What about earlier years?", "You choose where full FIFO starts. Years already filed another way stay closed. For coins where you have the full history, the real old purchase prices can be used - so a real loss can be claimed when you sell."),
+      ("What about earlier years?", "Years already filed another way stay closed and are not recalculated. Every purchase you import is still used for the cost when you sell later - old ones too. If the purchase is missing, the report shows the sale as unresolved until you enter the real cost."),
       ("What about cash on exchanges?", "Dollars and kroner held on an exchange are wealth - normally a claim against the exchange - but not a virtual asset. Kryptokompis shows the balance at the turn of the year separately. Where to report it depends on the balance, the currency and where the exchange is based."),
       ("Which devices?", "Windows PC and Android phone. One licence covers both. iPhone may come later."),
       ("Windows says \u201cWindows protected your PC\u201d. Is it safe?", "The message appears because Kryptokompis is new and has not yet built a reputation with Microsoft, not because anything is wrong. Click <b>More info</b>, then <b>Run anyway</b>. The installer needs no administrator rights and everything goes into your own user folder. Each version's SHA-256 checksum is listed on the downloads page."),

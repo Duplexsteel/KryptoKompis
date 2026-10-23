@@ -5,7 +5,7 @@ summary: Når du selger en mynt du har kjøpt flere ganger, bestemmer FIFO hvilk
 order: 2
 kind: guide
 ---
-Har du kjøpt samme mynt flere ganger til ulike priser, må du vite *hvilke* mynter du selger når du selger. I Norge brukes FIFO: **først inn, først ut**. De myntene du kjøpte først, regnes som solgt først.
+Har du kjøpt samme mynt flere ganger til ulike priser, må du vite *hvilke* mynter du selger når du selger. Kryptokompis bruker FIFO: **først inn, først ut**. De myntene du kjøpte først, regnes som solgt først. FIFO er ikke et lovkrav for krypto - Skatteetaten krever at du kan vise hvilke enheter du har solgt og hva de kostet. FIFO er en enkel og etterprøvbar måte å gjøre det på.
 
 ## Et enkelt eksempel
 | Dato | Hva | Antall | Pris per BTC |
@@ -19,7 +19,7 @@ Med FIFO er det januar-myntene som er solgt. Kostprisen er 40 000 kr, salget gir
 Hadde man i stedet brukt mars-kjøpet, ville gevinsten blitt 10 000 kr. Det er derfor metoden betyr mye.
 
 ## Per mynt, på tvers av børser
-FIFO gjelder per mynt - ikke per børs. Kjøpte du BTC på én børs og solgte på en annen, er det fortsatt det eldste kjøpet som regnes som solgt først. Derfor må historikken fra alle børsene ses samlet.
+Kryptokompis regner FIFO per mynt - ikke per børs. Kjøpte du BTC på én børs og solgte på en annen, er det fortsatt det eldste kjøpet som regnes som solgt først. Derfor må historikken fra alle børsene ses samlet.
 
 ## Bytter og gebyrer teller også
 - Et bytte fra én mynt til en annen er et salg av den første - også til en stablecoin.

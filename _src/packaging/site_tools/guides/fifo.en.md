@@ -5,7 +5,7 @@ summary: When you sell a coin you bought several times, FIFO decides which purch
 order: 2
 kind: guide
 ---
-If you bought the same coin several times at different prices, you need to know *which* coins you sell when you sell. Norway uses FIFO: **first in, first out**. The coins you bought first count as sold first.
+If you bought the same coin several times at different prices, you need to know *which* coins you sell when you sell. Kryptokompis uses FIFO: **first in, first out**. The coins you bought first count as sold first. FIFO is not a legal requirement for crypto - Skatteetaten requires that you can show which units you sold and what they cost. FIFO is a simple, verifiable way to do that.
 
 ## A simple example
 | Date | What | Amount | Price per BTC |
@@ -19,7 +19,7 @@ With FIFO the January coins are the ones sold. The cost is NOK 40,000, the sale 
 Had the March purchase been used instead, the gain would have been NOK 10,000. That is why the method matters.
 
 ## Per coin, across exchanges
-FIFO applies per coin - not per exchange. If you bought BTC on one exchange and sold on another, the oldest purchase still counts as sold first. That is why the history from every exchange must be looked at together.
+Kryptokompis applies FIFO per coin - not per exchange. If you bought BTC on one exchange and sold on another, the oldest purchase still counts as sold first. That is why the history from every exchange must be looked at together.
 
 ## Swaps and fees count too
 - A swap from one coin to another is a sale of the first - including to a stablecoin.

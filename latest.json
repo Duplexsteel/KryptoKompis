@@ -1,8 +1,7 @@
 {
- "version": "0.5.2",
+ "version": "0.5.4",
  "url": "https://github.com/Duplexsteel/KryptoKompis/releases/latest",
- "notes": "Kryptokompis 0.5.2: tydelige varsler n\u00e5r transaksjoner og b\u00f8rser ikke stemmer, appen lukker seg helt",
- "windows": "https://github.com/Duplexsteel/KryptoKompis/releases/download/v0.5.2/Kryptokompis-Setup-0.5.2.exe",
- "windows_sha256": "eacb45b00792289d63f08601353dde56ec127d1037eed6bfb8e51ed008978380",
- "android": "https://github.com/Duplexsteel/KryptoKompis/releases/download/v0.5.2/Kryptokompis-0.5.2.apk"
+ "notes": "Correct Norwegian tax rules (old gains never moved to new purchases, fees paid in coin realised at market value, unknown values shown as unresolved), Coinbase Pro import, your own corrections with a permanent log, an inbox folder that imports and files statements, and a full documentation archive.",
+ "windows": "https://github.com/Duplexsteel/KryptoKompis/releases/download/V.0.5.4/Kryptokompis-Setup-0.5.4.exe",
+ "windows_sha256": "92c971d2770cb7fd4c4c4a9fb12a6b947d9fc440d9b8e36d40ab149396b12d4c"
 }

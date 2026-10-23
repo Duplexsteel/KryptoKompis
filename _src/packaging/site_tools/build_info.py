@@ -64,7 +64,7 @@ T = {
   about="""
 <h2>Om Kryptokompis</h2>
 <p class="sub">Kryptokompis er laget i Norge av en utvikler som selv handler krypto og ville ha tall han kunne stole på. <a href="om.html">Les mer om hvem som lager det</a>.</p>
-<ul class="ck"><li>Norske regler: FIFO per mynt på tvers av børser, NOK-kurs fra Norges Bank på hver transaksjonsdato, gevinst og tap hver for seg.</li>
+<ul class="ck"><li>Beregning: FIFO per mynt på tvers av børser (metoden Kryptokompis bruker, ikke et lovkrav), NOK-kurs fra Norges Bank på hver transaksjonsdato, gevinst og tap hver for seg.</li>
 <li>Dataene dine blir på din egen enhet. API-nøkler kan bare lese.</li>
 <li>Hver rapport viser hvilket regelsett som er brukt, og hva som er antatt.</li>
 <li>Ikke skatterådgivning - du er selv ansvarlig for skattemeldingen. <a href="vilkar.html">Vilkår</a></li></ul>""",
@@ -126,7 +126,7 @@ T = {
   about="""
 <h2>About Kryptokompis</h2>
 <p class="sub">Kryptokompis is made in Norway by a developer who trades crypto himself and wanted figures he could trust. <a href="about.html">More about who makes it</a>.</p>
-<ul class="ck"><li>Norwegian rules: FIFO per coin across exchanges, Norges Bank NOK rate on each transaction date, gains and losses kept apart.</li>
+<ul class="ck"><li>Calculation: FIFO per coin across exchanges (the method Kryptokompis uses, not a legal requirement), Norges Bank NOK rate on each transaction date, gains and losses kept apart.</li>
 <li>Your data stays on your own device. API keys can only read.</li>
 <li>Every report states which ruleset was used and what was assumed.</li>
 <li>Not tax advice - you are responsible for your tax return. <a href="terms.html">Terms</a></li></ul>""",

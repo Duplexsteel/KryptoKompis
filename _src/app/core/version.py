@@ -1,9 +1,9 @@
 """Version identifiers stamped on reports and test runs."""
 
-APP_VERSION = "0.5.2"
+APP_VERSION = "0.5.4"
 # Bump when a TAX RULE changes (not for UI/import fixes): a report or test run
 # can then say exactly which interpretation of the rules produced it.
-RULESET_VERSION = "NO-krypto-2026.1"
+RULESET_VERSION = "NO-krypto-2026.2"
 RULESET_SUMMARY = (
     "FIFO per asset across exchanges; NOK cost fixed per lot on its acquisition date; "
     "crypto-to-crypto (incl. stablecoins) = realisation; own transfers are not realisations; "
