@@ -40,6 +40,8 @@ COPY = {
     'download': ('Gå til nedlasting', 'Go to downloads'),
     'ready': ('Klar for å prøve?', 'Ready to try?'),
     'win_p': ('For Windows 10 og 11.', 'For Windows 10 and 11.'),
+    'windows_help': ('Windows kan vise «Windows beskyttet PC-en»: trykk <b>Mer info → Kjør likevel</b>.', 'Windows may show “Windows protected your PC”: click <b>More info → Run anyway</b>.'),
+    'windows_help_link': ('Les hele forklaringen', 'Read the full explanation'),
     'android_p': ('Installer APK-filen på Android.', 'Install the APK on Android.'),
     'versions': ('Alle versjoner', 'All versions'),
     'latest_h': ('Nytt og nyttig, også mellom skattemeldingene.', 'Useful all year, between tax returns too.'),
@@ -143,6 +145,12 @@ def a(href, label, cls=''):
     return f'<a href="{escape(href, quote=True)}" class="{cls}">{label}</a>'
 
 
+def windows_help(lang):
+    t = {'lang': lang}
+    faq = 'sporsmal.html' if lang == 'nb' else 'faq.html'
+    return f'<span class="download-help">{text(t,"windows_help")} {a(faq+"#windows-smartscreen",text(t,"windows_help_link"))}</span>'
+
+
 def title(t, key, heading, intro=''):
     return f'<p class="eyebrow">{text(t,key)}</p><h1 class="page-title">{text(t,heading)}</h1>' + (f'<p class="intro">{text(t,intro)}</p>' if intro else '')
 
@@ -181,7 +189,8 @@ def plans(B,t,compact=False):
 
 
 def home_end(B,t):
-    return f'''<section class="space white"><div class="wrap"><div class="rowtitle"><div><p class="eyebrow">{text(t,'free')}</p><h2 class="sectiontitle">{text(t,'free_h')}</h2></div>{a(B.url(t,'pricing'),text(t,'pricing')+' →','arrowlink')}</div><p class="intro">{B.X[t['lang']]['tiers_sub']}</p>{plans(B,t,True)}</div></section><!--LATEST-->{ribbon(B,t)}'''
+    download_heading, download = t['go_steps'][0]
+    return f'''<section class="space white"><div class="wrap"><div class="rowtitle"><div><p class="eyebrow">{text(t,'free')}</p><h2 class="sectiontitle">{text(t,'free_h')}</h2></div>{a(B.url(t,'pricing'),text(t,'pricing')+' →','arrowlink')}</div><p class="intro">{B.X[t['lang']]['tiers_sub']}</p>{plans(B,t,True)}<div class="home-download"><h3>{download_heading}</h3><p>{download}</p></div></div></section><!--LATEST-->{ribbon(B,t)}'''
 
 
 def latest(B,t,rows):
@@ -229,7 +238,7 @@ def pricing(B,t):
     old=B.sec_start(t,False)
     lost=old[old.index('<div class="tip" id="lost">'):old.rindex('</div></section>')]
     lost=lost.replace('class="tip"','class="licence-help"').replace('class="lost"','class="inline-form"')
-    download=''.join(f'<div class="download-option"><span class="device-sign" aria-hidden="true">{symbol}</span><div><h3>{name}</h3><p>{text(t,key)} v{B.VERSION}</p>{a(href,name+" ↓","btn")}</div></div>' for symbol,name,key,href in [('▦','Windows','win_p',B.DL_WIN),('▣','Android (APK)','android_p',B.DL_APK)])
+    download=''.join(f'<div class="download-option"><span class="device-sign" aria-hidden="true">{symbol}</span><div><h3>{name}</h3><p>{text(t,key)} v{B.VERSION}</p>{a(href,name+" ↓","btn")}{windows_help(t["lang"]) if key=="win_p" else ""}</div></div>' for symbol,name,key,href in [('▦','Windows','win_p',B.DL_WIN),('▣','Android (APK)','android_p',B.DL_APK)])
     return f'''<section class="space white"><div class="wrap">{title(t,'pricing','pricing_h')}<p class="intro">{t['go_sub']}</p><div class="free-line"><div><strong>{text(t,'free_portfolio')}</strong><p class="muted">{text(t,'free_p')}</p></div>{a('#'+t['ids'][4],text(t,'download')+' ↓','arrowlink')}</div>{plans(B,t)}<p class="tiny">{t['pay_note']}</p></div></section><section class="space" id="{t['ids'][4]}"><div class="wrap"><h2 class="sectiontitle">{text(t,'ready')}</h2><div class="downloads">{download}</div><p>{a(B.RELEASES,text(t,'versions')+' →','arrowlink')}</p><div class="support-area"><div><p class="eyebrow">{x['portal_h']}</p><h3>{x['portal_btn']}</h3><p>{x['portal_p']}</p>{a(B.PORTAL,x['portal_btn']+' →','arrowlink')}</div>{lost}</div></div></section>'''
 
 
@@ -240,9 +249,18 @@ def controls(B,t):
 
 
 def faq(B,t):
-    items=''.join(f'<details class="faq-item" data-question="{escape(re.sub("<[^>]+>","",q+" "+answer).lower(),quote=True)}" {"open" if i==0 else ""}><summary>{q}</summary><p>{answer}</p></details>' for i,(q,answer) in enumerate(t['faq']))
+    items=[]
+    for i,(q,answer) in enumerate(t['faq']):
+        anchor = 'id="windows-smartscreen"' if q.startswith('Windows ') else ''
+        question = escape(re.sub('<[^>]+>', '', q+' '+answer).lower(), quote=True)
+        opened = 'open' if i == 0 else ''
+        items.append(f'<details class="faq-item" {anchor} data-question="{question}" {opened}><summary>{q}</summary><p>{answer}</p></details>')
+    items=''.join(items)
     groups=''.join(a(B.url(t,k),text(t,k)) for k in ('imports','pricing','insights'))
-    return f'''<section class="space" id="{t['ids'][6]}"><div class="wrap">{title(t,'faq','faq_h','faq_p')}<label class="sr-only" for="faq-search">{text(t,'faq_search')}</label><input type="search" id="faq-search" class="field faq-search" placeholder="{text(t,'faq_search')} …"><div class="faq-layout"><aside class="faq-groups">{groups}</aside><div id="faq-items">{items}<p id="faq-empty" role="status" hidden>{text(t,'faq_empty')}</p><div class="open-note">{a(B.DISCORD,text(t,'contact')+' →')}</div><p class="tiny">{t['warn']}</p></div></div></div></section>'''
+    return f'''<section class="space" id="{t['ids'][6]}"><div class="wrap">{title(t,'faq','faq_h','faq_p')}<label class="sr-only" for="faq-search">{text(t,'faq_search')}</label><input type="search" id="faq-search" class="field faq-search" placeholder="{text(t,'faq_search')} …"><div class="faq-layout"><aside class="faq-groups">{groups}</aside><div id="faq-items">{items}<p id="faq-empty" role="status" hidden>{text(t,'faq_empty')}</p><div class="open-note">{a(B.DISCORD,text(t,'contact')+' →')}</div><p class="tiny">{t['warn']}</p></div></div></div></section>''' + '''<script>
+function openFaqTarget(){const item=document.getElementById(location.hash.slice(1));if(item&&item.matches('.faq-item')){item.hidden=false;item.open=true;item.scrollIntoView()}}
+openFaqTarget();window.addEventListener('hashchange',openFaqTarget);
+</script>'''
 
 
 def reading(t,content):

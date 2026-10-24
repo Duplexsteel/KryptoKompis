@@ -341,7 +341,7 @@ T = {
       ("Varsler i appen", "Når en ny versjon er ute, og når en kostnad over 10 000 kr ikke er betalt via bank og kanskje ikke gir fradrag.")],
  # get started + price
  go_h="Kom i gang", go_sub="Prøv gratis først. Betal når du trenger tallene til skattemeldingen.",
- go_steps=[("Last ned", f'<a class="dl" href="{DL_WIN}" data-goatcounter-click="download-windows" data-goatcounter-title="Download Windows {VERSION}">Windows 10 og 11</a> <a class="dl" href="{DL_APK}" data-goatcounter-click="download-android" data-goatcounter-title="Download Android {VERSION}">Android (APK)</a><br><small>Versjon {VERSION}. <a href="{{RELEASES}}">Alle versjoner</a>. Viser Windows en blå advarsel: Mer info, Kjør likevel.</small>'),
+ go_steps=[("Last ned", f'<span class="download-platforms"><span><a class="btn dl" href="{DL_WIN}" data-goatcounter-click="download-windows" data-goatcounter-title="Download Windows {VERSION}">Windows 10 og 11</a>{DESIGN.windows_help("nb")}</span><span><a class="btn dl" href="{DL_APK}" data-goatcounter-click="download-android" data-goatcounter-title="Download Android {VERSION}">Android (APK)</a></span></span><br><small>Versjon {VERSION}. <a href="{{RELEASES}}">Alle versjoner</a>.</small>'),
            ("Koble til børsene", "Porteføljen og kontrollene er gratis. Total formue vises."),
            ("Kjøp lisens", "Lisensen låser opp tallene til skattemeldingen, PDF-rapporten og CSV-filene.")],
  price_h="Betalisens", amount="99 kr", once="én gang",
@@ -468,7 +468,7 @@ T = {
       ("Results per coin and period", "Realised gains and losses, fees and win rate per coin - per week, month or year. Needs a licence."),
       ("Alerts in the app", "When a new version is out, and when a cost over NOK 10,000 wasn't paid via a bank and may not be deductible.")],
  go_h="Get started", go_sub="Try it free first. Pay when you need the figures for your tax return.",
- go_steps=[("Download", f'<a class="dl" href="{DL_WIN}" data-goatcounter-click="download-windows" data-goatcounter-title="Download Windows {VERSION}">Windows 10 and 11</a> <a class="dl" href="{DL_APK}" data-goatcounter-click="download-android" data-goatcounter-title="Download Android {VERSION}">Android (APK)</a><br><small>Version {VERSION}. <a href="{{RELEASES}}">All versions</a>. If Windows shows a blue warning: More info, Run anyway.</small>'),
+ go_steps=[("Download", f'<span class="download-platforms"><span><a class="btn dl" href="{DL_WIN}" data-goatcounter-click="download-windows" data-goatcounter-title="Download Windows {VERSION}">Windows 10 and 11</a>{DESIGN.windows_help("en")}</span><span><a class="btn dl" href="{DL_APK}" data-goatcounter-click="download-android" data-goatcounter-title="Download Android {VERSION}">Android (APK)</a></span></span><br><small>Version {VERSION}. <a href="{{RELEASES}}">All versions</a>.</small>'),
            ("Connect your exchanges", "The portfolio and the checks are free. Total wealth is shown."),
            ("Buy a licence", "The licence unlocks the figures for the tax return, the PDF report and the CSV files.")],
  price_h="Beta licence", amount="99 NOK", once="once",
