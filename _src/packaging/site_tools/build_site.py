@@ -507,9 +507,15 @@ for _t in T.values():
                       if isinstance(i, tuple) else i for i in _v]
 
 
+def canonical(file: str) -> str:
+    """The one address Google should use for a page (Search Console 2026-10-26: "duplicate without
+    user-selected canonical" - the front page answers both as / and as /index.html)."""
+    return f"{SITE_URL}/" if file in ("", "index.html") else f"{SITE_URL}/{file}"
+
+
 def head(t, title, desc, path=None, body_class=""):
     body_class = "home-blue site-design"
-    url = f"{SITE_URL}/{path or t['file']}"
+    url = canonical(path or t['file'])
     return f"""<!doctype html>
 <html lang="{t['lang']}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -521,7 +527,8 @@ def head(t, title, desc, path=None, body_class=""):
 <meta property="og:url" content="{url}"><meta property="og:locale" content="{t['locale']}">
 <meta property="og:image" content="{SITE_URL}/assets/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="alternate" hreflang="nb" href="{SITE_URL}/index.html"><link rel="alternate" hreflang="en" href="{SITE_URL}/en.html">
+<link rel="canonical" href="{url}">
+<link rel="alternate" hreflang="nb" href="{canonical('index.html')}"><link rel="alternate" hreflang="en" href="{SITE_URL}/en.html">
 <link rel="alternate" type="application/rss+xml" title="{'Kryptokompis - guider og nyheter' if t['lang'] == 'nb' else 'Kryptokompis - guides and news'}" href="{SITE_URL}/{'rss.xml' if t['lang'] == 'nb' else 'rss-en.xml'}">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="icon" href="icon.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">

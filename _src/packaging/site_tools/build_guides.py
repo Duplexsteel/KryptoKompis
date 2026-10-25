@@ -225,8 +225,8 @@ def build() -> list:
 def sitemap(urls: list) -> None:
     fixed = ["index.html", "en.html", "info.html", "info-en.html", "vilkar.html", "terms.html", "personvern.html", "privacy.html"]
     fixed += [f for lang in B.PAGES for k, f in B.PAGES[lang].items() if k not in ("guides", "blog")]
-    rows = [f"<url><loc>{B.SITE_URL}/{u}</loc></url>" for u in fixed]
-    rows += [f"<url><loc>{B.SITE_URL}/{u}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>" for u, d in urls]
+    rows = [f"<url><loc>{B.canonical(u)}</loc></url>" for u in fixed]
+    rows += [f"<url><loc>{B.canonical(u)}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>" for u, d in urls]
     (SITE / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
                                       + "".join(rows) + "</urlset>\n", encoding="utf-8")
     (SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {B.SITE_URL}/sitemap.xml\n", encoding="utf-8")
