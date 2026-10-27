@@ -316,7 +316,7 @@ T = {
         ("Staking og belønninger", "Inntekt til markedsverdi, som også blir kostprisen."),
         ("Gevinst og tap", "Føres hver for seg, aldri trukket fra hverandre."),
         ("Formue", "Markedsverdi 31.12. Kontanter på børser vises for seg.")],
- rules_note="Regelsettet heter NO-krypto-2026.2 og står i hver rapport.",
+ rules_note="Regelsettet heter NO-krypto-2026.3 og står i hver rapport.",
  # imports + cost basis
  imp_h="Transaksjoner og kostpris", imp_sub="Kryptokompis henter historikken din og gir hvert kjøp riktig kostpris i kroner. Det meste av jobben din er å koble til børsene første gang.",
  imp=[("API-nøkkel som bare kan lese", "Børsene synkes automatisk i bakgrunnen. Kryptokompis kan aldri handle eller ta ut penger."),
@@ -446,7 +446,7 @@ T = {
         ("Staking and rewards", "Income at market value, which also becomes the cost."),
         ("Gains and losses", "Reported separately, never netted."),
         ("Wealth", "Market value at 31.12. Cash on exchanges is shown separately.")],
- rules_note="The ruleset is called NO-krypto-2026.2 and is stated in every report.",
+ rules_note="The ruleset is called NO-krypto-2026.3 and is stated in every report.",
  imp_h="Transactions and cost basis", imp_sub="Kryptokompis collects your history and gives every purchase the right cost in NOK. Most of your work is connecting the exchanges the first time.",
  imp=[("Read-only API keys", "Exchanges sync automatically in the background. Kryptokompis can never trade or withdraw."),
       ("Or the exchange's own export file", "Upload the file and Kryptokompis recognises the exchange. Importing the same period again is safe - nothing is counted twice."),

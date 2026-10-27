@@ -1,5 +1,341 @@
 [
 {
+"title": "Ethereum fixes Glamsterdam bug that could have sent staking deposits to builders",
+"link": "https://www.coindesk.com/tech/2026/10/27/ethereum-fixes-glamsterdam-bug-that-could-have-sent-staking-deposits-to-builders",
+"source": "CoinDesk",
+"at": "2026-10-27T07:09:56+00:00"
+},
+{
+"title": "Zcash co-founder proposes ending grants funding, citing $125 million treasury",
+"link": "https://www.coindesk.com/markets/2026/10/27/zcash-co-founder-proposes-ending-grants-funding-citing-usd125-million-treasury",
+"source": "CoinDesk",
+"at": "2026-10-27T06:14:41+00:00"
+},
+{
+"title": "Here’s what happened in crypto today",
+"link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-27T06:08:28+00:00"
+},
+{
+"title": "Ripple gets a final go-ahead to launch its own U.S. national trust bank",
+"link": "https://www.coindesk.com/markets/2026/10/27/ripple-gets-a-final-go-ahead-to-launch-its-own-u-s-national-trust-bank",
+"source": "CoinDesk",
+"at": "2026-10-27T04:28:49+00:00"
+},
+{
+"title": "RedotPay weighs confidential US IPO filing by year-end: Bloomberg",
+"link": "https://cointelegraph.com/news/redotpay-weighs-confidential-us-ipo-filing-by-year-end-bloomberg?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-27T04:26:51+00:00"
+},
+{
+"title": "Keystone breach deepens: Hackers stole key used to verify wallets as genuine",
+"link": "https://cointelegraph.com/news/keystone-breach-deepens-hackers-stole-key-used-to-verify-wallets-as-genuine?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-27T01:55:03+00:00"
+},
+{
+"title": "Ripple wins final US approval for national trust bank",
+"link": "https://cointelegraph.com/news/ripple-wins-final-us-approval-for-national-trust-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-27T00:06:41+00:00"
+},
+{
+"title": "Cold Storage Goes South: bitcoin++ Announces Antarctica Edition",
+"link": "https://bitcoinmagazine.com/news/cold-storage-bitcoin-antarctica",
+"source": "Bitcoin Magazine",
+"at": "2026-10-27T00:00:04+00:00"
+},
+{
+"title": "Canada’s Draft Stablecoin Rules Cap Redemption Fees at 1% and Ban Yield",
+"link": "https://decrypt.co/381889/canada-draft-stablecoin-rules-redemption-fees-ban-yield",
+"source": "Decrypt",
+"at": "2026-10-26T22:16:03+00:00"
+},
+{
+"title": "OpenAI Launches GPT-6.1 Terra, Its Half-Good AI Model at Half the Price",
+"link": "https://decrypt.co/381883/openai-launches-gpt-6-1-terra-half-good-half-price",
+"source": "Decrypt",
+"at": "2026-10-26T21:46:02+00:00"
+},
+{
+"title": "US OCC calls on community banks to become payment stablecoin issuers",
+"link": "https://cointelegraph.com/news/occ-community-banks-stablecoin-issuers-genius-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-26T21:38:30+00:00"
+},
+{
+"title": "Injective launches onchain futures market tracking Nvidia GPU rental costs",
+"link": "https://cointelegraph.com/news/injective-launches-onchain-futures-market-tracking-nvidia-gpu-rental-costs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-26T21:23:32+00:00"
+},
+{
+"title": "Unitree Stock Jumps as Investors Bet Chatbot AI Will Finally Give Robots a Brain",
+"link": "https://decrypt.co/381871/unitree-stock-jumps-investors-bet-chatbot-ai-robots-brain",
+"source": "Decrypt",
+"at": "2026-10-26T21:16:03+00:00"
+},
+{
+"title": "Blink Wallet Adds Inactivity Fee to Custodial Accounts, Accelerating Migration to Self Custody",
+"link": "https://bitcoinmagazine.com/business/blink-wallet-adds-inactivity-fee-to-custodial-accounts-accelerating-migration-to-self-custody",
+"source": "Bitcoin Magazine",
+"at": "2026-10-26T21:14:23+00:00"
+},
+{
+"title": "NBA Embraces the CFTC on Prediction Markets as the NFL Fights It in Court",
+"link": "https://decrypt.co/381864/nba-cftc-prediction-markets-nfl-fights-court",
+"source": "Decrypt",
+"at": "2026-10-26T20:36:03+00:00"
+},
+{
+"title": "South Korea Arrests Seven in First Big AI-Assisted Hacking Case",
+"link": "https://decrypt.co/381862/south-korea-arrests-seven-first-big-ai-hacking-case",
+"source": "Decrypt",
+"at": "2026-10-26T20:06:02+00:00"
+},
+{
+"title": "Canada opens consultation on stablecoins, citing US GENIUS Act",
+"link": "https://cointelegraph.com/news/canada-consultation-stablecoins-genius-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-26T19:47:40+00:00"
+},
+{
+"title": "AI Agents Found a Way Into Anthropic's Business Systems in Under 12 Hours",
+"link": "https://decrypt.co/381860/ai-agents-hack-anthropic-business-systems-12-hours",
+"source": "Decrypt",
+"at": "2026-10-26T19:31:02+00:00"
+},
+{
+"title": "Coinbase Institutional Co-CEO: Bitcoin’s “Second Wave” of Institutional Capital has Arrived",
+"link": "https://bitcoinmagazine.com/videos/coinbase-institutional-co-ceo-bitcoins-second-wave-of-institutional-capital-has-arrived",
+"source": "Bitcoin Magazine",
+"at": "2026-10-26T19:24:08+00:00"
+},
+{
+"title": "Why Prediction Markets Got the Brazilian Election So Wrong",
+"link": "https://decrypt.co/381858/why-prediction-markets-got-brazilian-election-wrong",
+"source": "Decrypt",
+"at": "2026-10-26T18:46:03+00:00"
+},
+{
+"title": "AI company Anthropic announces IPO, expected as early as November",
+"link": "https://cointelegraph.com/news/anthropic-artificial-intelligence-ipo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-26T18:42:41+00:00"
+},
+{
+"title": "SpaceX Locks Up $40 Billion for AI Chips as Musk Warns Most Neoclouds Will Die",
+"link": "https://decrypt.co/381848/spacex-40-billion-ai-chips-elon-musk-warns-most-neoclouds-will-die",
+"source": "Decrypt",
+"at": "2026-10-26T18:16:02+00:00"
+},
+{
+"title": "NBA names Kalshi, Polymarket preferred exchanges, signs CFTC deal",
+"link": "https://cointelegraph.com/news/nba-names-kalshi-polymarket-preferred-exchanges-signs-cftc-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-26T17:46:09+00:00"
+},
+{
+"title": "Bitcoin Price Hovers Near $80,000 as Traders Await Fed Decision",
+"link": "https://bitcoinmagazine.com/markets/bitcoin-price-hovers-around-80000",
+"source": "Bitcoin Magazine",
+"at": "2026-10-26T17:43:18+00:00"
+},
+{
+"title": "Bitcoin Wallet Fixes Critical Flaw That Redirected Funds to Attackers",
+"link": "https://decrypt.co/381844/bitcoin-wallet-flaw-trick-users-paying-attackers",
+"source": "Decrypt",
+"at": "2026-10-26T17:41:21+00:00"
+},
+{
+"title": "India’s CoinDCX Confirms $16 Million Loss Days After CEO Called It a ‘False Alarm’",
+"link": "https://decrypt.co/381834/india-coindcx-confirms-16-million-loss-ceo-called-false-alarm",
+"source": "Decrypt",
+"at": "2026-10-26T16:36:03+00:00"
+},
+{
+"title": "South Korea lawmakers mull pushing crypto tax implementation to 2029",
+"link": "https://cointelegraph.com/news/south-korea-implementation-crypto-tax-2029?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-26T16:18:09+00:00"
+},
+{
+"title": "Tom Lee's Bitmine favors share buybacks to ether purchases as crypto declines",
+"link": "https://www.coindesk.com/business/2026/10/26/tom-lee-s-bitmine-favors-share-buybacks-to-ether-purchases-as-crypto-declines",
+"source": "CoinDesk",
+"at": "2026-10-26T16:05:12+00:00"
+},
+{
+"title": "Brazil’s Stock Market Crashes After Lula’s Upset Victory",
+"link": "https://decrypt.co/381828/brazil-stock-market-crashes-lula-upset-victory",
+"source": "Decrypt",
+"at": "2026-10-26T16:04:51+00:00"
+},
+{
+"title": "NBA joins pro sports leagues on CFTC prediction markets bandwagon while NFL balks",
+"link": "https://www.coindesk.com/policy/2026/10/26/nba-joins-pro-sports-leagues-on-cftc-prediction-markets-bandwagon-while-nfl-balks",
+"source": "CoinDesk",
+"at": "2026-10-26T15:59:55+00:00"
+},
+{
+"title": "Kalshi strikes deal with S&P Dow Jones Indices to expand financial event contracts",
+"link": "https://cointelegraph.com/news/sp-dow-jones-partners-with-kalshi-to-bring-financial-benchmarks-to-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-26T15:54:15+00:00"
+},
+{
+"title": "OCC calls on community banks to enter the stablecoin payments market",
+"link": "https://www.coindesk.com/policy/2026/10/26/occ-calls-on-community-banks-to-enter-the-stablecoin-payments-market",
+"source": "CoinDesk",
+"at": "2026-10-26T15:45:51+00:00"
+},
+{
+"title": "Strategy (MSTR) Pauses Bitcoin Buying and Spends $205 Million on Preferred Stock",
+"link": "https://bitcoinmagazine.com/news/strategy-mstr-pauses-bitcoin-buying-205",
+"source": "Bitcoin Magazine",
+"at": "2026-10-26T15:39:53+00:00"
+},
+{
+"title": "Tom Lee's Bitmine Keeps Buying Ethereum But Pivots to Record Share Buybacks",
+"link": "https://decrypt.co/381826/tom-lee-bitmine-keeps-buying-ethereum-share-buybacks",
+"source": "Decrypt",
+"at": "2026-10-26T15:36:03+00:00"
+},
+{
+"title": "'Privacy Horror’: Researcher Uncovers Extent of Samsung Smart TV User Tracking",
+"link": "https://decrypt.co/381801/privacy-horror-researcher-uncovers-extent-of-samsung-smart-tv-user-tracking",
+"source": "Decrypt",
+"at": "2026-10-26T15:00:02+00:00"
+},
+{
+"title": "South Korea weighs fourth delay on its crypto gains tax, pushing it to 2029",
+"link": "https://www.coindesk.com/policy/2026/10/26/south-korea-weighs-fourth-delay-on-its-crypto-gains-tax-pushing-it-to-2029",
+"source": "CoinDesk",
+"at": "2026-10-26T14:51:07+00:00"
+},
+{
+"title": "Bitcoin’s Bear Market Is Over, Galaxy Says",
+"link": "https://bitcoinmagazine.com/markets/bitcoins-bear-market-is-over-galaxy-says",
+"source": "Bitcoin Magazine",
+"at": "2026-10-26T14:44:40+00:00"
+},
+{
+"title": "PHP flaw shows AI ‘vulnerability apocalypse’ is on schedule: Immunefi CEO",
+"link": "https://cointelegraph.com/news/php-flaw-ai-vulnerability-apocalypse-immunefi-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-26T14:25:22+00:00"
+},
+{
+"title": "Canada opens consultation on draft stablecoin rules, maintains ban on yields",
+"link": "https://www.coindesk.com/policy/2026/10/26/canada-opens-consultation-on-draft-stablecoin-rules-maintains-ban-on-yields",
+"source": "CoinDesk",
+"at": "2026-10-26T14:23:41+00:00"
+},
+{
+"title": "South Korea Weighs Fourth Delay of Crypto Tax, With 2029 Start Tied to U.S. Data Sharing",
+"link": "https://bitcoinmagazine.com/news/south-korea-weighs-fourth-delay-crypto-tax",
+"source": "Bitcoin Magazine",
+"at": "2026-10-26T14:06:27+00:00"
+},
+{
+"title": "Anthropic Makes IPO Filing Public, Plans Nasdaq Listing Under ‘ANT’",
+"link": "https://decrypt.co/381818/anthropic-makes-ipo-filing-public-plans-nasdaq-listing-under-ant",
+"source": "Decrypt",
+"at": "2026-10-26T13:50:22+00:00"
+},
+{
+"title": "Leon Wankum: The Insane Math Behind Bitcoin Demonetizing Real Estate",
+"link": "https://bitcoinmagazine.com/videos/leon-wankum-the-insane-math-behind-bitcoin-demonetizing-real-estate",
+"source": "Bitcoin Magazine",
+"at": "2026-10-26T13:37:28+00:00"
+},
+{
+"title": "Blockstream Executive Peter Bain: Institutional Clients Say Bitcoin “Poised for a Big Bull Run”",
+"link": "https://bitcoinmagazine.com/videos/blockstream-executive-peter-bain-institutional-clients-say-bitcoin-poised-for-a-big-bull-run",
+"source": "Bitcoin Magazine",
+"at": "2026-10-26T13:31:07+00:00"
+},
+{
+"title": "Strategy skips Bitcoin purchases, spends $205M on STRC buybacks",
+"link": "https://cointelegraph.com/news/strategy-skips-btc-buy-205-million-strc-buyback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-26T13:27:38+00:00"
+},
+{
+"title": "The Bitcoin vs. Nasdaq Signal Has Flipped Bullish",
+"link": "https://bitcoinmagazine.com/videos/the-bitcoin-vs-nasdaq-signal-has-flipped-bullish",
+"source": "Bitcoin Magazine",
+"at": "2026-10-26T13:26:33+00:00"
+},
+{
+"title": "Strategy Pauses Bitcoin Buying, Spends $205M Buying Back STRC",
+"link": "https://decrypt.co/381811/strategy-pauses-bitcoin-buying-spends-205m-buying-back-strc",
+"source": "Decrypt",
+"at": "2026-10-26T13:24:38+00:00"
+},
+{
+"title": "AI giant Anthropic files for blockbuster IPO",
+"link": "https://www.coindesk.com/business/2026/10/26/ai-giant-anthropic-files-for-blockbuster-ipo",
+"source": "CoinDesk",
+"at": "2026-10-26T13:22:09+00:00"
+},
+{
+"title": "HOOD’s prediction markets to add $1.7B to revenue, exceed crypto by 2028: Bernstein",
+"link": "https://cointelegraph.com/news/prediction-markets-17b-robinhood-exceed-crypto-revenue-2028-bernstein?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-26T13:12:41+00:00"
+},
+{
+"title": "Bitcoin Dips Below $80,000 Ahead of Fed Decision, Midterms",
+"link": "https://decrypt.co/381802/bitcoin-dips-below-80000-ahead-of-fed-decision-midterms",
+"source": "Decrypt",
+"at": "2026-10-26T13:02:43+00:00"
+},
+{
+"title": "Bitcoin’s Bear Market Is Over, Galaxy Research Says: 'Now Is an Attractive Time to Buy'",
+"link": "https://decrypt.co/381786/bitcoin-bear-market-is-over-galaxy-research-says",
+"source": "Decrypt",
+"at": "2026-10-26T13:01:02+00:00"
+},
+{
+"title": "Morning Minute: Bitcoin Breaks Below $80,000 as Iran Fears Hit the Weekend",
+"link": "https://decrypt.co/381797/morning-minute-bitcoin-breaks-below-80000-as-iran-fears-hit-the-weekend",
+"source": "Decrypt",
+"at": "2026-10-26T12:16:12+00:00"
+},
+{
+"title": "A $68 million bitcoin bet is targeting a post-midterm election breakout to $90,000",
+"link": "https://www.coindesk.com/daybook-us/2026/10/26/a-usd68-million-bitcoin-bet-is-targeting-a-post-midterm-election-breakout-to-usd90-000",
+"source": "CoinDesk",
+"at": "2026-10-26T11:53:07+00:00"
+},
+{
+"title": "Aviva Investors launches tokenized share class of $29B Sterling fund on XRP Ledger",
+"link": "https://cointelegraph.com/news/aviva-investors-launches-tokenized-share-class-of-sterling-fund-on-xrp-ledger?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-10-26T11:39:27+00:00"
+},
+{
+"title": "Israel's Central Bank Rebukes Netanyahu Plan to Use Crypto to Dodge Sanctions",
+"link": "https://decrypt.co/381789/israels-central-bank-rebukes-netanyahu-plan-to-use-crypto-to-dodge-sanctions",
+"source": "Decrypt",
+"at": "2026-10-26T11:34:08+00:00"
+},
+{
+"title": "Bitcoin holds near $80,000 as oil retreats and the Fed decision looms",
+"link": "https://www.coindesk.com/markets/2026/10/26/bitcoin-holds-near-usd80-000-as-oil-retreats-and-the-fed-decision-looms",
+"source": "CoinDesk",
+"at": "2026-10-26T11:24:33+00:00"
+},
+{
+"title": "Live news: Bitcoin dips below $80,000 as stocks rally following Anthropic IPO filing",
+"link": "https://www.coindesk.com/tech/2026/10/26/live-news-brent-crude-slides-below-usd110-as-iran-deal-hopes-grow-and-brazil-stocks-sink",
+"source": "CoinDesk",
+"at": "2026-10-26T11:05:31+00:00"
+},
+{
 "title": "BTC price risks $80K loss into FOMC, earnings: Three things to know in Bitcoin this week",
 "link": "https://cointelegraph.com/markets/btc-price-risks-80k-loss-into-fomc-earnings-three-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
 "source": "Cointelegraph",
@@ -22,341 +358,5 @@
 "link": "https://www.coindesk.com/markets/2026/10/26/fed-ecb-and-boj-interest-rate-decisions-coinbase-earnings-crypto-week-ahead",
 "source": "CoinDesk",
 "at": "2026-10-26T09:14:47+00:00"
-},
-{
-"title": "Bitcoin ETFs break 2-week outflow streak with $301M comeback",
-"link": "https://cointelegraph.com/markets/bitcoin-etfs-rebound-weekly-inflow-301-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-26T08:20:49+00:00"
-},
-{
-"title": "Over 11 million bitcoin has no known owner. Here's what it means",
-"link": "https://www.coindesk.com/markets/2026/10/26/over-11-million-btc-can-t-be-linked-to-any-known-owner-even-after-wall-street-buying",
-"source": "CoinDesk",
-"at": "2026-10-26T07:18:24+00:00"
-},
-{
-"title": "Here’s what happened in crypto today",
-"link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-26T05:44:44+00:00"
-},
-{
-"title": "India's largest crypto exchange absorbs $16 million loss from internal process failure tied to retired wallet",
-"link": "https://www.coindesk.com/markets/2026/10/26/coindcx-absorbs-usd16-million-loss-from-internal-process-failure-tied-to-retired-wallet",
-"source": "CoinDesk",
-"at": "2026-10-26T05:39:17+00:00"
-},
-{
-"title": "Bitcoin wallet bug let rogue servers steal funds when users tried to speed up payments",
-"link": "https://www.coindesk.com/tech/2026/10/26/bitcoin-wallet-bug-let-rogue-servers-steal-funds-when-users-tried-to-speed-up-payments",
-"source": "CoinDesk",
-"at": "2026-10-26T05:15:20+00:00"
-},
-{
-"title": "Musk warns over 200 AI neoclouds face ‘guppy-level death’",
-"link": "https://cointelegraph.com/news/musk-warns-over-200-ai-neoclouds-face-guppy-level-death?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-26T05:13:33+00:00"
-},
-{
-"title": "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting",
-"link": "https://www.coindesk.com/markets/2026/10/26/bitcoin-slips-under-usd80-000-as-traders-de-risk-ahead-of-fed-meeting",
-"source": "CoinDesk",
-"at": "2026-10-26T04:37:02+00:00"
-},
-{
-"title": "Hong Kong names Nasdaq-listed Solana Company a strategic enterprise",
-"link": "https://cointelegraph.com/news/hong-kong-names-nasdaq-listed-solana-company-a-strategic-enterprise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-26T03:21:26+00:00"
-},
-{
-"title": "Elon Musk issues a warning for 'AI neoclouds' as SpaceX borrows $40 billion for chips",
-"link": "https://www.coindesk.com/markets/2026/10/26/elon-musk-confirms-usd40-billion-spacex-debt-deal-for-ai-chips-warns-of-neocloud-shakeout",
-"source": "CoinDesk",
-"at": "2026-10-26T03:11:39+00:00"
-},
-{
-"title": "Keystone says website breach exposed hardware wallet buyers’ addresses",
-"link": "https://cointelegraph.com/news/keystone-says-website-breach-exposed-hardware-wallet-buyers-addresses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-26T02:24:04+00:00"
-},
-{
-"title": "Standard Chartered-led Anchorpoint says it’s not rushing retail stablecoin",
-"link": "https://cointelegraph.com/news/standard-chartered-led-anchorpoint-says-its-not-rushing-retail-stablecoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-26T00:13:29+00:00"
-},
-{
-"title": "AI agents help rescue ETH’s Glamsterdam fork, ‘Steal My Bitcoin’ site: Hodler’s Digest",
-"link": "https://cointelegraph.com/magazine/ai-agents-help-rescue-eths-glamsterdam-fork-steal-my-bitcoin-site-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-25T22:48:40+00:00"
-},
-{
-"title": "Wells Fargo, Cisco, Intuit Among 6 More Companies Objecting to Tokenized Stocks",
-"link": "https://decrypt.co/381784/wells-fargo-cisco-intuit-more-companies-object-tokenized-stocks",
-"source": "Decrypt",
-"at": "2026-10-25T16:01:03+00:00"
-},
-{
-"title": "ECB official sees digital euro as key to protecting EU ‘sovereignty’",
-"link": "https://cointelegraph.com/news/ecb-official-sees-digital-euro-tool-to-protect-eu-sovereignty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-25T15:11:00+00:00"
-},
-{
-"title": "Latvia targets tokenization rules in 2027 with commercial property in focus",
-"link": "https://www.coindesk.com/business/2026/10/25/latvia-targets-tokenization-rules-in-2027-with-commercial-property-in-focus",
-"source": "CoinDesk",
-"at": "2026-10-25T15:00:00+00:00"
-},
-{
-"title": "Bitcoin ETFs Snap Two-Week Losing Streak Despite Late-Week Slide",
-"link": "https://decrypt.co/381777/bitcoin-etfs-snap-two-week-losing-streak-despite-late-week-slide",
-"source": "Decrypt",
-"at": "2026-10-25T14:01:03+00:00"
-},
-{
-"title": "UK banks face 10,000 complaints in 3 months over crypto restrictions",
-"link": "https://www.coindesk.com/policy/2026/10/22/uk-banks-face-10-000-complaints-in-3-months-over-crypto-restrictions",
-"source": "CoinDesk",
-"at": "2026-10-25T13:00:00+00:00"
-},
-{
-"title": "Netanyahu floats use of blockchain as solution to potential financial sanctions",
-"link": "https://cointelegraph.com/news/netanyahu-floats-use-of-blockchain-as-solution-to-potential-financial-sanctions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-25T11:42:00+00:00"
-},
-{
-"title": "Google Quietly Updates Privacy Policy to Let Gmail and Photos Data Feed Ads",
-"link": "https://decrypt.co/381775/google-quietly-updates-privacy-policy-gmail-photos-ads",
-"source": "Decrypt",
-"at": "2026-10-24T17:01:02+00:00"
-},
-{
-"title": "Sweden's Government Offices Block ChatGPT and Claude, Keep Microsoft Copilot",
-"link": "https://decrypt.co/381763/sweden-government-offices-block-chatgpt-claude",
-"source": "Decrypt",
-"at": "2026-10-24T16:01:03+00:00"
-},
-{
-"title": "Strategy, Strive face balancing act between bitcoin buying and preferred stock dividends",
-"link": "https://www.coindesk.com/business/2026/10/24/strategy-strive-face-balancing-act-between-bitcoin-buying-and-preferred-stock-dividends",
-"source": "CoinDesk",
-"at": "2026-10-24T16:00:00+00:00"
-},
-{
-"title": "Block's new voice AI sounds eerily human, sparking awe and scam fears",
-"link": "https://www.coindesk.com/tech/2026/10/24/block-s-new-voice-ai-sounds-eerily-human-sparking-awe-and-scam-fears",
-"source": "CoinDesk",
-"at": "2026-10-24T15:21:06+00:00"
-},
-{
-"title": "Crypto under weekend pressure, bitcoin slides below $80,000 on U.S. Middle East evacuations",
-"link": "https://www.coindesk.com/markets/2026/10/24/crypto-under-weekend-pressure-bitcoin-slides-below-usd80-000-on-u-s-middle-east-evacuations",
-"source": "CoinDesk",
-"at": "2026-10-24T15:11:24+00:00"
-},
-{
-"title": "Game Publishers Have Pushed to Cut Discs Since 2007, Infinity Ward Veteran Says",
-"link": "https://decrypt.co/381674/game-publishers-have-pushed-to-cut-discs-since-2007-infinity-ward-veteran-says",
-"source": "Decrypt",
-"at": "2026-10-24T15:01:02+00:00"
-},
-{
-"title": "Why McDonalds, Microsoft and Google saying no to tokenized stocks isn't a dealbreaker",
-"link": "https://www.coindesk.com/business/2026/10/23/why-mcdonalds-microsoft-and-google-saying-no-to-tokenized-stocks-isn-t-a-dealbreaker",
-"source": "CoinDesk",
-"at": "2026-10-24T15:00:00+00:00"
-},
-{
-"title": "Argentina drops criminal probe into President Milei over crashed memecoin LIBRA",
-"link": "https://www.coindesk.com/business/2026/10/24/argentina-drops-criminal-probe-into-president-milei-over-crashed-memecoin-libra",
-"source": "CoinDesk",
-"at": "2026-10-24T14:38:47+00:00"
-},
-{
-"title": "Wells Fargo, Cisco, Marvell among latest firms objecting to OKXICE's tokenized stock plan",
-"link": "https://www.coindesk.com/business/2026/10/24/wells-fargo-cisco-marvell-among-latest-firms-objecting-to-okxice-s-tokenized-stock-plan",
-"source": "CoinDesk",
-"at": "2026-10-24T14:06:24+00:00"
-},
-{
-"title": "Bitcoin’s wealthy holders turning to loans and yield as investment habits mature: Xapo CEO",
-"link": "https://www.coindesk.com/business/2026/10/24/bitcoin-s-wealthy-holders-turning-to-loans-and-yield-as-investment-habits-mature-xapo-ceo",
-"source": "CoinDesk",
-"at": "2026-10-24T14:00:00+00:00"
-},
-{
-"title": "Hong Kong’s Biggest Bank Puts a Stablecoin in 3 Million Wallets",
-"link": "https://decrypt.co/381760/hong-kong-bank-hsbc-stablecoin-3-million-wallets",
-"source": "Decrypt",
-"at": "2026-10-24T13:01:02+00:00"
-},
-{
-"title": "U.S. Clarity Act failure gives Asia and Middle East a competitive edge, says Apex Group CEO",
-"link": "https://www.coindesk.com/policy/2026/10/24/u-s-clarity-act-failure-gives-asia-and-middle-east-a-competitive-edge-says-apex-group-ceo",
-"source": "CoinDesk",
-"at": "2026-10-24T12:00:00+00:00"
-},
-{
-"title": "Franklin Templeton adds $150 million in fund shares to XRP Ledger, all in one wallet",
-"link": "https://www.coindesk.com/markets/2026/10/24/franklin-templeton-adds-usd150-million-in-fund-shares-to-xrp-ledger-all-in-one-wallet",
-"source": "CoinDesk",
-"at": "2026-10-24T04:45:43+00:00"
-},
-{
-"title": "Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report",
-"link": "https://cointelegraph.com/news/nasdaq-companies-object-tokenized-stock-listings-okx-ice?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-23T21:32:16+00:00"
-},
-{
-"title": "NY Seeks $1.37 Billion Judgment Against Operators of NovaTech Crypto Ponzi Scheme",
-"link": "https://bitcoinmagazine.com/news/ny-seeks-1-37-b-judgement-novatech",
-"source": "Bitcoin Magazine",
-"at": "2026-10-23T21:21:46+00:00"
-},
-{
-"title": "Blockstream Launches Institutional Consulting Services, Opens Lugano Office",
-"link": "https://bitcoinmagazine.com/news/blockstream-launches-institutional-service",
-"source": "Bitcoin Magazine",
-"at": "2026-10-23T21:20:39+00:00"
-},
-{
-"title": "Netanyahu Considering Crypto Plan to Dodge Banking Sanctions on Israel",
-"link": "https://decrypt.co/381758/netanyahu-crypto-plan-banking-sanctions-israel",
-"source": "Decrypt",
-"at": "2026-10-23T21:16:03+00:00"
-},
-{
-"title": "IRS plans lower tax disclosure penalties, including for crypto: Forbes",
-"link": "https://cointelegraph.com/news/irs-plans-lower-penalties-for-crypto-tax-disclosures-forbes-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-23T20:54:17+00:00"
-},
-{
-"title": "Senate Democrat Probes Tether Payments to Ex-White House Crypto Adviser’s Firm",
-"link": "https://decrypt.co/381755/senate-democrat-tether-payments-ex-white-house-crypto-adviser",
-"source": "Decrypt",
-"at": "2026-10-23T20:16:02+00:00"
-},
-{
-"title": "SpaceX Filing Gives Elon Musk the Final Word on Tesla Merger He Says He’s Staying Out Of",
-"link": "https://decrypt.co/381753/spacex-filing-elon-musk-final-word-tesla-merger",
-"source": "Decrypt",
-"at": "2026-10-23T19:36:02+00:00"
-},
-{
-"title": "SEC Flags AI 'Super Intelligence' and Tokenization as Systemic Market Risks",
-"link": "https://decrypt.co/381745/sec-ai-super-intelligence-tokenization-2027-exam-list",
-"source": "Decrypt",
-"at": "2026-10-23T18:54:55+00:00"
-},
-{
-"title": "Initia halts blockchain after exploit reportedly drains over $2.6M",
-"link": "https://cointelegraph.com/news/initia-halts-blockchain-exploit-drained?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-23T18:39:02+00:00"
-},
-{
-"title": "How I Vibe Coded My Smart TV—And Claude Killed It",
-"link": "https://decrypt.co/381717/how-vibe-coded-my-smart-tv-claude-killed-it",
-"source": "Decrypt",
-"at": "2026-10-23T17:53:29+00:00"
-},
-{
-"title": "US senator probes Tether after reported deal with ex-Trump crypto adviser",
-"link": "https://cointelegraph.com/news/us-senator-probe-bo-hines-trump-crypto-adviser-tether-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-23T17:42:12+00:00"
-},
-{
-"title": "Bitcoin Core Rewrites Its Security Policy for a World Where AI Finds Bugs in One Prompt",
-"link": "https://decrypt.co/381715/bitcoin-core-security-policy-ai-threats",
-"source": "Decrypt",
-"at": "2026-10-23T17:16:03+00:00"
-},
-{
-"title": "Bitcoin Core Ends Long Embargoes for Bugs AI Can Rediscover",
-"link": "https://bitcoinmagazine.com/news/bitcoin-core-ends-long-embargoes",
-"source": "Bitcoin Magazine",
-"at": "2026-10-23T17:06:32+00:00"
-},
-{
-"title": "Bitcoin ETFs Lose Over $635M In One Day Following Oil Price Spike",
-"link": "https://bitcoinmagazine.com/news/bitcoin-etfs-lose-over-635-million",
-"source": "Bitcoin Magazine",
-"at": "2026-10-23T16:46:36+00:00"
-},
-{
-"title": "Crypto Scammers Who Used Prayer Groups to Lure Victims Must Pay $1.3 Billion, Says New York",
-"link": "https://decrypt.co/381708/crypto-scammers-prayer-groups-lure-victims-must-pay-1-3-billion-new-york",
-"source": "Decrypt",
-"at": "2026-10-23T16:31:03+00:00"
-},
-{
-"title": "SEC flags tokenization as high-risk area in 2027 market examinations",
-"link": "https://cointelegraph.com/news/sec-adds-tokenized-securities-to-2027-examination-priorities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-23T16:08:40+00:00"
-},
-{
-"title": "Bitcoin ETFs Bleed $636 Million as October Turns Red Again",
-"link": "https://decrypt.co/381700/bitcoin-etfs-bleed-october-turns-red-again",
-"source": "Decrypt",
-"at": "2026-10-23T15:50:41+00:00"
-},
-{
-"title": "Franklin Templeton Clears Final Hurdle For ETFs That Turn Stock Dividends Into Bitcoin",
-"link": "https://bitcoinmagazine.com/news/franklin-templeton-clears-final-hurdle",
-"source": "Bitcoin Magazine",
-"at": "2026-10-23T15:40:05+00:00"
-},
-{
-"title": "Bitcoin seeks support above $81K as Brent crude oil hits highest level since March",
-"link": "https://cointelegraph.com/markets/bitcoin-seeks-support-above-81k-as-brent-crude-oil-hits-highest-level-since-march?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-10-23T15:39:17+00:00"
-},
-{
-"title": "Bank of Korea Wants Stablecoins Written Into Forex Law as Crypto Bill and Tax Fight Come to a Head",
-"link": "https://bitcoinmagazine.com/news/bank-of-korea-crypto-bill-and-tax",
-"source": "Bitcoin Magazine",
-"at": "2026-10-23T14:01:41+00:00"
-},
-{
-"title": "Robinhood sees surge in bitcoin, gold prediction markets as traders move beyond sports",
-"link": "https://www.coindesk.com/markets/2026/10/23/robinhood-sees-surge-in-bitcoin-gold-prediction-markets-as-traders-move-beyond-sports",
-"source": "CoinDesk",
-"at": "2026-10-23T13:58:56+00:00"
-},
-{
-"title": "Stand With Crypto Director: The Crypto Vote Will Decide the Midterms | Mason Lynaugh",
-"link": "https://bitcoinmagazine.com/videos/stand-with-crypto-director-the-crypto-vote-will-decide-the-midterms-mason-lynaugh",
-"source": "Bitcoin Magazine",
-"at": "2026-10-23T13:33:32+00:00"
-},
-{
-"title": "Morning Minute: a16z Drops 'Crypto' From Its Fund",
-"link": "https://decrypt.co/381691/morning-minute-a16z-drops-crypto-from-its-fund",
-"source": "Decrypt",
-"at": "2026-10-23T13:29:21+00:00"
-},
-{
-"title": "Parker Lewis: Bitcoin Will Settle 100% of Global Payments",
-"link": "https://bitcoinmagazine.com/videos/parker-lewis-bitcoin-will-settle-100-of-global-payments",
-"source": "Bitcoin Magazine",
-"at": "2026-10-23T13:28:16+00:00"
-},
-{
-"title": "Block Releases THE Bitcoin National Ad Campaign",
-"link": "https://bitcoinmagazine.com/videos/block-releases-the-bitcoin-national-ad-campaign",
-"source": "Bitcoin Magazine",
-"at": "2026-10-23T13:21:52+00:00"
 }
 ]

@@ -1,7 +1,7 @@
 {
- "version": "0.5.4",
+ "version": "0.5.5",
  "url": "https://github.com/Duplexsteel/KryptoKompis/releases/latest",
- "notes": "Correct Norwegian tax rules (old gains never moved to new purchases, fees paid in coin realised at market value, unknown values shown as unresolved), Coinbase Pro import, your own corrections with a permanent log, an inbox folder that imports and files statements, and a full documentation archive.",
- "windows": "https://github.com/Duplexsteel/KryptoKompis/releases/download/V.0.5.4/Kryptokompis-Setup-0.5.4.exe",
- "windows_sha256": "92c971d2770cb7fd4c4c4a9fb12a6b947d9fc440d9b8e36d40ab149396b12d4c"
+ "notes": "Binance account statement import (margin, futures, Earn, card purchases, Convert), Binance trade history files, Kraken unified accounts counted once, the tax report no longer hangs when Norges Bank is slow, fix for a crash on first start, NANO/XNO as one coin and Firi bonuses as income.",
+ "windows": "https://github.com/Duplexsteel/KryptoKompis/releases/download/v0.5.5/Kryptokompis-Setup-0.5.5.exe",
+ "windows_sha256": "653d64fe70794dee7dfb27c20cb68327bafa1c9ff5dfcdfd56f1e32300f91d74"
 }
