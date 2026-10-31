@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="nb"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FIFO for krypto - hva det er, og hvorfor det avgjør skatten din - Kryptokompis</title>
+<meta name="description" content="Når du selger en mynt du har kjøpt flere ganger, bestemmer FIFO hvilken kjøpspris som brukes. Et enkelt eksempel.">
+<meta name="theme-color" content="#F5FAFF">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Kryptokompis">
+<meta property="og:title" content="Kryptokompis - din kryptokompis for oversikt og skatt"><meta property="og:description" content="Når du selger en mynt du har kjøpt flere ganger, bestemmer FIFO hvilken kjøpspris som brukes. Et enkelt eksempel.">
+<meta property="og:url" content="https://kryptokompis.no/guide-fifo.html"><meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="https://kryptokompis.no/assets/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://kryptokompis.no/guide-fifo.html">
+<link rel="alternate" hreflang="nb" href="https://kryptokompis.no/"><link rel="alternate" hreflang="en" href="https://kryptokompis.no/en.html">
+<link rel="alternate" type="application/rss+xml" title="Kryptokompis - guider og nyheter" href="https://kryptokompis.no/rss.xml">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="icon" href="icon.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script data-goatcounter="https://duplexsteel.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><style>
+.art{max-width:760px;padding-top:56px;padding-bottom:72px}.art h1{font-size:clamp(32px,5vw,46px);margin:6px 0 12px}
+.art .meta{color:var(--ink2);font-size:15px}.art h2{font-size:22px;margin:30px 0 8px}.art p,.art li{color:var(--ink2)}
+.art p{margin:12px 0}.art ul{padding-left:22px}.art li{margin:7px 0}.art li ul{margin:6px 0}
+.art ol{list-style:none;padding:0;counter-reset:n}.art ol>li{counter-increment:n;padding-left:32px;position:relative}
+.art ol>li:before{content:counter(n);position:absolute;left:0;top:2px;width:22px;height:22px;border-radius:50%;background:var(--mint);color:var(--spruce-d);font-size:13px;font-weight:700;display:grid;place-items:center}.art b,.art strong{color:var(--ink)}
+.art code{background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:.9em;word-break:break-all}
+.art table{border-collapse:collapse;width:100%;margin:16px 0}.art td,.art th{padding:10px 10px 10px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.art th{font-size:14px;color:var(--ink2)}.art .vid{position:relative;padding-top:56.25%;margin:22px 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.art .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.art .end{margin-top:40px;display:flex;gap:12px;flex-wrap:wrap}
+.glist{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:12px;max-width:860px}
+.glist a{display:block;padding:18px 20px;border:1px solid var(--line);border-radius:var(--r);background:var(--sheet);color:var(--ink);text-decoration:none}
+.glist a:hover{border-color:var(--spruce)}.glist b{font-size:18px}.glist span{display:block;color:var(--ink2);margin-top:4px}
+.glist small{color:var(--ink2)}.whohead{display:flex;gap:28px;align-items:center;margin-bottom:8px}
+.who{width:120px;height:120px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--mint)}
+@media(max-width:560px){.whohead{flex-direction:column;align-items:flex-start;gap:16px}.who{width:96px;height:96px}}.krow{display:flex;gap:10px}.krow>a:first-child{flex:1}
+.glist a.yt{flex:none;display:grid;place-items:center;padding:0 22px;font-weight:700;color:#fff;background:var(--spruce);border-color:var(--spruce)}
+.glist a.yt:hover{background:var(--spruce-d)}.gsec{margin-top:40px}.rss{font-size:15px}
+</style></head><body class="home-blue site-design">
+<a class="skip-link" href="#main">Til innhold</a>
+<header class="site-design-header"><nav class="site-design-nav" aria-label="Meny"><a href="index.html" class="wordmark"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><g fill="currentColor"><rect x="5" y="5" width="5" height="22" rx="1.4"/><rect x="20" y="5" width="8" height="3.6" rx="1.4"/><rect x="16" y="9.6" width="8" height="3.6" rx="1.4"/><rect x="12" y="14.2" width="8" height="3.6" rx="1.4"/><rect x="16" y="18.8" width="8" height="3.6" rx="1.4"/><rect x="20" y="23.4" width="8" height="3.6" rx="1.4"/></g></svg>Kryptokompis</a><div class="navlinks"><a href="portefolje.html" class="">Portefølje</a><a href="skatt.html" class="">Skatt og rapporter</a><a href="borser.html" class="">Børser og import</a><a href="guider.html" class="">Guider og blogg</a><a href="kryptonytt.html" class="">Kryptonytt</a></div><a href="guide-fifo-en.html" class="language-link">EN</a><a href="priser.html" class="btn small">Prøv appen</a><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu">Meny</button></nav><div class="mobile-menu" id="site-menu"><a href="portefolje.html" class="">Portefølje</a><a href="skatt.html" class="">Skatt og rapporter</a><a href="borser.html" class="">Børser og import</a><a href="guider.html" class="">Guider og blogg</a><a href="kryptonytt.html" class="">Kryptonytt</a><a href="innsikt.html" class="">Kontroller og personvern</a><a href="priser.html" class="">Priser og nedlasting</a><a href="sporsmal.html" class="">Spørsmål og svar</a><a href="om.html" class="">Om og kontakt</a><a href="info.html" class="">Info og ressurser</a><a href="guide-fifo-en.html" class="language-link">EN</a></div></header><main id="main"><section class="space white"><div class="wrap reading"><aside class="toc"><p>På denne siden</p><a href="#chapter-1" class="">Et enkelt eksempel</a><a href="#chapter-2" class="">Per mynt, på tvers av børser</a><a href="#chapter-3" class="">Bytter og gebyrer teller også</a><a href="#chapter-4" class="">Kostprisen i kroner</a><a href="#chapter-5" class="">Slik gjør Kryptokompis det</a></aside><article class="prose-reader"><article class="article-content"><p class="meta"><a href="guider.html">Alle guider</a> · Publisert 31. oktober 2026</p><h1>FIFO for krypto - hva det er, og hvorfor det avgjør skatten din</h1><p class="lead">Når du selger en mynt du har kjøpt flere ganger, bestemmer FIFO hvilken kjøpspris som brukes. Et enkelt eksempel.</p><p>Har du kjøpt samme mynt flere ganger til ulike priser, må du vite <em>hvilke</em> mynter du selger når du selger. Kryptokompis bruker FIFO: <strong>først inn, først ut</strong>. De myntene du kjøpte først, regnes som solgt først. FIFO er ikke et lovkrav for krypto - Skatteetaten krever at du kan vise hvilke enheter du har solgt og hva de kostet. FIFO er en enkel og etterprøvbar måte å gjøre det på.</p>
+<h2 id="chapter-1">Et enkelt eksempel</h2>
+<table>
+<thead>
+<tr>
+<th>Dato</th>
+<th>Hva</th>
+<th>Antall</th>
+<th>Pris per BTC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Januar</td>
+<td>Kjøp</td>
+<td>0,1 BTC</td>
+<td>400 000 kr</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>Kjøp</td>
+<td>0,1 BTC</td>
+<td>700 000 kr</td>
+</tr>
+<tr>
+<td>Juni</td>
+<td>Salg</td>
+<td>0,1 BTC</td>
+<td>800 000 kr</td>
+</tr>
+</tbody>
+</table>
+<p>Med FIFO er det januar-myntene som er solgt. Kostprisen er 40 000 kr, salget gir 80 000 kr, og <strong>gevinsten er 40 000 kr</strong>. Myntene fra mars ligger igjen, med sin kostpris på 70 000 kr, til du selger dem.</p>
+<p>Hadde man i stedet brukt mars-kjøpet, ville gevinsten blitt 10 000 kr. Det er derfor metoden betyr mye.</p>
+<h2 id="chapter-2">Per mynt, på tvers av børser</h2>
+<p>Kryptokompis regner FIFO per mynt - ikke per børs. Kjøpte du BTC på én børs og solgte på en annen, er det fortsatt det eldste kjøpet som regnes som solgt først. Derfor må historikken fra alle børsene ses samlet.</p>
+<h2 id="chapter-3">Bytter og gebyrer teller også</h2>
+<ul>
+<li>Et bytte fra én mynt til en annen er et salg av den første - også til en stablecoin.</li>
+<li>Et gebyr betalt i mynt er et lite salg av den mynten.</li>
+<li>En overføring mellom dine egne kontoer er ikke et salg. Kostprisen følger med mynten.</li>
+</ul>
+<h2 id="chapter-4">Kostprisen i kroner</h2>
+<p>Kostprisen fastsettes i kroner på kjøpsdagen. Kjøpte du for dollar, regnes beløpet om med kursen den dagen. Kryptokompis bruker Norges Banks dagskurs.</p>
+<h2 id="chapter-5">Slik gjør Kryptokompis det</h2>
+<p>Kryptokompis legger alle kjøp, salg, bytter og gebyrer fra alle børsene på én tidslinje per mynt, og regner FIFO i kroner. Hvert salg vises i PDF-rapporten med hvilke kjøp det er regnet mot, så du kan følge tallet tilbake.</p>
+<p><em>Dette er en forenklet forklaring, ikke skatterådgivning. Les mer hos <a href="https://www.skatteetaten.no/virtuellvaluta">Skatteetaten</a>.</em></p><p class="end"><a class="btn" href="priser.html#kom-i-gang">Last ned Kryptokompis</a><a class="btn g" href="https://discord.gg/hnAGgsAQ5V" target="_blank" rel="noopener">Discord</a></p></article></article></div></section></main><footer class="site-design-footer"><div class="wrap"><div class="footergrid"><div><a href="index.html" class="wordmark"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><g fill="currentColor"><rect x="5" y="5" width="5" height="22" rx="1.4"/><rect x="20" y="5" width="8" height="3.6" rx="1.4"/><rect x="16" y="9.6" width="8" height="3.6" rx="1.4"/><rect x="12" y="14.2" width="8" height="3.6" rx="1.4"/><rect x="16" y="18.8" width="8" height="3.6" rx="1.4"/><rect x="20" y="23.4" width="8" height="3.6" rx="1.4"/></g></svg>Kryptokompis</a><p class="footer-slogan">Kryptoen din.<br>Samlet oversikt.<br>Enklere skatt.</p></div><div class="footlinks"><h3>Produktet</h3><a href="portefolje.html" class="">Portefølje</a><a href="skatt.html" class="">Skatt og rapporter</a><a href="borser.html" class="">Børser og import</a><a href="innsikt.html" class="">Kontroller og personvern</a><a href="priser.html" class="">Priser og nedlasting</a></div><div class="footlinks"><h3>Nytt og nyttig</h3><a href="guider.html" class="">Guider og blogg</a><a href="kryptonytt.html" class="">Kryptonytt</a><a href="sporsmal.html" class="">Spørsmål og svar</a><a href="blogg.html" class="">Fra Kryptokompis</a><a href="om.html" class="">Om og kontakt</a><a href="info.html" class="">Info og ressurser</a></div></div><div class="footerbase"><div>Laget i Norge. Ikke skatterådgivning.<br>Du er selv ansvarlig for skattemeldingen.</div><div><a href="vilkar.html" class="">Bruksvilkår</a><a href="personvern.html" class="">Personvern</a><a href="https://discord.gg/hnAGgsAQ5V" class="">Discord</a><a href="guide-fifo-en.html" class="">English</a></div></div></div></footer><script>
+const toggle=document.querySelector('.menu-toggle');const menu=document.getElementById('site-menu');
+if(toggle&&menu){const close=()=>{toggle.setAttribute('aria-expanded','false');menu.classList.remove('open')};toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));menu.classList.toggle('open',open)});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&toggle.getAttribute('aria-expanded')==='true'){close();toggle.focus()}});menu.addEventListener('click',e=>{if(e.target.closest('a'))close()});}
+const search=document.getElementById('exchange-search');let method='ALL';
+function filterEx(){let count=0;document.querySelectorAll('.exchange-row').forEach(r=>{const show=r.dataset.name.includes(search.value.trim().toLowerCase())&&(method==='ALL'||r.dataset.method.split(' ').includes(method));r.hidden=!show;if(show)count++});const status=document.getElementById('exchange-count');status.textContent=count+' '+status.dataset.label;document.getElementById('exchange-empty').hidden=count>0}
+if(search){search.addEventListener('input',filterEx);document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{method=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});filterEx()}))}
+const faqSearch=document.getElementById('faq-search');if(faqSearch)faqSearch.addEventListener('input',()=>{let count=0;document.querySelectorAll('[data-question]').forEach(x=>{x.hidden=!x.dataset.question.includes(faqSearch.value.trim().toLowerCase());if(!x.hidden)count++});document.getElementById('faq-empty').hidden=count>0});
+document.querySelectorAll('[data-source-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-news-source]').forEach(row=>row.hidden=button.dataset.sourceFilter!=='ALL'&&row.dataset.newsSource!==button.dataset.sourceFilter);document.querySelectorAll('[data-source-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===button)))}));
+</script></body></html>
