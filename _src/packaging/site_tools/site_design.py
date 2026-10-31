@@ -12,6 +12,8 @@ CSS = Path(__file__).with_suffix('.css').read_text(encoding='utf-8')
 
 # Customer-facing text belongs in translation tables, including layout captions.
 COPY = {
+    'methodology': ('Slik regner vi', 'How we calculate (Norwegian)'),
+    'methodology_intro': ('Se regnestykkene bak rapporten, fra kjøp og salg til gebyrer og formue.', 'See the calculations behind the report, from trades to fees and wealth.'),
     'try': ('Prøv appen', 'Try the app'),
     'product': ('Produktet', 'Product'),
     'resources': ('Nytt og nyttig', 'News and resources'),
@@ -170,6 +172,7 @@ def footer(B,t):
     product=''.join(a(B.url(t,k),text(t,k)) for k in ('portfolio','tax','imports','insights','pricing'))
     resources=''.join(a(B.url(t,k),text(t,k)) for k in ('guides','blog','news','faq') if k!='blog')
     resources+=a('blogg.html' if nb else 'blog.html',text(t,'blog_h'))
+    resources+=a('slik-regner-vi.html',text(t,'methodology'))
     resources+=a('om.html' if nb else 'about.html',text(t,'about'))+a(t['info'],text(t,'info'))
     return f'''<footer class="site-design-footer"><div class="wrap"><div class="footergrid"><div>{a(B.T[t['lang']]['file'],B.MARK+'Kryptokompis','wordmark')}<p class="footer-slogan">{text(t,'slogan')}</p></div><div class="footlinks"><h3>{text(t,'product')}</h3>{product}</div><div class="footlinks"><h3>{text(t,'resources')}</h3>{resources}</div></div><div class="footerbase"><div>{text(t,'foot_note')}</div><div>{a('vilkar.html' if nb else 'terms.html',text(t,'terms'))}{a('personvern.html' if nb else 'privacy.html',text(t,'privacy'))}{a(B.DISCORD,'Discord')}{a(t['other'],'English' if nb else 'Norsk')}</div></div></div></footer>{SCRIPT}</body></html>'''
 
@@ -190,7 +193,8 @@ def plans(B,t,compact=False):
 
 def home_end(B,t):
     download_heading, download = t['go_steps'][0]
-    return f'''<section class="space white"><div class="wrap"><div class="rowtitle"><div><p class="eyebrow">{text(t,'free')}</p><h2 class="sectiontitle">{text(t,'free_h')}</h2></div>{a(B.url(t,'pricing'),text(t,'pricing')+' →','arrowlink')}</div><p class="intro">{B.X[t['lang']]['tiers_sub']}</p>{plans(B,t,True)}<div class="home-download"><h3>{download_heading}</h3><p>{download}</p></div></div></section><!--LATEST-->{ribbon(B,t)}'''
+    method = f'<div class="methodology-link"><h2>{a("slik-regner-vi.html",text(t,"methodology")+" →")}</h2><p>{text(t,"methodology_intro")}</p></div>'
+    return f'''<section class="space white"><div class="wrap">{method}<div class="rowtitle"><div><p class="eyebrow">{text(t,'free')}</p><h2 class="sectiontitle">{text(t,'free_h')}</h2></div>{a(B.url(t,'pricing'),text(t,'pricing')+' →','arrowlink')}</div><p class="intro">{B.X[t['lang']]['tiers_sub']}</p>{plans(B,t,True)}<div class="home-download"><h3>{download_heading}</h3><p>{download}</p></div></div></section><!--LATEST-->{ribbon(B,t)}'''
 
 
 def latest(B,t,rows):
@@ -257,6 +261,7 @@ def faq(B,t):
         items.append(f'<details class="faq-item" {anchor} data-question="{question}" {opened}><summary>{q}</summary><p>{answer}</p></details>')
     items=''.join(items)
     groups=''.join(a(B.url(t,k),text(t,k)) for k in ('imports','pricing','insights'))
+    groups+=a('slik-regner-vi.html',text(t,'methodology'))
     return f'''<section class="space" id="{t['ids'][6]}"><div class="wrap">{title(t,'faq','faq_h','faq_p')}<label class="sr-only" for="faq-search">{text(t,'faq_search')}</label><input type="search" id="faq-search" class="field faq-search" placeholder="{text(t,'faq_search')} …"><div class="faq-layout"><aside class="faq-groups">{groups}</aside><div id="faq-items">{items}<p id="faq-empty" role="status" hidden>{text(t,'faq_empty')}</p><div class="open-note">{a(B.DISCORD,text(t,'contact')+' →')}</div><p class="tiny">{t['warn']}</p></div></div></div></section>''' + '''<script>
 function openFaqTarget(){const item=document.getElementById(location.hash.slice(1));if(item&&item.matches('.faq-item')){item.hidden=false;item.open=true;item.scrollIntoView()}}
 openFaqTarget();window.addEventListener('hashchange',openFaqTarget);

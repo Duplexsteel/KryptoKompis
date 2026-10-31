@@ -223,7 +223,7 @@ def build() -> list:
 
 
 def sitemap(urls: list) -> None:
-    fixed = ["index.html", "en.html", "info.html", "info-en.html", "vilkar.html", "terms.html", "personvern.html", "privacy.html"]
+    fixed = ["index.html", "en.html", "info.html", "info-en.html", "vilkar.html", "terms.html", "personvern.html", "privacy.html", "slik-regner-vi.html"]
     fixed += [f for lang in B.PAGES for k, f in B.PAGES[lang].items() if k not in ("guides", "blog")]
     rows = [f"<url><loc>{B.canonical(u)}</loc></url>" for u in fixed]
     rows += [f"<url><loc>{B.canonical(u)}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>" for u, d in urls]

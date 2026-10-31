@@ -6,6 +6,9 @@ import sys
 from pathlib import Path
 
 import build_site as B
+import markdown
+import re
+from html import escape
 
 SITE = Path(sys.argv[1] if len(sys.argv) > 1 else "site")
 D, BUY = B.DISCORD, B.BUY
@@ -174,3 +177,43 @@ for L, f, srcname, other in (("nb", "vilkar.html", "legal_nb.html", "terms.html"
             + '<main id="main">' + B.DESIGN.reading(page, src.split("-->", 1)[1]) + '</main>' + B.footer(page))
     (SITE / f).write_text(html, encoding="utf-8")
     print("wrote", f)
+
+
+def methodology():
+    """Render the reviewed examples from the source copied by sync_public.sh."""
+    source = Path(__file__).with_name('pages') / 'slik-regner-vi.nb.md'
+    content = re.sub(r'<!--.*?-->', '', source.read_text(encoding='utf-8'), flags=re.S)
+    content = re.sub(r'^---\s*$', '', content, flags=re.M).strip()
+    heading, intro = content.split('\n', 1)
+    sections = re.split(r'^## (.+)$', intro, flags=re.M)
+    body = [f'<header class="methodology-header"><p class="eyebrow">{B.DESIGN.text(B.T["nb"], "methodology")}</p>'
+            f'<h1>{escape(heading.removeprefix("# "))}</h1>{markdown.markdown(sections[0])}</header>']
+    for title, section in zip(sections[1::2], sections[2::2]):
+        if title.startswith('Del '):
+            part = title.split(':', 1)[0].split()[-1]
+            examples = re.split(r'^### (.+)$', section, flags=re.M)
+            cards = []
+            for name, example in zip(examples[1::2], examples[2::2]):
+                # Keep each labelled field in a separate paragraph; Markdown otherwise joins lines.
+                example = re.sub(r'\n(?=\*\*|<small>)', '\n\n', example.strip())
+                cards.append(f'<article class="calculation-card"><h3>{escape(name)}</h3>{markdown.markdown(example)}</article>')
+            cards = '<div class="calculation-cards">' + ''.join(cards) + '</div>'
+            if part == '1':
+                body.append(f'<section class="calculation-part" id="del-{part}"><h2>{escape(title)}</h2>{cards}</section>')
+            else:
+                body.append(f'<details class="calculation-part" id="del-{part}"><summary><h2>{escape(title)}</h2></summary>{cards}</details>')
+        else:
+            body.append(f'<section class="methodology-notes"><h2>{escape(title)}</h2>{markdown.markdown(section)}</section>')
+    page = dict(B.T['nb'], file='slik-regner-vi.html', other='guides.html', og_title='Slik regner vi - Kryptokompis')
+    description = 'Se hvordan Kryptokompis regner, med eksempler på kjøp, salg, gebyrer og formue. Hvert eksempel er knyttet til en test.'
+    # This page has no English counterpart yet; do not advertise the homepages as translations.
+    head = re.sub(r'<link rel="alternate" hreflang="[^"]+" href="[^"]+">', '',
+                  B.head(page, page['og_title'], description))
+    html = (head + B.nav(page, home_page=False)
+            + '<main id="main" class="methodology"><div class="wrap methodology-wrap">' + ''.join(body)
+            + '</div></main>' + B.footer(page))
+    (SITE / page['file']).write_text(html, encoding='utf-8')
+    print('wrote', page['file'])
+
+
+methodology()
