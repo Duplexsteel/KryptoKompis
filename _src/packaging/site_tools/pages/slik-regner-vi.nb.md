@@ -105,11 +105,12 @@ Airdrops regnes på samme måte: 100 tokens verdt 500 kr gir 500 kr i inntekt. S
 
 ## Del 3: Avansert
 
-### 10. Du betaler en annen person med coins
+### 10. Du betaler eller gir coins til en annen person
 **Situasjon:** Du kjøpte 100 XNO for 1 000 kr og brukte dem til å betale en annen person. Da var de verdt 1 500 kr.
 **Slik regner vi:** Betalingen regnes som et salg til markedsverdi den dagen. Eksemplet gjelder betaling, ikke gave. I appen markerer du sendingen som «Betalt til en annen person» og skriver en kort begrunnelse, som lagres som dokumentasjon.
 **Resultat:** Gevinst **500 kr**. Hadde de bare vært verdt 600 kr, ville du fått et tap på **400 kr**.
-<small>Testet: TRF-04, TRF-05</small>
+**Var det en gave?** Gir du coins i gave til familie eller venner, er det ikke et salg for deg. Du får verken gevinst eller tap, og mottakeren overtar kostprisen din på 1 000 kr. I appen markerer du sendingen som «Gave til en annen person».
+<small>Testet: TRF-04, TRF-05, TRF-06, TRF-07</small>
 
 ### 11. En coin som er blitt nesten verdiløs
 **Situasjon:** Du kjøpte 1 000 tokens for 1 000 kr. Ved nyttår er de bare verdt 1,05 kr til sammen, men du eier dem fortsatt.
