@@ -1,7 +1,7 @@
 {
- "version": "0.5.5",
+ "version": "0.5.6",
  "url": "https://github.com/Duplexsteel/KryptoKompis/releases/latest",
- "notes": "Binance account statement import (margin, futures, Earn, card purchases, Convert), Binance trade history files, Kraken unified accounts counted once, the tax report no longer hangs when Norges Bank is slow, fix for a crash on first start, NANO/XNO as one coin and Firi bonuses as income.",
- "windows": "https://github.com/Duplexsteel/KryptoKompis/releases/download/v0.5.5/Kryptokompis-Setup-0.5.5.exe",
- "windows_sha256": "653d64fe70794dee7dfb27c20cb68327bafa1c9ff5dfcdfd56f1e32300f91d74"
+ "notes": "Mark coins given to family or friends as a gift (no gain or loss), Export everything now includes statements, frozen reports and raw API data, KuCoin deposit/withdrawal history import, KuCoin orders from both exports counted once.",
+ "windows": "https://github.com/Duplexsteel/KryptoKompis/releases/download/v0.5.6/Kryptokompis-Setup-0.5.6.exe",
+ "windows_sha256": "6e1026c836c538191f5cebde70433e4bf077e22ca1639f79302ca1f4c40a42a9"
 }
