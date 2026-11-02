@@ -112,7 +112,7 @@ Airdrops regnes på samme måte: 100 tokens verdt 500 kr gir 500 kr i inntekt. S
 <small>Testet: TRF-04, TRF-05</small>
 
 ### 11. En coin som er blitt nesten verdiløs
-**Situasjon:** Du kjøpte 1 000 tokens for 1 000 kr. Ved nyttår er de verdt 1 krone til sammen, men du eier dem fortsatt.
+**Situasjon:** Du kjøpte 1 000 tokens for 1 000 kr. Ved nyttår er de bare verdt 1,05 kr til sammen, men du eier dem fortsatt.
 **Slik regner vi:** Et prisfall alene gir ikke et realisert tap. I dette eksemplet eier du fortsatt coinene.
 **Resultat:** Ikke noe tap i år. Formuen blir **1,05 kr**, og kostprisen på 1 000 kr ligger klar til den dagen du selger.
 <small>Testet: YE-08</small>
