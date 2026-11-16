@@ -1,12 +1,222 @@
 [
 {
+"title": "Morning Minute: Crypto Hits Extreme Fear as Bitcoin Plunges",
+"link": "https://decrypt.co/383301/morning-minute-crypto-hits-extreme-fear-as-bitcoin-plunges",
+"source": "Decrypt",
+"at": "2026-11-16T13:23:17+00:00"
+},
+{
+"title": "Ledger Brings Clear Signing to Solana, Ending 'Blind' Signing for Jupiter Swaps",
+"link": "https://decrypt.co/383302/ledger-brings-clear-signing-to-solana-ending-blind-signing-for-jupiter-swaps",
+"source": "Decrypt",
+"at": "2026-11-16T13:12:08+00:00"
+},
+{
+"title": "Solana drops ‘beta’ label after more than six years",
+"link": "https://www.coindesk.com/tech/2026/11/16/solana-drops-beta-label-after-more-than-six-years",
+"source": "CoinDesk",
+"at": "2026-11-16T13:03:16+00:00"
+},
+{
+"title": "Binance Pay Later offers credit backed by Bitcoin, Ether and BNB holdings",
+"link": "https://cointelegraph.com/news/binance-pay-later-crypto-backed-credit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-16T13:00:00+00:00"
+},
+{
+"title": "Old crypto feud reignites: Why OKX's Star Xu blames Binance for two years of October crashes",
+"link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-s-slide-reopens-an-old-feud-between-crypto-s-most-powerful-founders",
+"source": "CoinDesk",
+"at": "2026-11-16T12:55:46+00:00"
+},
+{
+"title": "HKMA, Swift explore tokenized deposits for cross-border bank payments",
+"link": "https://cointelegraph.com/news/hkma-swift-tokenized-deposits-cross-border-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-16T12:54:51+00:00"
+},
+{
+"title": "Bitcoin was supposed to gain as AI faltered, but it crashed. Here's why.",
+"link": "https://www.coindesk.com/daybook-us/2026/11/16/bitcoin-was-supposed-to-gain-as-ai-faltered-but-it-crashed-here-s-why",
+"source": "CoinDesk",
+"at": "2026-11-16T12:09:00+00:00"
+},
+{
+"title": "Singapore, Germany test cross-border payments to reduce settlement risk",
+"link": "https://www.coindesk.com/business/2026/11/16/singapore-germany-test-cross-border-payments-to-reduce-settlement-risk",
+"source": "CoinDesk",
+"at": "2026-11-16T11:47:12+00:00"
+},
+{
+"title": "Bitcoin slips after rebounding from July 14 low that triggered $2 billion of liquidations",
+"link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-slips-to-usd64-000-after-usd2-billion-weekend-flush",
+"source": "CoinDesk",
+"at": "2026-11-16T11:03:14+00:00"
+},
+{
+"title": "Singapore, Germany test cross-border FX settlement with CBDCs",
+"link": "https://cointelegraph.com/news/singapore-german-central-banks-settlement-cbdcs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-16T10:49:12+00:00"
+},
+{
+"title": "BTC price tags 18-week low into Nvidia earnings: Three things to know in Bitcoin this week",
+"link": "https://cointelegraph.com/markets/btc-price-18-week-low-nvidia-three-things-know-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-16T10:39:05+00:00"
+},
+{
+"title": "German Lawmakers Back Customs Powers to Seize Crypto of 'Unclear Origin'",
+"link": "https://decrypt.co/383297/german-lawmakers-back-customs-powers-to-seize-crypto-of-unclear-origin",
+"source": "Decrypt",
+"at": "2026-11-16T10:25:15+00:00"
+},
+{
+"title": "Vitalik Buterin Now ‘a Total Bull’ on leanPCS as Fast Track to Quantum-Safe Ethereum",
+"link": "https://decrypt.co/383294/vitalik-buterin-now-a-total-bull-on-leanpcs-as-fast-track-to-quantum-safe-ethereum",
+"source": "Decrypt",
+"at": "2026-11-16T09:54:55+00:00"
+},
+{
+"title": "Live updates: Bitcoin holding weekend plunge as November losses deepen to 17%",
+"link": "https://www.coindesk.com/tech/2026/11/16/live-news-bitcoin-posts-sixth-weekly-loss-as-tech-stocks-and-metals-slide",
+"source": "CoinDesk",
+"at": "2026-11-16T09:34:18+00:00"
+},
+{
+"title": "Elon Musk Joins 160,000 Backing Petition to Bring Jensen Huang Back to Nvidia",
+"link": "https://decrypt.co/383286/elon-musk-joins-160000-backing-petition-to-bring-jensen-huang-back-to-nvidia",
+"source": "Decrypt",
+"at": "2026-11-16T09:25:01+00:00"
+},
+{
+"title": "FOMC minutes, Nvidia earnings, Russia’s retail crypto rules: Crypto Week Ahead",
+"link": "https://www.coindesk.com/markets/2026/11/16/fomc-minutes-nvidia-earnings-russia-s-retail-crypto-rules-crypto-week-ahead",
+"source": "CoinDesk",
+"at": "2026-11-16T09:23:07+00:00"
+},
+{
+"title": "DBS, JPMorgan’s Kinexys launch 24/7 transfers of tokenized deposits",
+"link": "https://cointelegraph.com/news/dbs-jpmorgans-kinexys-launch-tokenized-transfers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-16T08:50:50+00:00"
+},
+{
+"title": "JPMorgan and DBS let clients move dollars across borders on weekends",
+"link": "https://www.coindesk.com/business/2026/11/16/j-p-morgan-and-dbs-let-clients-move-dollars-across-borders-on-weekends",
+"source": "CoinDesk",
+"at": "2026-11-16T08:46:00+00:00"
+},
+{
+"title": "Harvard, Dartmouth keep Bitcoin ETF stakes steady as fund gains 42% in Q3",
+"link": "https://cointelegraph.com/news/harvard-dartmouth-bitcoin-etf-ibit-up-q3?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-16T08:27:39+00:00"
+},
+{
+"title": "Vitalik Buterin flips to ‘total bull’ on a faster route to quantum-safe Ethereum",
+"link": "https://www.coindesk.com/tech/2026/11/16/vitalik-buterin-flips-to-total-bull-on-a-faster-route-to-quantum-safe-ethereum",
+"source": "CoinDesk",
+"at": "2026-11-16T08:18:03+00:00"
+},
+{
+"title": "Bitcoin miners were hijacked and their BTC rewards redirected to an attacker",
+"link": "https://www.coindesk.com/tech/2026/11/16/bitcoin-miners-were-hijacked-and-their-btc-rewards-redirected-to-an-attacker",
+"source": "CoinDesk",
+"at": "2026-11-16T07:51:15+00:00"
+},
+{
+"title": "Cardano holders vote down $5 million bid to buy warehouse copper",
+"link": "https://www.coindesk.com/markets/2026/11/16/cardano-holders-vote-down-usd5-million-bid-to-buy-warehouse-copper",
+"source": "CoinDesk",
+"at": "2026-11-16T06:27:42+00:00"
+},
+{
+"title": "Trump administration to name Nvidia, OpenAI and several others as AI national champions",
+"link": "https://www.coindesk.com/markets/2026/11/16/trump-administration-to-name-nvidia-openai-and-several-others-as-u-s-ai-national-champions",
+"source": "CoinDesk",
+"at": "2026-11-16T06:01:41+00:00"
+},
+{
 "title": "Here’s what happened in crypto today",
 "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
 "source": "Cointelegraph",
-"at": "2026-11-15T11:18:48+00:00"
+"at": "2026-11-16T06:00:00+00:00"
 },
 {
-"title": "Bitcoin falls to four-month low near $62K as crypto selloff deepens",
+"title": "Aster CEO suspects foul play after token plunges 32% in minutes",
+"link": "https://cointelegraph.com/markets/aster-ceo-suspects-foul-play-after-token-plunges-32-in-minutes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-16T05:28:40+00:00"
+},
+{
+"title": "Bitcoin’s biggest bet is now a drop below $60,000, not a rally above $100,000",
+"link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-s-biggest-bet-is-now-a-drop-below-usd60-000-not-a-rally-above-usd100-000",
+"source": "CoinDesk",
+"at": "2026-11-16T05:01:17+00:00"
+},
+{
+"title": "Asian chip stocks tumble ahead of Nvidia Q3 earnings",
+"link": "https://cointelegraph.com/markets/asian-chip-stocks-tumble-ahead-of-nvidia-q3-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-16T04:42:07+00:00"
+},
+{
+"title": "Luxor CEO warns of AI ‘dark forest’ following Bitcoin miner hijack",
+"link": "https://cointelegraph.com/news/luxor-ceo-warns-of-ai-dark-forest-after-bitcoin-miner-hijack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-16T02:33:07+00:00"
+},
+{
+"title": "Jensen Huang weighs Nvidia comeback days after shock exit: FT",
+"link": "https://cointelegraph.com/news/jensen-huang-weighs-nvidia-comeback-days-after-shock-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-15T23:47:45+00:00"
+},
+{
+"title": "US sellers drive Bitcoin crash, Jensen plots Nvidia comeback: Hodler’s Digest",
+"link": "https://cointelegraph.com/magazine/us-sellers-drive-bitcoin-crash-jensen-plots-comeback-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-15T22:50:59+00:00"
+},
+{
+"title": "Did prediction markets call the U.S. midterm election?: State of Crypto",
+"link": "https://www.coindesk.com/policy/2026/11/15/did-prediction-markets-call-the-u-s-midterm-election-state-of-crypto",
+"source": "CoinDesk",
+"at": "2026-11-15T19:30:00+00:00"
+},
+{
+"title": "How Wall Street Is Racing to Claim the Onchain Dollar",
+"link": "https://decrypt.co/383284/how-wall-street-racing-onchain-dollar-stablecoins",
+"source": "Decrypt",
+"at": "2026-11-15T16:01:02+00:00"
+},
+{
+"title": "Peruvian Bull: The Yen Carry Trade and Bitcoin’s Road to $300k",
+"link": "https://bitcoinmagazine.com/videos/peruvian-bull-the-yen-carry-trade-and-bitcoins-road-to-300k",
+"source": "Bitcoin Magazine",
+"at": "2026-11-15T15:00:05+00:00"
+},
+{
+"title": "Enterprise blockchain is going to come back from the dead",
+"link": "https://cointelegraph.com/opinion/enterprise-blockchain-come-back-from-dead?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+"source": "Cointelegraph",
+"at": "2026-11-15T14:30:00+00:00"
+},
+{
+"title": "Bitcoin ETFs Lose $2.1 Billion in November as Outflow Streak Hits Seven Days",
+"link": "https://decrypt.co/383282/bitcoin-etfs-lose-2-1-billion-november-outflow-streak-seven-days",
+"source": "Decrypt",
+"at": "2026-11-15T14:01:02+00:00"
+},
+{
+"title": "Crypto insiders aren't counting on silver linings in Congress' 'lame duck' session",
+"link": "https://www.coindesk.com/news-analysis/2026/11/13/crypto-insiders-aren-t-counting-on-silver-linings-in-congress-lame-duck-session",
+"source": "CoinDesk",
+"at": "2026-11-15T14:00:00+00:00"
+},
+{
+"title": "Bitcoin falls to 4-month low near $62K as crypto selloff deepens",
 "link": "https://cointelegraph.com/markets/bitcoin-four-month-low-62k-crypto-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
 "source": "Cointelegraph",
 "at": "2026-11-15T10:23:17+00:00"
@@ -18,7 +228,13 @@
 "at": "2026-11-15T08:07:58+00:00"
 },
 {
-"title": "RWA protocol stUSDT winds down three years after $2.3B TVL peak",
+"title": "Changing of Lagarde: How the candidates to be next ECB president view bitcoin, stablecoins and CBDCs",
+"link": "https://www.coindesk.com/policy/2026/11/14/changing-of-lagarde-how-the-candidates-to-be-next-ecb-president-view-bitcoin-stablecoins-and-cbdcs",
+"source": "CoinDesk",
+"at": "2026-11-15T07:00:00+00:00"
+},
+{
+"title": "RWA protocol stUSDT winds down 3 years after $2.3B TVL peak",
 "link": "https://cointelegraph.com/news/rwa-protocol-stusdt-winds-down-three-years-after-23b-tvl-peak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
 "source": "Cointelegraph",
 "at": "2026-11-15T06:27:26+00:00"
@@ -142,221 +358,5 @@
 "link": "https://cointelegraph.com/news/adam-back-simpler-security-blockstream-bitcoin-custody-system?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
 "source": "Cointelegraph",
 "at": "2026-11-13T21:49:27+00:00"
-},
-{
-"title": "Should Government Officials Be Banned From Prediction Markets? House Oversight Says Maybe",
-"link": "https://decrypt.co/383271/government-officials-banned-prediction-markets-house-oversight",
-"source": "Decrypt",
-"at": "2026-11-13T21:36:03+00:00"
-},
-{
-"title": "Kraken parent Payward gains market share as slower trading weighs on earnings",
-"link": "https://cointelegraph.com/news/kraken-parent-payward-gains-market-share-slower-trading-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-11-13T21:01:39+00:00"
-},
-{
-"title": "Joe Carlasare on “Extreme Fear” in Bitcoin: “I’m A Buyer Here”",
-"link": "https://bitcoinmagazine.com/videos/joe-carlasare-on-extreme-fear-in-bitcoin-im-a-buyer-here",
-"source": "Bitcoin Magazine",
-"at": "2026-11-13T21:00:18+00:00"
-},
-{
-"title": "US regulators move ahead on crypto trust charters as Senate scrutiny grows",
-"link": "https://cointelegraph.com/news/us-regulators-crypto-trust-charters-senate-scrutiny-grows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-11-13T20:53:20+00:00"
-},
-{
-"title": "China’s $3.2 Billion AI Pipeline Still Calls for Nvidia Chips Washington Restricts",
-"link": "https://decrypt.co/383266/china-ai-pipeline-nvidia-chips-washington-restricts",
-"source": "Decrypt",
-"at": "2026-11-13T20:45:03+00:00"
-},
-{
-"title": "JPMorgan’s Bitcoin and Crypto-Linked Holdings Approach $1 Billion",
-"link": "https://decrypt.co/383267/jpmorgan-bitcoin-crypto-linked-holdings-approach-1-billion",
-"source": "Decrypt",
-"at": "2026-11-13T20:16:03+00:00"
-},
-{
-"title": "Bill Miller IV: “They’re Not Printing More Bitcoin”",
-"link": "https://bitcoinmagazine.com/videos/bill-miller-iv-theyre-not-printing-more-bitcoin",
-"source": "Bitcoin Magazine",
-"at": "2026-11-13T20:00:39+00:00"
-},
-{
-"title": "Dormant Bitcoin Wallets Wake Up After 16 Years, Moving $6.9 Million",
-"link": "https://decrypt.co/383264/dormant-bitcoin-wallets-wake-up-after-16-years",
-"source": "Decrypt",
-"at": "2026-11-13T19:36:03+00:00"
-},
-{
-"title": "Bitcoin plunges to $68,000 as Anthropic IPO frenzy adds to market jitters",
-"link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-slides-to-usd68k-as-nvidia-turmoil-anthropic-ipo-fuel-broader-market-sell-off",
-"source": "CoinDesk",
-"at": "2026-11-13T18:39:58+00:00"
-},
-{
-"title": "Fed Chair Warsh Wants Answers on AI Inflation—and Bitcoin May Feel the Impact",
-"link": "https://decrypt.co/383259/fed-chair-warsh-wants-answers-ai-inflation-bitcoin",
-"source": "Decrypt",
-"at": "2026-11-13T18:36:02+00:00"
-},
-{
-"title": "Metaplanet swings to $170M loss as Bitcoin sale hits earnings",
-"link": "https://cointelegraph.com/news/metaplanet-swings-170m-loss-bitcoin-sale-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-11-13T18:28:29+00:00"
-},
-{
-"title": "Why Private AI is More Important Than Ever",
-"link": "https://bitcoinmagazine.com/videos/why-private-ai-is-more-important-than-ever",
-"source": "Bitcoin Magazine",
-"at": "2026-11-13T18:00:15+00:00"
-},
-{
-"title": "Trump’s First Democratic Picks for SEC and CFTC Could Reshape Crypto’s Regulators",
-"link": "https://decrypt.co/383260/trump-first-democratic-picks-sec-cftc-could-reshape-crypto",
-"source": "Decrypt",
-"at": "2026-11-13T17:56:03+00:00"
-},
-{
-"title": "Bitcoin Hits 12-Week Low as Fed Rate Fears Undo Most of Summer Rally",
-"link": "https://decrypt.co/383231/bitcoin-hits-12-week-low-fed-rate-fears-undo-summer-rally",
-"source": "Decrypt",
-"at": "2026-11-13T17:22:54+00:00"
-},
-{
-"title": "U.S. Senate Banking Committee races toward hearing on new SEC nominations",
-"link": "https://www.coindesk.com/policy/2026/11/13/u-s-senate-banking-committee-races-toward-hearing-on-new-sec-nominations",
-"source": "CoinDesk",
-"at": "2026-11-13T17:05:43+00:00"
-},
-{
-"title": "FutureBit’s Apollo III Bitcoin Miner Hits Micro Center Shelves in Its First Brick-and-Mortar Launch",
-"link": "https://bitcoinmagazine.com/news/futurebit-apollo-iii-hits-micro-center-shelves",
-"source": "Bitcoin Magazine",
-"at": "2026-11-13T16:39:33+00:00"
-},
-{
-"title": "Bitcoin holds below $70K as stocks slip despite a cooler US PPI print",
-"link": "https://cointelegraph.com/markets/bitcoin-below-70k-stocks-slip-cooler-us-ppi-print?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-11-13T16:39:11+00:00"
-},
-{
-"title": "Bitcoin heads for sixth weekly loss as Anthropic’s blockbuster IPO looms",
-"link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-heads-for-sixth-weekly-loss-as-anthropic-s-blockbuster-ipo-looms",
-"source": "CoinDesk",
-"at": "2026-11-13T16:01:27+00:00"
-},
-{
-"title": "Robinhood’s Crypto Trading Volume Falls 48% in October as Event Contracts More Than Double",
-"link": "https://bitcoinmagazine.com/news/robinhood-crypto-volume-falls-48-percent",
-"source": "Bitcoin Magazine",
-"at": "2026-11-13T15:30:00+00:00"
-},
-{
-"title": "Over 300 Pro-Crypto Lawmakers Are Coming Into Congress",
-"link": "https://bitcoinmagazine.com/videos/over-300-pro-crypto-lawmakers-are-coming-into-congress",
-"source": "Bitcoin Magazine",
-"at": "2026-11-13T15:00:13+00:00"
-},
-{
-"title": "President Trump Taps Two Democrats in Bipartisan Slate of SEC and CFTC Nominees as Both Agencies Run Short-Handed",
-"link": "https://bitcoinmagazine.com/news/trump-sec-cftc-nominees-bipartisan",
-"source": "Bitcoin Magazine",
-"at": "2026-11-13T14:45:00+00:00"
-},
-{
-"title": "Bitcoin Price Briefly Crashes to $67,500, Lowest Since August, as Dollar Holds 19-Month High",
-"link": "https://bitcoinmagazine.com/markets/bitcoin-price-trades-near-69100-dollar",
-"source": "Bitcoin Magazine",
-"at": "2026-11-13T14:11:44+00:00"
-},
-{
-"title": "Kraken parent Payward says expansion outside crypto trading helps cushion revenue decline",
-"link": "https://www.coindesk.com/business/2026/11/13/kraken-parent-payward-says-expansion-outside-crypto-trading-helps-cushion-revenue-decline",
-"source": "CoinDesk",
-"at": "2026-11-13T14:02:00+00:00"
-},
-{
-"title": "Crypto Laundering a 'Material Risk' for UK Ahead of FATF Review: RUSI",
-"link": "https://decrypt.co/383227/crypto-laundering-a-material-risk-for-uk-ahead-of-fatf-review-rusi",
-"source": "Decrypt",
-"at": "2026-11-13T13:55:25+00:00"
-},
-{
-"title": "Arthur Hayes ‘flattered’ as Coinbase backs US stock perps",
-"link": "https://cointelegraph.com/news/arthur-hayes-coinbase-us-stock-perps-cftc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-11-13T13:41:26+00:00"
-},
-{
-"title": "‘Roadmap is Complete,' Cardano Founder Charles Hoskinson Says",
-"link": "https://decrypt.co/383221/roadmap-is-complete-cardano-founder-charles-hoskinson-says",
-"source": "Decrypt",
-"at": "2026-11-13T13:36:29+00:00"
-},
-{
-"title": "Nakamoto shares fall 6% premarket after Q3 revenue turns negative",
-"link": "https://cointelegraph.com/markets/nakamoto-shares-fall-after-negative-q3-revenue?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-11-13T13:04:19+00:00"
-},
-{
-"title": "Morning Minute: Crypto Plummets as Jensen Huang Exits Nvidia",
-"link": "https://decrypt.co/383222/morning-minute-crypto-plummets-as-jensen-huang-exits-nvidia",
-"source": "Decrypt",
-"at": "2026-11-13T13:03:40+00:00"
-},
-{
-"title": "Israeli police arrest five in $5M WhatsApp crypto trading probe",
-"link": "https://cointelegraph.com/news/israel-police-arrest-five-5m-whatsapp-crypto-scheme?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-11-13T12:19:01+00:00"
-},
-{
-"title": "Bitcoin's momentum gauge is turning red, could send prices back below $60,000",
-"link": "https://www.coindesk.com/daybook-us/2026/11/13/bitcoin-s-momentum-gauge-is-turning-red-could-send-prices-back-below-usd60-000",
-"source": "CoinDesk",
-"at": "2026-11-13T12:14:22+00:00"
-},
-{
-"title": "Digital Credit: Comparing The Six Bitcoin Preferred Stocks",
-"link": "https://bitcoinmagazine.com/bitcoin-for-corporations/digital-credit-comparing-the-six-bitcoin-preferred-stocks",
-"source": "Bitcoin Magazine",
-"at": "2026-11-13T12:03:47+00:00"
-},
-{
-"title": "Nvidia Employees Push Board to Bring Back Jensen Huang: Report",
-"link": "https://decrypt.co/383217/nvidia-employees-push-board-to-bring-back-jensen-huang-report",
-"source": "Decrypt",
-"at": "2026-11-13T11:58:47+00:00"
-},
-{
-"title": "Bitcoin hits 12-week low as dollar rallies on interest-rate outlook, liquidations top $1.6 billion",
-"link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-hits-12-week-low-as-dollar-rallies-on-interest-rate-outlook-liquidations-top-usd1-6-billion",
-"source": "CoinDesk",
-"at": "2026-11-13T11:52:25+00:00"
-},
-{
-"title": "Bitcoin Drops to $69K On 'Concentrated Liquidation' and 'Weakening' Demand",
-"link": "https://decrypt.co/383214/bitcoin-drops-to-69k-on-concentrated-liquidation-and-weakening-demand",
-"source": "Decrypt",
-"at": "2026-11-13T11:20:44+00:00"
-},
-{
-"title": "Congress Summons Ex-Nvidia CEO Jensen Huang, Lutnick Over Chip Exports to China",
-"link": "https://decrypt.co/383211/congress-summons-ex-nvidia-ceo-jensen-huang-lutnick-over-chip-exports-to-china",
-"source": "Decrypt",
-"at": "2026-11-13T10:55:54+00:00"
-},
-{
-"title": "Unocoin keeps deposits and withdrawals halted over suspect transfers",
-"link": "https://cointelegraph.com/news/unocoin-withdrawals-halted-bitgo-wallet-transfer-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-"source": "Cointelegraph",
-"at": "2026-11-13T09:58:21+00:00"
 }
 ]
